@@ -1,0 +1,134 @@
+﻿id_hero,name_hero,images-hero,role
+1,Aamon,aamon.png,['assassin']
+2,Akai,akai.png,['tank']
+3,Aldous,aldous.png,['fighter']
+4,Alice,alice.png,"['tank', 'mage']"
+5,Alpha,alpha.png,['fighter']
+6,Alucard,alucard.png,"['fighter', 'assassin']"
+7,Angela,angela.png,['support']
+8,Argus,argus.png,['fighter']
+9,Arlott,arlott.png,"['fighter', 'assassin']"
+10,Atlas,atlas.png,['tank']
+11,Aulus,aulus.png,['fighter']
+12,Aurora,aurora.png,['mage']
+13,Badang,badang.png,['fighter']
+14,Balmond,balmond.png,['fighter']
+15,Bane,bane.png,"['fighter', 'mage']"
+16,Barats,barats.png,"['tank', 'fighter']"
+17,Baxia,baxia.png,['tank']
+18,Beatrix,beatrix.png,['marksman']
+19,Belerick,belerick.png,['tank']
+20,Benedetta,benedetta.png,"['fighter', 'assassin']"
+21,Brody,brody.png,['marksman']
+22,Bruno,bruno.png,['marksman']
+23,Carmilla,carmilla.png,"['tank', 'support']"
+24,Cecilion,cecilion.png,['mage']
+25,Chang'e,chang27e.png,['mage']
+26,Chip,chip.png,"['tank', 'support']"
+27,Chou,chou.png,['fighter']
+28,Cici,cici.png,['fighter']
+29,Claude,claude.png,['marksman']
+30,Clint,clint.png,['marksman']
+31,Cyclops,cyclops.png,['mage']
+32,Diggie,diggie.png,['support']
+33,Dyrroth,dyrroth.png,['fighter']
+34,Edith,edith.png,"['tank', 'marksman']"
+35,Esmeralda,esmeralda.png,"['tank', 'mage']"
+36,Estes,estes.png,['support']
+37,Eudora,eudora.png,['mage']
+38,Fanny,fanny.png,['assassin']
+39,Faramis,faramis.png,"['mage', 'support']"
+40,Floryn,floryn.png,['support']
+41,Franco,franco.png,['tank']
+42,Fredrinn,fredrinn.png,"['tank', 'fighter']"
+43,Freya,freya.png,['fighter']
+44,Gatotkaca,gatotkaca.png,"['tank', 'fighter']"
+45,Gloo,gloo.png,['tank']
+46,Gord,gord.png,['mage']
+47,Granger,granger.png,['marksman']
+48,Grock,grock.png,"['tank', 'fighter']"
+49,Guinevere,guinevere.png,['fighter']
+50,Gusion,gusion.png,['assassin']
+51,Hanabi,hanabi.png,['marksman']
+52,Hanzo,hanzo.png,['assassin']
+53,Harith,harith.png,['mage']
+54,Harley,harley.png,"['assassin', 'mage']"
+55,Hayabusa,hayabusa.png,['assassin']
+56,Helcurt,helcurt.png,['assassin']
+57,Hilda,hilda.png,"['tank', 'fighter']"
+58,Hirara,hirara.png,['assassin']
+59,Hylos,hylos.png,['tank']
+60,Irithel,irithel.png,['marksman']
+61,Ixia,ixia.png,['marksman']
+62,Jawhead,jawhead.png,['fighter']
+63,Johnson,johnson.png,"['tank', 'support']"
+64,Joy,joy.png,['assassin']
+65,Julian,julian.png,"['fighter', 'assassin']"
+66,Kadita,kadita.png,"['assassin', 'mage']"
+67,Kagura,kagura.png,['mage']
+68,Kaja,kaja.png,"['fighter', 'support']"
+69,Kalea,kalea.png,"['fighter', 'support']"
+70,Karina,karina.png,['assassin']
+71,Karrie,karrie.png,['marksman']
+72,Khaleed,khaleed.png,['fighter']
+73,Khufra,khufra.png,['tank']
+74,Kimmy,kimmy.png,"['mage', 'marksman']"
+75,Lancelot,lancelot.png,['assassin']
+76,Lapu-Lapu,lapu-lapu.png,['fighter']
+77,Layla,layla.png,['marksman']
+78,Leomord,leomord.png,['fighter']
+79,Lesley,lesley.png,"['assassin', 'marksman']"
+80,Ling,ling.png,['assassin']
+81,Lolita,lolita.png,"['tank', 'support']"
+82,Lukas,lukas.png,['fighter']
+83,Lunox,lunox.png,['mage']
+84,Luo Yi,luo_yi.png,['mage']
+85,Lylia,lylia.png,['mage']
+86,Marcel,marcel.png,['support']
+87,Martis,martis.png,['fighter']
+88,Masha,masha.png,"['tank', 'fighter']"
+89,Mathilda,mathilda.png,"['assassin', 'support']"
+90,Melissa,melissa.png,['marksman']
+91,Minotaur,minotaur.png,"['tank', 'support']"
+92,Minsitthar,minsitthar.png,['fighter']
+93,Miya,miya.png,['marksman']
+94,Moskov,moskov.png,['marksman']
+95,Nana,nana.png,['mage']
+96,Natalia,natalia.png,['assassin']
+97,Natan,natan.png,['marksman']
+98,Nolan,nolan.png,['assassin']
+99,Novaria,novaria.png,['mage']
+100,Obsidia,obsidia.png,['marksman']
+101,Odette,odette.png,['mage']
+102,Paquito,paquito.png,"['fighter', 'assassin']"
+103,Pharsa,pharsa.png,['mage']
+104,Phoveus,phoveus.png,['fighter']
+105,Popol and Kupa,popol_and_kupa.png,['marksman']
+106,Rafaela,rafaela.png,['support']
+107,Roger,roger.png,"['fighter', 'marksman']"
+108,Ruby,ruby.png,['fighter']
+109,Saber,saber.png,['assassin']
+110,Selena,selena.png,"['assassin', 'mage']"
+111,Silvanna,silvanna.png,['fighter']
+112,Sora,sora.png,"['fighter', 'assassin']"
+113,Sun,sun.png,['fighter']
+114,Suyou,suyou.png,"['fighter', 'assassin']"
+115,Terizla,terizla.png,"['tank', 'fighter']"
+116,Thamuz,thamuz.png,['fighter']
+117,Tigreal,tigreal.png,['tank']
+118,Uranus,uranus.png,['tank']
+119,Vale,vale.png,['mage']
+120,Valentina,valentina.png,['mage']
+121,Valir,valir.png,['mage']
+122,Vexana,vexana.png,['mage']
+123,Wanwan,wanwan.png,['marksman']
+124,X.Borg,xborg.png,['fighter']
+125,Xavier,xavier.png,['mage']
+126,Yi Sun-shin,yi_sun-shin.png,"['assassin', 'marksman']"
+127,Yin,yin.png,"['fighter', 'assassin']"
+128,Yu Zhong,yu_zhong.png,['fighter']
+129,Yve,yve.png,['mage']
+130,Zetian,zetian.png,['mage']
+131,Zhask,zhask.png,['mage']
+132,Zhuxin,zhuxin.png,['mage']
+133,Zilong,zilong.png,"['fighter', 'assassin']"

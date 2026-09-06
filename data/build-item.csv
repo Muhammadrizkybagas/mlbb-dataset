@@ -1,0 +1,358 @@
+﻿hero_name,role,speciality,build_no,battle_spell,emblem_1,emblem_2,emblem_3,emblem_4,item_1,item_2,item_3,item_4,item_5,item_6
+Aamon,Assassin,"Jungle, Chase, Magic Damage",1,Retribution,Custom Magic Emblem,Thrill,Bargain Hunter,Impure Rage,Arcane Boots,Feather of Heaven,Genius Wand,Holy Crystal,Star Shard / Concentrated Energy,Blood Wings
+Aamon,Assassin,"Jungle, Chase, Magic Damage",2,Retribution,Custom Magic Emblem,Swift,Wilderness Blessing,Impure Rage,Arcane Boots,Feather of Heaven,Genius Wand,Glowing Wand,Divine Glaive,Blood Wings
+Akai,Tank,"Guard, Crowd Control",1,,Custom Tank Emblem,Thrill,Wilderness Blessing,Concussive Blast,Rapid Boots,Thunder Belt,Dominance Ice,Antique Cuirass,Guardian Helmet,Immortality
+Akai,Tank,"Guard, Crowd Control",2,Retribution,Custom Tank Emblem,Thrill,Seasoned Hunter,Concussive Blast,Rapid Boots,Cursed Helmet,Guardian Helmet,Blade of the Heptaseas,Endless Battle,Malefic Roar
+Akai,Tank,"Guard, Crowd Control",3,Flicker,Custom Support Emblem,Focusing Mark,Tenacity,Inspire,Rapid Boots,Guardian Helmet,Cursed Helmet,Blade Armor,Chastise Pauldron,Fleeting Time
+Aldous,Fighter,"Burst, Support",1,Flicker,Custom Assassin Emblem,Thrill,Tenacity,Lethal Ignition,Blade of the Heptaseas,Thunder Belt,Blade of Despair,War Axe,Rose Gold Meteor,Immortality
+Aldous,Fighter,"Burst, Support",2,Flicker,Custom Assassin Emblem,Agility,Wilderness Blessing,Quantum Charge,Endless Battle,Haas' Claws,Rose Gold Meteor,Oracle,Queen's Wings,Rapid Boots
+Aldous,Fighter,"Burst, Support",3,Flicker,Custom Assassin Emblem,Fatal,Master Assassin,Killing Spree,Rapid Boots,Blade of the Heptaseas,Thunder Belt,Sky Piercer,Malefic Roar,Guardian Helmet
+Alice,"Tank, Mage","Charge, Regen",1,Flicker,Custom Tank Emblem,Vitality,Tenacity,Brave Smite,Oracle,Warrior Boots,Chastise Pauldron,Brute Force Breastplate,Radiant Armor,Dominance Ice
+Alice,"Tank, Mage","Charge, Regen",2,Flicker,Custom Fighter Emblem,Vitality,Festival of Blood,Brave Smite,Oracle,Tough Boots,Cursed Helmet,Dominance Ice,Antique Cuirass,Athena's Shield
+Alice,"Tank, Mage","Charge, Regen",3,Flicker,Custom Common Emblem,Brave Smite,Festival of Blood,Agility,Warrior Boots,Radiant Armor,Oracle,Chastise Pauldron,Dominance Ice,Immortality
+Alpha,Fighter,"Charge, Damage",1,Ice Retribution,Custom Fighter Emblem,Thrill,Festival of Blood,Killing Spree,Tough Boots,Sky Piercer,War Axe,Brute Force Breastplate,Blade of Despair,Queen's Wings
+Alpha,Fighter,"Charge, Damage",2,Ice Retribution,Custom Fighter Emblem,Thrill,Seasoned Hunter,Impure Rage,Rapid Boots,War Axe,Hunter Strike,Blade of Despair,Rose Gold Meteor,Queen's Wings
+Alpha,Fighter,"Charge, Damage",3,Ice Retribution,Custom Fighter Emblem,Thrill,Festival of Blood,Killing Spree,Tough Boots,Sea Halberd,War Axe,Blade of Despair,Queen's Wings,Great Dragon Spear
+Alucard,"Fighter, Assassin","Chase, Damage",1,Bloody Retribution,Custom Fighter Emblem,Rupture,Weapon Master,Temporal Reign,Blade of Despair,Tough Boots,War Axe,Endless Battle,Queen's Wings,Rose Gold Meteor
+Alucard,"Fighter, Assassin","Chase, Damage",2,Retribution,Custom Fighter Emblem,Thrill,Seasoned Hunter,Impure Rage,Tough Boots,War Axe,Brute Force Breastplate,Queen's Wings,Blade of Despair,Rose Gold Meteor
+Alucard,"Fighter, Assassin","Chase, Damage",3,Retribution,Custom Fighter Emblem,Thrill,Seasoned Hunter,Impure Rage,Berserker's Fury,Tough Boots,Endless Battle,Blade of Despair,Queen's Wings,Malefic Roar
+Angela,Support,"Guard, Support",1,Flameshot,Custom Support Emblem,Inspire,Pull Yourself Together,Impure Rage,Demon Shoes,Fleeting Time,Sky Piercer,Lightning Truncheon,Holy Crystal,Genius Wand
+Angela,Support,"Guard, Support",2,Flicker,Custom Common Emblem,Impure Rage,Tenacity,Rupture,Demon Shoes,Flask of the Oasis,Cursed Helmet,Clock of Destiny,Divine Glaive,Blood Wings
+Angela,Support,"Guard, Support",3,Arrival,Custom Tank Emblem,Vitality,Tenacity,Quantum Charge,Demon Shoes,Flask of the Oasis,Oracle,Chastise Pauldron,Antique Cuirass,Guardian Helmet
+Argus,Fighter,"Charge, Burst",1,Inspire,Custom Fighter Emblem,Weakness Finder,Master Assassin,Swift,Haas' Claws,Hunter Strike,Great Dragon Spear,Rose Gold Meteor,Sea Halberd,Blade of Despair
+Argus,Fighter,"Charge, Burst",2,Inspire,Custom Fighter Emblem,Swift,Bargain Hunter,War Cry,Windtalker,Corrosion Scythe,Great Dragon Spear,Haas' Claws,Berserker's Fury,Blade of Despair
+Argus,Fighter,"Charge, Burst",3,Inspire,Custom Marksman Emblem,Swift,Pull Yourself Together,War Cry,Corrosion Scythe,Windtalker,Berserker's Fury,Haas' Claws,Great Dragon Spear,Demon Hunter Sword
+Arlott,"Fighter, Assassin","Charge, Burst",1,Petrify,Custom Fighter Emblem,Thrill,Festival of Blood,War Cry,War Axe,Tough Boots,Brute Force Breastplate,Oracle,Dominance Ice,Queen's Wings
+Arlott,"Fighter, Assassin","Charge, Burst",2,Flameshot,Custom Fighter Emblem,Rupture,Festival of Blood,Brave Smite,Hunter Strike,Tough Boots,Oracle,Dominance Ice,Brute Force Breastplate,Queen's Wings
+Arlott,"Fighter, Assassin","Charge, Burst",3,Petrify,Custom Fighter Emblem,Rupture,Master Assassin,Brave Smite,Hunter Strike,Tough Boots,Queen's Wings,Chastise Pauldron,Oracle,Dominance Ice
+Atlas,Tank,"Crowd Control, Initiator",1,Flicker,Custom Tank Emblem,Concussive Blast,Pull Yourself Together,Firmness,Rapid Boots,Guardian Helmet,Fleeting Time,Dominance Ice,Radiant Armor,Antique Cuirass
+Atlas,Tank,"Crowd Control, Initiator",2,Vengeance,Custom Tank Emblem,Agility,Festival of Blood,Brave Smite,Rapid Boots,Fleeting Time,Oracle,Queen's Wings,Flask of the Oasis,Cursed Helmet
+Aulus,Fighter,"Damage, Charge",1,Vengeance,Custom Fighter Emblem,Brave Smite,Bargain Hunter,Thrill,Magic Shoes,War Axe,Queen's Wings,Rose Gold Meteor,Malefic Roar,Oracle
+Aulus,Fighter,"Damage, Charge",2,Bloody Retribution,Custom Fighter Emblem,Thrill,Seasoned Hunter,Killing Spree,Tough Boots,War Axe,Endless Battle,Queen's Wings,Great Dragon Spear,Immortality
+Aulus,Fighter,"Damage, Charge",3,Vengeance,Custom Fighter Emblem,Thrill,Festival of Blood,Impure Rage,Tough Boots,Haas' Claws,War Axe,Brute Force Breastplate,Corrosion Scythe,Malefic Gun
+Aurora,Mage,"Crowd Control, Poke",1,Flicker,Custom Mage Emblem,Rupture,Bargain Hunter,Lethal Ignition,Glowing Wand,Arcane Boots,Enchanted Talisman,Divine Glaive,Holy Crystal,Blood Wings
+Aurora,Mage,"Crowd Control, Poke",2,Flicker,Custom Assassin Emblem,Agility,Wilderness Blessing,Impure Rage,Rapid Boots,Genius Wand,Blood Wings,Holy Crystal,Glowing Wand,Divine Glaive
+Badang,Fighter,"Charge, Burst",1,Flicker,Custom Support Emblem,Firmness,Tenacity,Quantum Charge,Magic Shoes,Thunder Belt,Dominance Ice,Oracle,Rose Gold Meteor,Blade Armor
+Badang,Fighter,"Charge, Burst",2,Flicker,Custom Support Emblem,Focusing Mark,Wilderness Blessing,Agility,Rapid Boots,Oracle,Dominance Ice,Brute Force Breastplate,Athena's Shield,Immortality
+Badang,Fighter,"Charge, Burst",3,Flicker,Custom Assassin Emblem,Agility,Master Assassin,Lethal Ignition,Blade of the Heptaseas,Blade of Despair,Hunter Strike,Sky Piercer,Malefic Roar,Berserker's Fury
+Balmond,Fighter,"Damage, Regen",1,Flicker,Custom Fighter Emblem,Rupture,Festival of Blood,Killing Spree,Warrior Boots,War Axe,Sky Piercer,Queen's Wings,Dominance Ice,Rose Gold Meteor
+Balmond,Fighter,"Damage, Regen",2,Ice Retribution,Custom Fighter Emblem,Killing Spree,Festival of Blood,Thrill,Tough Boots,War Axe,Sky Piercer,Queen's Wings,Blade of Despair,Oracle
+Balmond,Fighter,"Damage, Regen",3,Vengeance,Custom Tank Emblem,Firmness,Tenacity,Brave Smite,Magic Shoes,War Axe,Queen's Wings,Oracle,Guardian Helmet,Cursed Helmet
+Bane,"Fighter, Mage","Push, Burst",1,Vengeance,Custom Fighter Emblem,Agility,Festival of Blood,Temporal Reign,Magic Shoes,Starlium Scythe,Blood Wings,Endless Battle,Malefic Roar,Dominance Ice
+Bane,"Fighter, Mage","Push, Burst",2,Retribution,Custom Assassin Emblem,Thrill,Seasoned Hunter,Impure Rage,Tough Boots,War Axe,Endless Battle,Blade of Despair,Malefic Roar,Sea Halberd
+Bane,"Fighter, Mage","Push, Burst",3,Flicker,Custom Tank Emblem,Firmness,Festival of Blood,Brave Smite,Arcane Boots,Holy Crystal,Sky Piercer,Fleeting Time,Enchanted Talisman,Immortality
+Barats,"Tank, Fighter","Damage, Crowd Control",1,Flicker,Custom Fighter Emblem,Thrill,Festival of Blood,Brave Smite,War Axe,Endless Battle,Oracle,Queen's Wings,Chastise Pauldron,Radiant Armor
+Barats,"Tank, Fighter","Damage, Crowd Control",2,Retribution,Custom Fighter Emblem,Thrill,Festival of Blood,Impure Rage,Warrior Boots,War Axe,Endless Battle,Dominance Ice,Brute Force Breastplate,Queen's Wings
+Barats,"Tank, Fighter","Damage, Crowd Control",3,Vengeance,Custom Fighter Emblem,Killing Spree,Festival of Blood,Thrill,War Axe,Tough Boots,Sky Piercer,Guardian Helmet,Antique Cuirass,Oracle
+Baxia,Tank,"Support, Damage",1,Retribution,Custom Tank Emblem,Firmness,Seasoned Hunter,Temporal Reign,Magic Shoes,Guardian Helmet,Chastise Pauldron,Glowing Wand,Antique Cuirass,Radiant Armor
+Baxia,Tank,"Support, Damage",2,Retribution,Custom Tank Emblem,Firmness,Tenacity,Concussive Blast,Tough Boots,Cursed Helmet,Antique Cuirass,Dominance Ice,Athena's Shield,Radiant Armor
+Baxia,Tank,"Support, Damage",3,Revitalize,Custom Tank Emblem,Tenacity,Brave Smite,Vitality,Tough Boots,Oracle,Dominance Ice,Athena's Shield,Antique Cuirass,Guardian Helmet
+Beatrix,Marksman,"Finisher, Damage",1,Flicker,Custom Marksman Emblem,Rupture,Weapon Master,War Cry,Swift Boots,Golden Staff,Hunter Strike,Malefic Roar,Blade of Despair,Sea Halberd
+Beatrix,Marksman,"Finisher, Damage",2,Flicker,Custom Marksman Emblem,Rupture,Weapon Master,Quantum Charge,Blade of Despair,Malefic Gun,Sea Halberd,Warrior Boots,Wind of Nature,Hunter Strike
+Beatrix,Marksman,"Finisher, Damage",3,Flicker,Custom Marksman Emblem,Quantum Charge,Weapon Master,Thrill,Swift Boots,Sea Halberd,Haas' Claws,Blade of Despair,Malefic Gun,Rose Gold Meteor
+Belerick,Tank,"Crowd Control, Regen",1,Vengeance,Custom Tank Emblem,Vitality,Tenacity,Brave Smite,Rapid Boots,Radiant Armor,Antique Cuirass,Dominance Ice,Blade Armor,Immortality
+Belerick,Tank,"Crowd Control, Regen",2,Vengeance,Custom Tank Emblem,Rupture,Pull Yourself Together,Brave Smite,Tough Boots,Corrosion Scythe,Guardian Helmet,Oracle,Holy Crystal,Blade of Despair
+Belerick,Tank,"Crowd Control, Regen",3,Vengeance,Custom Common Emblem,Agility,Tenacity,Brave Smite,Thunder Belt,Blade Armor,Dominance Ice,Oracle,Immortality,Chastise Pauldron
+Benedetta,"Assassin, Fighter","Chase, Burst",1,Petrify,Custom Assassin Emblem,Rupture,Master Assassin,Lethal Ignition,Blade of the Heptaseas,Blade of Despair,Endless Battle,Hunter Strike,Malefic Roar,Sea Halberd
+Benedetta,"Assassin, Fighter","Chase, Burst",2,Petrify,Custom Fighter Emblem,Festival of Blood,Thrill,Impure Rage,War Axe,Fury Hammer,Sea Halberd,Endless Battle,Malefic Roar,Rose Gold Meteor
+Benedetta,"Assassin, Fighter","Chase, Burst",3,Petrify,Custom Assassin Emblem,Thrill,Master Assassin,Lethal Ignition,Tough Boots,Blade of the Heptaseas,Sky Piercer,Endless Battle,Sea Halberd,Immortality
+Brody,Marksman,"Burst, Finisher",1,Flicker,Custom Assassin Emblem,Thrill,Weapon Master,Quantum Charge,Blade of the Heptaseas,Malefic Gun,Tough Boots,Sky Piercer,Hunter Strike,Great Dragon Spear
+Brody,Marksman,"Burst, Finisher",2,,Custom Fighter Emblem,Thrill,Weapon Master,Quantum Charge,Blade of the Heptaseas,Tough Boots,Sky Piercer,Malefic Gun,Wind of Nature,Blade of Despair
+Brody,Marksman,"Burst, Finisher",3,Flicker,Custom Assassin Emblem,War Cry,Agility,Master Assassin,Blade of the Heptaseas,Tough Boots,Malefic Gun,Sky Piercer,Blade of Despair,Rose Gold Meteor
+Bruno,Marksman,"Finisher, Burst",1,Aegis,Custom Marksman Emblem,Fatal,Tenacity,Quantum Charge,Haas' Claws,Demon Shoes,Berserker's Fury,Malefic Gun,Windtalker,Wind of Nature
+Bruno,Marksman,"Finisher, Burst",2,Inspire,Custom Fighter Emblem,Thrill,Weapon Master,Weakness Finder,Arcane Boots,Blade of Despair,Blade of the Heptaseas,Berserker's Fury,Corrosion Scythe,Golden Staff
+Bruno,Marksman,"Finisher, Burst",3,Flicker,Custom Fighter Emblem,Fatal,Master Assassin,Quantum Charge,Haas' Claws,Tough Boots,Berserker's Fury,Malefic Gun,Windtalker,Wind of Nature
+Carmilla,"Support, Tank","Crowd Control, Damage",1,,Custom Tank Emblem,Agility,Wilderness Blessing,Concussive Blast,Rapid Boots,Thunder Belt,Cursed Helmet,Dominance Ice,Chastise Pauldron,Immortality
+Carmilla,"Support, Tank","Crowd Control, Damage",2,Petrify,Custom Support Emblem,Vitality,Wilderness Blessing,Focusing Mark,Rapid Boots,Dominance Ice,Oracle,Athena's Shield,Guardian Helmet,Immortality
+Carmilla,"Support, Tank","Crowd Control, Damage",3,Flicker,Custom Tank Emblem,Vitality,Pull Yourself Together,Impure Rage,Rapid Boots,Thunder Belt,Dominance Ice,Brute Force Breastplate,Lightning Truncheon,Wishing Lantern
+Cecilion,Mage,"Poke, Burst",1,Sprint,Custom Assassin Emblem,Impure Rage,Tenacity,Inspire,Demon Shoes,Clock of Destiny,Glowing Wand,Wishing Lantern,Divine Glaive,Ice Queen Wand
+Cecilion,Mage,"Poke, Burst",2,Sprint,Custom Mage Emblem,Inspire,Wilderness Blessing,Impure Rage,Clock of Destiny,Demon Shoes,Glowing Wand,Wishing Lantern,Blood Wings,Divine Glaive
+Chou,Fighter,"Chase, Control",1,Flicker,Custom Assassin Emblem,Thrill,Master Assassin,Lethal Ignition,Boots,Blade of the Heptaseas,Blade of Despair,Malefic Roar,Endless Battle,Hunter Strike
+Chou,Fighter,"Chase, Control",2,Flicker,Custom Assassin Emblem,Rupture,Master Assassin,Lethal Ignition,Tough Boots,Blade of the Heptaseas,Blade of Despair,Endless Battle,Malefic Roar,Hunter Strike
+Chou,Fighter,"Chase, Control",3,Flicker,Custom Assassin Emblem,Concussive Blast,Master Assassin,Thrill,War Axe,Endless Battle,Blade of Despair,Malefic Roar,Sea Halberd,Antique Cuirass
+Cici,Fighter,"Damage, Regen",1,,Custom Fighter Emblem,Agility,Festival of Blood,Impure Rage,Rapid Boots,Sky Piercer,War Axe,Hunter Strike,Winter Crown,Malefic Roar
+Claude,Marksman,"Burst, Chase",1,Flicker,Custom Fighter Emblem,Thrill,Master Assassin,Quantum Charge,Tough Boots,Demon Hunter Sword,Golden Staff,Corrosion Scythe,Malefic Gun,Wind of Nature
+Claude,Marksman,"Burst, Chase",2,Vengeance,Custom Assassin Emblem,Swift,Seasoned Hunter,Quantum Charge,Berserker's Fury,Blade of Despair,Blade of the Heptaseas,Golden Staff,Haas' Claws,Corrosion Scythe
+Claude,Marksman,"Burst, Chase",3,Sprint,Custom Fighter Emblem,Brave Smite,Swift,Bargain Hunter,Tough Boots,Corrosion Scythe,Golden Staff,Demon Hunter Sword,Windtalker,Wind of Nature
+Clint,Marksman,"Finisher, Burst",1,Flicker,Custom Marksman Emblem,Rupture,Weapon Master,Quantum Charge,Endless Battle,Tough Boots,Blade of the Heptaseas,Berserker's Fury,Blade of Despair,Great Dragon Spear
+Clint,Marksman,"Finisher, Burst",2,Flicker,Custom Fighter Emblem,Agility,Weapon Master,Quantum Charge,Endless Battle,Magic Shoes,Sky Piercer,Blade of Despair,Hunter Strike,Malefic Roar
+Clint,Marksman,"Finisher, Burst",3,Flicker,Custom Fighter Emblem,Thrill,Weapon Master,Impure Rage,Blade of the Heptaseas,Endless Battle,Malefic Roar,Rose Gold Meteor,Sky Piercer,Blade of Despair
+Cyclops,Mage,"Damage, Control",1,Flicker,Custom Mage Emblem,Agility,Festival of Blood,Temporal Reign,Magic Shoes,Enchanted Talisman,Queen's Wings,Concentrated Energy,Brute Force Breastplate,Clock of Destiny
+Cyclops,Mage,"Damage, Control",2,Ice Retribution,Custom Assassin Emblem,Festival of Blood,Impure Rage,Inspire,Magic Shoes,Enchanted Talisman,Concentrated Energy,Clock of Destiny,Blood Wings,Divine Glaive
+Cyclops,Mage,"Damage, Control",3,Flameshot,Custom Marksman Emblem,Rupture,Weapon Master,Lethal Ignition,Arcane Boots,Lightning Truncheon,Starlium Scythe,Genius Wand,Holy Crystal,Divine Glaive
+Diggie,Support,"Guard, Poke",1,Revitalize,Custom Support Emblem,Inspire,Focusing Mark,Pull Yourself Together,Magic Shoes,Enchanted Talisman,Glowing Wand,Genius Wand,Guardian Helmet,Immortality
+Diggie,Support,"Guard, Poke",2,Flicker,Custom Mage Emblem,Inspire,Weapon Master,Lethal Ignition,Arcane Boots,Lightning Truncheon,Genius Wand,Sky Piercer,Blood Wings,Holy Crystal
+Dyrroth,Fighter,"Charge, Burst",1,Retribution,Custom Fighter Emblem,Thrill,Festival of Blood,Brave Smite,Tough Boots,War Axe,Hunter Strike,Blade of the Heptaseas,Malefic Roar,Immortality
+Dyrroth,Fighter,"Charge, Burst",2,Ice Retribution,Custom Assassin Emblem,Thrill,Master Assassin,Lethal Ignition,Tough Boots,Blade of the Heptaseas,Hunter Strike,Sky Piercer,Malefic Roar,Queen's Wings
+Dyrroth,Fighter,"Charge, Burst",3,Vengeance,Custom Fighter Emblem,Swift,Festival of Blood,Brave Smite,War Axe,Dominance Ice,Queen's Wings,Brute Force Breastplate,Immortality,Malefic Roar
+Edith,"Tank, Marksman","Control, Burst",1,Flicker,Custom Tank Emblem,Agility,Festival of Blood,Concussive Blast,Rapid Boots,Thunder Belt,Dominance Ice,Starlium Scythe,Blade Armor,Ice Queen Wand
+Edith,"Tank, Marksman","Control, Burst",2,Inspire,Custom Marksman Emblem,Thrill,Bargain Hunter,Weakness Finder,Swift Boots,Feather of Heaven,Starlium Scythe,Ice Queen Wand,Oracle,Queen's Wings
+Edith,"Tank, Marksman","Control, Burst",3,Flicker,Custom Tank Emblem,Swift,Tenacity,Brave Smite,Tough Boots,Thunder Belt,Dominance Ice,Feather of Heaven,Blade Armor,Radiant Armor
+Esmeralda,"Tank, Mage","Regen, Mixed Damage",1,Flicker,Custom Mage Emblem,Bargain Hunter,Thrill,Lethal Ignition,Arcane Boots,Clock of Destiny,Genius Wand,Winter Crown,Fleeting Time,Oracle
+Esmeralda,"Tank, Mage","Regen, Mixed Damage",2,Aegis,Custom Support Emblem,Agility,Festival of Blood,War Cry,Tough Boots,Enchanted Talisman,Glowing Wand,Concentrated Energy,Divine Glaive,Blood Wings
+Estes,Support,"Regen, Guard",1,Revitalize,Custom Support Emblem,Quantum Charge,Inspire,Pull Yourself Together,Demon Shoes,Thunder Belt,Flask of the Oasis,Fleeting Time,Holy Crystal,Blood Wings
+Estes,Support,"Regen, Guard",2,Revitalize,Custom Support Emblem,Agility,Pull Yourself Together,Focusing Mark,Rapid Boots,Flask of the Oasis,Enchanted Talisman,Fleeting Time,Dominance Ice,Athena's Shield
+Estes,Support,"Regen, Guard",3,Purify,Custom Support Emblem,Inspire,Bargain Hunter,Focusing Mark,Rapid Boots,Flask of the Oasis,Enchanted Talisman,Antique Cuirass,Athena's Shield,Holy Crystal
+Fanny,Assassin,"Chase, Finisher",1,Ice Retribution,Custom Assassin Emblem,Rupture,Master Assassin,Lethal Ignition,Tough Boots,Blade of the Heptaseas,Hunter Strike,Malefic Roar,Blade of Despair,Rose Gold Meteor
+Fanny,Assassin,"Chase, Finisher",2,Bloody Retribution,Custom Assassin Emblem,Thrill,Festival of Blood,Lethal Ignition,Tough Boots,Blade of the Heptaseas,War Axe,Malefic Roar,Sea Halberd,Endless Battle
+Fanny,Assassin,"Chase, Finisher",3,Retribution,Custom Fighter Emblem,Rupture,Festival of Blood,Killing Spree,Tough Boots,War Axe,Sky Piercer,Malefic Roar,Brute Force Breastplate,Queen's Wings
+Faramis,"Support, Mage","Guard, Charge",1,Flicker,Custom Assassin Emblem,Rupture,Weapon Master,Impure Rage,Arcane Boots,Glowing Wand,Holy Crystal,Blood Wings,Lightning Truncheon,Divine Glaive
+Faramis,"Support, Mage","Guard, Charge",2,Revitalize,Custom Support Emblem,Agility,Wilderness Blessing,Focusing Mark,Arcane Boots,Fleeting Time,Flask of the Oasis,Genius Wand,Holy Crystal,Divine Glaive
+Faramis,"Support, Mage","Guard, Charge",3,Flameshot,Custom Mage Emblem,Inspire,Weapon Master,Impure Rage,Arcane Boots,Enchanted Talisman,Sky Piercer,Holy Crystal,Starlium Scythe,Clock of Destiny
+Floryn,Support,"Poke, Guard",1,Flicker,Custom Support Emblem,Agility,Pull Yourself Together,Focusing Mark,Demon Shoes,Flask of the Oasis,Oracle,Holy Crystal,Fleeting Time,Immortality
+Floryn,Support,"Poke, Guard",2,Revitalize,Custom Support Emblem,Thrill,Weapon Master,Temporal Reign,Demon Shoes,Enchanted Talisman,Fleeting Time,Flask of the Oasis,Blood Wings,Dominance Ice
+Floryn,Support,"Poke, Guard",3,Revitalize,Custom Support Emblem,Inspire,Pull Yourself Together,Focusing Mark,Demon Shoes,Flask of the Oasis,Fleeting Time,Holy Crystal,Glowing Wand,Blood Wings
+Franco,Tank,"Initiator, Control",1,Flicker,Custom Assassin Emblem,War Cry,Master Assassin,Rupture,Sky Piercer,Blade of the Heptaseas,Malefic Roar,Blade of Despair,Sea Halberd,Great Dragon Spear
+Franco,Tank,"Initiator, Control",2,Flicker,Custom Support Emblem,Focusing Mark,Pull Yourself Together,Inspire,Rapid Boots,Enchanted Talisman,Fleeting Time,Dominance Ice,Antique Cuirass,Athena's Shield
+Franco,Tank,"Initiator, Control",3,Petrify,Custom Tank Emblem,Inspire,Weapon Master,Concussive Blast,Rapid Boots,Fleeting Time,Molten Essence,Thunder Belt,Brute Force Breastplate,Blade of Despair
+Fredrinn,"Fighter, Tank","Damage, Chase",1,Ice Retribution,Custom Fighter Emblem,Brave Smite,Seasoned Hunter,Vitality,Tough Boots,Oracle,Queen's Wings,Guardian Helmet,Brute Force Breastplate,Chastise Pauldron
+Fredrinn,"Fighter, Tank","Damage, Chase",2,Bloody Retribution,Custom Tank Emblem,Firmness,Impure Rage,Festival of Blood,Tough Boots,Brute Force Breastplate,Chastise Pauldron,Oracle,Guardian Helmet,Athena's Shield
+Fredrinn,"Fighter, Tank","Damage, Chase",3,Retribution,Custom Tank Emblem,Thrill,Seasoned Hunter,Concussive Blast,Warrior Boots,War Axe,Queen's Wings,Brute Force Breastplate,Guardian Helmet,Antique Cuirass
+Freya,Fighter,"Chase, Damage",1,Inspire,Custom Fighter Emblem,Rupture,Festival of Blood,Brave Smite,Rapid Boots,Corrosion Scythe,War Axe,Queen's Wings,Oracle,Immortality
+Freya,Fighter,"Chase, Damage",2,Vengeance,Custom Fighter Emblem,War Cry,Festival of Blood,Thrill,Corrosion Scythe,Golden Staff,Demon Hunter Sword,Sea Halberd,Brute Force Breastplate,Queen's Wings
+Freya,Fighter,"Chase, Damage",3,Inspire,Custom Marksman Emblem,Thrill,Weapon Master,War Cry,Tough Boots,Golden Staff,Sea Halberd,Demon Hunter Sword,Blade of Despair,Endless Battle
+Gatotkaca,"Tank, Fighter","Crowd Control, Burst",1,Vengeance,Custom Fighter Emblem,Firmness,Tenacity,Lethal Ignition,Tough Boots,Starlium Scythe,Concentrated Energy,Holy Crystal,Glowing Wand,Immortality
+Gatotkaca,"Tank, Fighter","Crowd Control, Burst",2,Purify,Custom Mage Emblem,Thrill,Festival of Blood,Lethal Ignition,Magic Shoes,Lightning Truncheon,Clock of Destiny,Blood Wings,Dominance Ice,Immortality
+Gatotkaca,"Tank, Fighter","Crowd Control, Burst",3,Revitalize,Custom Tank Emblem,Vitality,Tenacity,Brave Smite,Tough Boots,Antique Cuirass,Radiant Armor,Immortality,Dominance Ice,Guardian Helmet
+Gloo,Tank,"Regen, Control",1,Sprint,Custom Common Emblem,Agility,Tenacity,Brave Smite,Rapid Boots,Cursed Helmet,Dominance Ice,Clock of Destiny,Radiant Armor,Antique Cuirass
+Gloo,Tank,"Regen, Control",2,Flicker,Custom Common Emblem,Agility,Wilderness Blessing,Impure Rage,Rapid Boots,Cursed Helmet,Glowing Wand,Genius Wand,Oracle,Guardian Helmet
+Gloo,Tank,"Regen, Control",3,Flameshot,Custom Common Emblem,Agility,Wilderness Blessing,Brave Smite,Rapid Boots,Cursed Helmet,Glowing Wand,Guardian Helmet,Chastise Pauldron,Radiant Armor
+Gord,Mage,"Poke, Burst",1,Flicker,Custom Mage Emblem,Inspire,Wilderness Blessing,Impure Rage,Magic Shoes,Glowing Wand,Lightning Truncheon,Blood Wings,Ice Queen Wand,Divine Glaive
+Gord,Mage,"Poke, Burst",2,Flicker,Custom Fighter Emblem,Inspire,Festival of Blood,Impure Rage,Concentrated Energy,Demon Shoes,Holy Crystal,Ice Queen Wand,Glowing Wand,Wishing Lantern
+Gord,Mage,"Poke, Burst",3,Flameshot,Custom Mage Emblem,Inspire,Bargain Hunter,Temporal Reign,Sky Piercer,Arcane Boots,Glowing Wand,Ice Queen Wand,Genius Wand,Fleeting Time
+Granger,Marksman,"Burst, Finisher",1,Flicker,Custom Assassin Emblem,Thrill,Bargain Hunter,Temporal Reign,Tough Boots,Sky Piercer,Hunter Strike,Blade of the Heptaseas,Endless Battle,Malefic Roar
+Granger,Marksman,"Burst, Finisher",2,Flicker,Custom Assassin Emblem,Rupture,Weapon Master,Impure Rage,Rapid Boots,Hunter Strike,Sky Piercer,Blade of Despair,Malefic Roar,Immortality
+Granger,Marksman,"Burst, Finisher",3,Vengeance,Custom Fighter Emblem,Thrill,Festival of Blood,Impure Rage,Rapid Boots,Hunter Strike,War Axe,Endless Battle,Malefic Roar,Brute Force Breastplate
+Grock,"Tank, Fighter","Crowd Control, Initiator",1,Flicker,Custom Tank Emblem,Brave Smite,Wilderness Blessing,Firmness,Rapid Boots,Thunder Belt,Dominance Ice,Antique Cuirass,Chastise Pauldron,Blade Armor
+Grock,"Tank, Fighter","Crowd Control, Initiator",2,Flicker,Custom Tank Emblem,Agility,Wilderness Blessing,Concussive Blast,Magic Shoes,Chastise Pauldron,Dominance Ice,Immortality,Athena's Shield,Oracle
+Grock,"Tank, Fighter","Crowd Control, Initiator",3,Petrify,Custom Tank Emblem,Swift,Weapon Master,Temporal Reign,Antique Cuirass,Brute Force Breastplate,Oracle,Guardian Helmet,Thunder Belt,Boots
+Guinevere,Fighter,"Burst, Magic Damage",1,Flicker,Custom Fighter Emblem,Temporal Reign,Festival of Blood,Inspire,Magic Shoes,Concentrated Energy,Clock of Destiny,Brute Force Breastplate,Queen's Wings,Radiant Armor
+Guinevere,Fighter,"Burst, Magic Damage",2,,Custom Mage Emblem,Thrill,Seasoned Hunter,Impure Rage,Concentrated Energy,Magic Shoes,Genius Wand,Cursed Helmet,Brute Force Breastplate,Queen's Wings
+Guinevere,Fighter,"Burst, Magic Damage",3,Flicker,Custom Tank Emblem,Agility,Pull Yourself Together,Concussive Blast,Magic Shoes,Antique Cuirass,Brute Force Breastplate,Chastise Pauldron,Radiant Armor,Dominance Ice
+Gusion,Assassin,"Burst, Magic Damage",1,Flicker,Custom Mage Emblem,Inspire,Bargain Hunter,Lethal Ignition,Arcane Boots,Genius Wand,Holy Crystal,Sky Piercer,Divine Glaive,Wishing Lantern
+Gusion,Assassin,"Burst, Magic Damage",2,Ice Retribution,Custom Assassin Emblem,Rupture,Seasoned Hunter,Lethal Ignition,Arcane Boots,Genius Wand,Sky Piercer,Blood Wings,Glowing Wand,Starlium Scythe
+Gusion,Assassin,"Burst, Magic Damage",3,Ice Retribution,Custom Assassin Emblem,Thrill,Seasoned Hunter,Lethal Ignition,Arcane Boots,Genius Wand,Holy Crystal,Divine Glaive,Lightning Truncheon,Blood Wings
+Hanabi,Marksman,"Finisher, Damage",1,Aegis,Custom Marksman Emblem,Fatal,Bargain Hunter,Weakness Finder,Berserker's Fury,Haas' Claws,Windtalker,Malefic Gun,Blade of Despair,Wind of Nature
+Hanabi,Marksman,"Finisher, Damage",2,Flicker,Custom Fighter Emblem,Swift,Bargain Hunter,Weakness Finder,Sky Piercer,Corrosion Scythe,Golden Staff,Demon Hunter Sword,Malefic Gun,Sea Halberd
+Hanabi,Marksman,"Finisher, Damage",3,Flicker,Custom Marksman Emblem,Fatal,Bargain Hunter,War Cry,Warrior Boots,Windtalker,Haas' Claws,Berserker's Fury,Malefic Gun,Sea Halberd
+Hanzo,Assassin,"Poke, Burst",1,Ice Retribution,Custom Support Emblem,Wilderness Blessing,War Cry,Agility,Rapid Boots,Corrosion Scythe,Golden Staff,Demon Hunter Sword,Malefic Roar,Sea Halberd
+Hanzo,Assassin,"Poke, Burst",2,Retribution,Custom Assassin Emblem,Thrill,Seasoned Hunter,War Cry,Rapid Boots,Corrosion Scythe,War Axe,Golden Staff,Demon Hunter Sword,Immortality
+Hanzo,Assassin,"Poke, Burst",3,,Custom Support Emblem,Agility,Wilderness Blessing,Temporal Reign,Rapid Boots,Thunder Belt,Golden Staff,Endless Battle,Brute Force Breastplate,Rose Gold Meteor
+Harith,Mage,"Chase, Damage",1,Purify,Custom Support Emblem,Inspire,Wilderness Blessing,Lethal Ignition,Magic Shoes,Starlium Scythe,Feather of Heaven,Blood Wings,Concentrated Energy,Divine Glaive
+Harith,Mage,"Chase, Damage",2,Purify,Custom Mage Emblem,Inspire,Bargain Hunter,Impure Rage,Magic Shoes,Starlium Scythe,Feather of Heaven,Holy Crystal,Divine Glaive,Wishing Lantern
+Harith,Mage,"Chase, Damage",3,Flicker,Custom Mage Emblem,Inspire,Bargain Hunter,Impure Rage,Magic Shoes,Lightning Truncheon,Concentrated Energy,Enchanted Talisman,Holy Crystal,Divine Glaive
+Harley,"Assassin, Mage","Burst, Poke",1,Retribution,Custom Mage Emblem,Lethal Ignition,Master Assassin,Inspire,Arcane Boots,Lightning Truncheon,Sky Piercer,Genius Wand,Holy Crystal,Blood Wings
+Harley,"Assassin, Mage","Burst, Poke",2,,Custom Mage Emblem,Seasoned Hunter,Inspire,Impure Rage,Arcane Boots,Sky Piercer,Lightning Truncheon,Holy Crystal,Blood Wings,Divine Glaive
+Harley,"Assassin, Mage","Burst, Poke",3,Bloody Retribution,Custom Assassin Emblem,Rupture,Seasoned Hunter,Lethal Ignition,Arcane Boots,Genius Wand,Holy Crystal,Divine Glaive,Blood Wings,Glowing Wand
+Hayabusa,Assassin,"Chase, Burst",1,Bloody Retribution,Custom Assassin Emblem,Rupture,Seasoned Hunter,Killing Spree,Tough Boots,Sky Piercer,Hunter Strike,Rose Gold Meteor,Blade of Despair,Malefic Roar
+Hayabusa,Assassin,"Chase, Burst",2,Retribution,Custom Assassin Emblem,Thrill,Seasoned Hunter,War Cry,Hunter Strike,Magic Shoes,War Axe,Sea Halberd,Blade of Despair,Malefic Roar
+Hayabusa,Assassin,"Chase, Burst",3,Retribution,Custom Assassin Emblem,Thrill,Seasoned Hunter,War Cry,Magic Shoes,Hunter Strike,War Axe,Sea Halberd,Malefic Roar,Blade of Despair
+Helcurt,Assassin,"Push, Burst",1,Execute,Custom Assassin Emblem,Rupture,Master Assassin,Lethal Ignition,Rapid Boots,Blade of the Heptaseas,Demon Hunter Sword,Malefic Roar,Hunter Strike,Sea Halberd
+Helcurt,Assassin,"Push, Burst",2,Ice Retribution,Custom Assassin Emblem,Rupture,Pull Yourself Together,Lethal Ignition,Rapid Boots,Sky Piercer,Antique Cuirass,Blade of Despair,Blade of the Heptaseas,Sea Halberd
+Helcurt,Assassin,"Push, Burst",3,Petrify,Custom Assassin Emblem,Agility,Master Assassin,Lethal Ignition,Rapid Boots,Demon Hunter Sword,Blade of the Heptaseas,Hunter Strike,Malefic Roar,Sea Halberd
+Hilda,"Fighter, Tank","Damage, Regen",1,Revitalize,Custom Tank Emblem,Vitality,Tenacity,Killing Spree,Rapid Boots,Chastise Pauldron,Radiant Armor,Antique Cuirass,Athena's Shield,Oracle
+Hilda,"Fighter, Tank","Damage, Regen",2,Revitalize,Custom Fighter Emblem,Agility,Festival of Blood,Concussive Blast,Rapid Boots,War Axe,Guardian Helmet,Oracle,Queen's Wings,Dominance Ice
+Hilda,"Fighter, Tank","Damage, Regen",3,Revitalize,Custom Assassin Emblem,Rupture,Master Assassin,Lethal Ignition,Rapid Boots,Blade of the Heptaseas,Hunter Strike,Sea Halberd,Immortality,Dominance Ice
+Hirara,Assassin,"Chase, Finisher",1,Ice Retribution,Custom Assassin Emblem,Inspire,Seasoned Hunter,Impure Rage,Magic Shoes,Hunter Strike,War Axe,Queen's Wings,Blade of Despair,Malefic Roar
+Hirara,Assassin,"Chase, Finisher",2,Retribution,Custom Assassin Emblem,Thrill,Seasoned Hunter,Killing Spree,Hunter Strike,Magic Shoes,Blade of the Heptaseas,Blade of Despair,War Axe,Malefic Roar
+Hirara,Assassin,"Chase, Finisher",3,Retribution,Custom Fighter Emblem,Rupture,Seasoned Hunter,War Cry,Magic Shoes,Hunter Strike,War Axe,Queen's Wings,Malefic Roar,Brute Force Breastplate
+Hylos,Tank,"Guard, Initiator",1,Revitalize,Custom Support Emblem,Inspire,Weapon Master,Focusing Mark,Warrior Boots,Clock of Destiny,Flask of the Oasis,Radiant Armor,Cursed Helmet,Blade Armor
+Hylos,Tank,"Guard, Initiator",2,Revitalize,Custom Common Emblem,Vitality,Wilderness Blessing,Concussive Blast,Rapid Boots,Thunder Belt,Dominance Ice,Clock of Destiny,Radiant Armor,Antique Cuirass
+Hylos,Tank,"Guard, Initiator",3,Vengeance,Custom Tank Emblem,Vitality,Tenacity,Concussive Blast,Tough Boots,Chastise Pauldron,Dominance Ice,Guardian Helmet,Antique Cuirass,Immortality
+Irithel,Marksman,"Finisher, Burst",1,Sprint,Custom Assassin Emblem,Fatal,Bargain Hunter,Quantum Charge,Windtalker,Haas' Claws,Warrior Boots,Berserker's Fury,Malefic Gun,Great Dragon Spear
+Irithel,Marksman,"Finisher, Burst",2,Flicker,Custom Marksman Emblem,Fatal,Wilderness Blessing,Killing Spree,Rapid Boots,Windtalker,Haas' Claws,Berserker's Fury,Sky Piercer,Great Dragon Spear
+Ixia,Marksman,"Finisher, Damage",1,Flicker,Custom Assassin Emblem,Rupture,Weapon Master,Impure Rage,Swift Boots,Corrosion Scythe,Demon Hunter Sword,Blade of Despair,Malefic Roar,Wind of Nature
+Ixia,Marksman,"Finisher, Damage",2,Flicker,Custom Fighter Emblem,Rupture,Bargain Hunter,Impure Rage,Sea Halberd,Tough Boots,Sky Piercer,Corrosion Scythe,Demon Hunter Sword,Rose Gold Meteor
+Ixia,Marksman,"Finisher, Damage",3,Flicker,Custom Assassin Emblem,Thrill,Weapon Master,Quantum Charge,Corrosion Scythe,Sky Piercer,Sea Halberd,Wind of Nature,Malefic Gun,Rose Gold Meteor
+Jawhead,Fighter,"Charge, Burst",1,Petrify,Custom Assassin Emblem,Swift,Master Assassin,Lethal Ignition,Rapid Boots,Sky Piercer,Blade of the Heptaseas,Sea Halberd,Malefic Roar,Blade of Despair
+Jawhead,Fighter,"Charge, Burst",2,Petrify,Custom Tank Emblem,Firmness,Tenacity,Concussive Blast,Rapid Boots,Dominance Ice,Brute Force Breastplate,Antique Cuirass,Chastise Pauldron,Winter Crown
+Johnson,"Tank, Support","Support, Crowd Control",1,Sprint,Custom Tank Emblem,Brave Smite,Tenacity,Inspire,Warrior Boots,Fleeting Time,Dominance Ice,Clock of Destiny,Blade Armor,Oracle
+Johnson,"Tank, Support","Support, Crowd Control",2,Execute,Custom Mage Emblem,Rupture,Master Assassin,Impure Rage,Arcane Boots,Genius Wand,Glowing Wand,Ice Queen Wand,Holy Crystal,Divine Glaive
+Johnson,"Tank, Support","Support, Crowd Control",3,Petrify,Custom Tank Emblem,Concussive Blast,Tenacity,Vitality,Warrior Boots,Dominance Ice,Holy Crystal,Blade Armor,Genius Wand,Antique Cuirass
+Joy,Assassin,"Chase, Damage",1,Ice Retribution,Custom Mage Emblem,Thrill,Weapon Master,Lethal Ignition,Arcane Boots,Holy Crystal,Concentrated Energy,Wishing Lantern,Divine Glaive,Blood Wings
+Joy,Assassin,"Chase, Damage",2,Retribution,Custom Mage Emblem,Rupture,Seasoned Hunter,Temporal Reign,Arcane Boots,Concentrated Energy,Holy Crystal,Wishing Lantern,Divine Glaive,Winter Crown
+Joy,Assassin,"Chase, Damage",3,Bloody Retribution,Custom Assassin Emblem,Rupture,Seasoned Hunter,Lethal Ignition,Arcane Boots,Concentrated Energy,Enchanted Talisman,Holy Crystal,Lightning Truncheon,Genius Wand
+Julian,"Assassin, Fighter","Chase, Magic Damage",1,Inspire,Custom Fighter Emblem,Swift,Festival of Blood,War Cry,Arcane Boots,Feather of Heaven,Windtalker,Concentrated Energy,Divine Glaive,Holy Crystal
+Julian,"Assassin, Fighter","Chase, Magic Damage",2,Flicker,Custom Fighter Emblem,Thrill,Impure Rage,Seasoned Hunter,Clock of Destiny,Feather of Heaven,Genius Wand,Haas' Claws,Holy Crystal,Windtalker
+Julian,"Assassin, Fighter","Chase, Magic Damage",3,Retribution,Custom Mage Emblem,Impure Rage,Seasoned Hunter,Swift,Magic Shoes,Holy Crystal,Feather of Heaven,Concentrated Energy,Blood Wings,Divine Glaive
+Kadita,"Mage, Assassin","Burst, Charge",1,Petrify,Custom Mage Emblem,Inspire,Pull Yourself Together,Lethal Ignition,Magic Shoes,Glowing Wand,Divine Glaive,Wishing Lantern,Lightning Truncheon,Blood Wings
+Kadita,"Mage, Assassin","Burst, Charge",2,Petrify,Custom Mage Emblem,Rupture,Weapon Master,Lethal Ignition,Arcane Boots,Genius Wand,Lightning Truncheon,Glowing Wand,Divine Glaive,Holy Crystal
+Kadita,"Mage, Assassin","Burst, Charge",3,Petrify,Custom Mage Emblem,Rupture,Pull Yourself Together,Lethal Ignition,Arcane Boots,Lightning Truncheon,Glowing Wand,Holy Crystal,Blood Wings,Divine Glaive
+Kagura,Mage,"Poke, Finisher",1,Flameshot,Custom Mage Emblem,Thrill,Weapon Master,War Cry,Genius Wand,Glowing Wand,Starlium Scythe,Queen's Wings,Wishing Lantern,Blood Wings
+Kagura,Mage,"Poke, Finisher",2,Flicker,Custom Assassin Emblem,Lethal Ignition,Bargain Hunter,Rupture,Arcane Boots,Glowing Wand,Genius Wand,Lightning Truncheon,Divine Glaive,Holy Crystal
+Kagura,Mage,"Poke, Finisher",3,Flicker,Custom Mage Emblem,Rupture,Bargain Hunter,Lethal Ignition,Arcane Boots,Glowing Wand,Lightning Truncheon,Divine Glaive,Holy Crystal,Blood Wings
+Kaja,"Support, Fighter","Control, Charge",1,Flicker,Custom Tank Emblem,Agility,Pull Yourself Together,Brave Smite,Rapid Boots,Thunder Belt,Dominance Ice,Antique Cuirass,Athena's Shield,Oracle
+Kaja,"Support, Fighter","Control, Charge",2,Flicker,Custom Mage Emblem,Agility,Wilderness Blessing,Lethal Ignition,Arcane Boots,Starlium Scythe,Holy Crystal,Blood Wings,Divine Glaive,Lightning Truncheon
+Kaja,"Support, Fighter","Control, Charge",3,Flicker,Custom Support Emblem,Firmness,Tenacity,Brave Smite,Tough Boots,Thunder Belt,Clock of Destiny,Glowing Wand,Brute Force Breastplate,Oracle
+Kalea,"Support, Fighter","Control, Regen",1,Flicker,Custom Fighter Emblem,Thrill,Wilderness Blessing,Brave Smite,Warrior Boots,War Axe,Dominance Ice,Chastise Pauldron,Oracle,Immortality
+Kalea,"Support, Fighter","Control, Regen",2,Flicker,Custom Tank Emblem,Wilderness Blessing,Vitality,Concussive Blast,Tough Boots,Oracle,Fleeting Time,Athena's Shield,Antique Cuirass,Immortality
+Kalea,"Support, Fighter","Control, Regen",3,Flicker,Custom Tank Emblem,Vitality,Pull Yourself Together,Concussive Blast,Tough Boots,Fleeting Time,Dominance Ice,Antique Cuirass,Athena's Shield,Chastise Pauldron
+Karina,Assassin,"Finisher, Magic Damage",1,Retribution,Custom Mage Emblem,Rupture,Festival of Blood,Killing Spree,Arcane Boots,Sky Piercer,Lightning Truncheon,Holy Crystal,Blood Wings,Divine Glaive
+Karina,Assassin,"Finisher, Magic Damage",2,Ice Retribution,Custom Mage Emblem,Rupture,Seasoned Hunter,Killing Spree,Sky Piercer,Arcane Boots,Starlium Scythe,Genius Wand,Holy Crystal,Queen's Wings
+Karina,Assassin,"Finisher, Magic Damage",3,Retribution,Custom Mage Emblem,Rupture,Weapon Master,Killing Spree,Arcane Boots,Sky Piercer,Starlium Scythe,Holy Crystal,Blood Wings,Divine Glaive
+Karrie,Marksman,"Finisher, Damage",1,,Custom Marksman Emblem,Swift,Festival of Blood,Quantum Charge,Swift Boots,Corrosion Scythe,Demon Hunter Sword,Golden Staff,Malefic Gun,Endless Battle
+Karrie,Marksman,"Finisher, Damage",2,Inspire,Custom Marksman Emblem,Swift,Weapon Master,Quantum Charge,Corrosion Scythe,Golden Staff,Demon Hunter Sword,War Axe,Malefic Gun,Windtalker
+Karrie,Marksman,"Finisher, Damage",3,Flicker,Custom Fighter Emblem,Swift,Master Assassin,Quantum Charge,Tough Boots,Corrosion Scythe,Golden Staff,Demon Hunter Sword,Malefic Gun,Wind of Nature
+Khaleed,Fighter,"Damage, Regen",1,Flicker,Custom Tank Emblem,Concussive Blast,Wilderness Blessing,Agility,Rapid Boots,Thunder Belt,Dominance Ice,Guardian Helmet,Athena's Shield,Immortality
+Khaleed,Fighter,"Damage, Regen",2,Revitalize,Custom Common Emblem,Agility,Tenacity,Brave Smite,Thunder Belt,Dominance Ice,Oracle,Queen's Wings,Brute Force Breastplate,Immortality
+Khaleed,Fighter,"Damage, Regen",3,Flicker,Custom Tank Emblem,Focusing Mark,Thrill,Wilderness Blessing,Rapid Boots,Oracle,Antique Cuirass,Athena's Shield,Dominance Ice,Queen's Wings
+Khufra,Tank,"Initiator, Crowd Control",1,Flicker,Custom Tank Emblem,Vitality,Tenacity,Concussive Blast,Magic Shoes,Thunder Belt,Cursed Helmet,War Axe,Guardian Helmet,Blade of Despair
+Khufra,Tank,"Initiator, Crowd Control",2,Flicker,Custom Tank Emblem,Vitality,Bargain Hunter,Concussive Blast,Thunder Belt,Tough Boots,Dominance Ice,Molten Essence,Blade of the Heptaseas,Immortality
+Khufra,Tank,"Initiator, Crowd Control",3,Flicker,Custom Tank Emblem,Focusing Mark,Tenacity,Vitality,Rapid Boots,Cursed Helmet,Dominance Ice,Athena's Shield,Brute Force Breastplate,Immortality
+Kimmy,"Marksman, Mage","Damage, Magic Damage",1,Flicker,Custom Mage Emblem,Rupture,Weapon Master,War Cry,Genius Wand,Concentrated Energy,Holy Crystal,Divine Glaive,Wishing Lantern,Berserker's Fury
+Kimmy,"Marksman, Mage","Damage, Magic Damage",2,Flicker,Custom Fighter Emblem,Thrill,Bargain Hunter,Weakness Finder,Arcane Boots,Glowing Wand,Feather of Heaven,Blood Wings,Holy Crystal,Divine Glaive
+Kimmy,"Marksman, Mage","Damage, Magic Damage",3,Execute,Custom Mage Emblem,Agility,Bargain Hunter,Impure Rage,Arcane Boots,Genius Wand,Glowing Wand,Ice Queen Wand,Holy Crystal,Blood Wings
+Lancelot,Assassin,"Chase, Burst",1,Ice Retribution,Custom Assassin Emblem,Swift,Seasoned Hunter,Killing Spree,Tough Boots,War Axe,Brute Force Breastplate,Endless Battle,Queen's Wings,Malefic Roar
+Lancelot,Assassin,"Chase, Burst",2,Execute,Custom Assassin Emblem,Thrill,Festival of Blood,Killing Spree,War Axe,Demon Shoes,Brute Force Breastplate,Queen's Wings,Rose Gold Meteor,Endless Battle
+Lancelot,Assassin,"Chase, Burst",3,Retribution,Custom Assassin Emblem,Firmness,Bargain Hunter,Temporal Reign,Demon Shoes,Endless Battle,Brute Force Breastplate,Malefic Roar,Antique Cuirass,Fleeting Time
+Lapu-Lapu,Fighter,"Chase, Burst",1,Flicker,Custom Fighter Emblem,Thrill,Festival of Blood,Brave Smite,Tough Boots,War Axe,Dominance Ice,Queen's Wings,Brute Force Breastplate,Antique Cuirass
+Lapu-Lapu,Fighter,"Chase, Burst",2,Vengeance,Custom Fighter Emblem,Agility,Festival of Blood,Brave Smite,War Axe,Queen's Wings,Oracle,Dominance Ice,Immortality,Brute Force Breastplate
+Lapu-Lapu,Fighter,"Chase, Burst",3,Flicker,Custom Fighter Emblem,Thrill,Festival of Blood,War Cry,War Axe,Endless Battle,Oracle,Queen's Wings,Brute Force Breastplate,Sea Halberd
+Layla,Marksman,"Finisher, Damage",1,Inspire,Custom Marksman Emblem,Fatal,Weapon Master,Quantum Charge,Swift Boots,Berserker's Fury,Windtalker,Demon Hunter Sword,Malefic Gun,Sea Halberd
+Layla,Marksman,"Finisher, Damage",2,Flicker,Custom Assassin Emblem,Agility,Bargain Hunter,Killing Spree,Rapid Boots,Malefic Gun,Windtalker,Haas' Claws,Rose Gold Meteor,Blade of Despair
+Layla,Marksman,"Finisher, Damage",3,Flicker,Custom Assassin Emblem,Fatal,Weapon Master,Weakness Finder,Rapid Boots,Corrosion Scythe,Windtalker,Haas' Claws,Berserker's Fury,Blade of Despair
+Leomord,Fighter,"Chase, Burst",1,Retribution,Custom Marksman Emblem,Thrill,Seasoned Hunter,Killing Spree,Tough Boots,War Axe,Endless Battle,Brute Force Breastplate,Queen's Wings,Malefic Gun
+Leomord,Fighter,"Chase, Burst",2,Ice Retribution,Custom Marksman Emblem,Swift,Seasoned Hunter,Killing Spree,Boots,War Axe,Great Dragon Spear,Queen's Wings,Endless Battle,Rose Gold Meteor
+Leomord,Fighter,"Chase, Burst",3,Ice Retribution,Custom Marksman Emblem,Thrill,Festival of Blood,War Cry,Tough Boots,War Axe,Queen's Wings,Endless Battle,Rose Gold Meteor,Sea Halberd
+Lesley,"Marksman, Assassin","Finisher, Burst",1,Flicker,Custom Fighter Emblem,Fatal,Weapon Master,Lethal Ignition,Berserker's Fury,Sky Piercer,Blade of the Heptaseas,Malefic Roar,Blade of Despair,Endless Battle
+Lesley,"Marksman, Assassin","Finisher, Burst",2,Flicker,Custom Marksman Emblem,Fatal,Weapon Master,Quantum Charge,Blade of the Heptaseas,Sky Piercer,Malefic Gun,Berserker's Fury,Blade of Despair,Malefic Roar
+Lesley,"Marksman, Assassin","Finisher, Burst",3,Flicker,Custom Assassin Emblem,Fatal,Bargain Hunter,Quantum Charge,Rapid Boots,Berserker's Fury,Malefic Gun,Blade of the Heptaseas,Demon Hunter Sword,Blade of Despair
+Ling,Assassin,"Chase, Burst",1,Ice Retribution,Custom Assassin Emblem,Fatal,War Cry,Seasoned Hunter,Tough Boots,Berserker's Fury,Haas' Claws,Blade of Despair,Malefic Roar,Immortality
+Ling,Assassin,"Chase, Burst",2,Ice Retribution,Custom Marksman Emblem,Rupture,Seasoned Hunter,Killing Spree,Magic Shoes,Berserker's Fury,Endless Battle,Blade of Despair,Great Dragon Spear,Immortality
+Ling,Assassin,"Chase, Burst",3,Ice Retribution,Custom Marksman Emblem,Fatal,Seasoned Hunter,Brave Smite,Tough Boots,Thunder Belt,War Axe,Endless Battle,Oracle,Immortality
+Lukas,Fighter,"Regen, Damage",1,Flicker,Custom Fighter Emblem,Rupture,Festival of Blood,Temporal Reign,Hunter Strike,Tough Boots,War Axe,Queen's Wings,Oracle,Malefic Roar
+Lukas,Fighter,"Regen, Damage",2,Revitalize,Custom Fighter Emblem,Firmness,Festival of Blood,Brave Smite,Warrior Boots,War Axe,Dominance Ice,Oracle,Antique Cuirass,Radiant Armor
+Lukas,Fighter,"Regen, Damage",3,Ice Retribution,Custom Fighter Emblem,Thrill,Festival of Blood,Brave Smite,Tough Boots,War Axe,Rose Gold Meteor,Sea Halberd,Queen's Wings,Malefic Roar
+Lunox,Mage,"Burst, Damage",1,Flicker,Custom Mage Emblem,Rupture,Bargain Hunter,Lethal Ignition,Arcane Boots,Genius Wand,Sky Piercer,Glowing Wand,Divine Glaive,Holy Crystal
+Lunox,Mage,"Burst, Damage",2,Flicker,Custom Mage Emblem,Rupture,Bargain Hunter,Impure Rage,Arcane Boots,Lightning Truncheon,Divine Glaive,Sky Piercer,Holy Crystal,Blood Wings
+Lylia,Mage,"Push, Damage",1,Flicker,Custom Mage Emblem,Inspire,Bargain Hunter,Impure Rage,Magic Shoes,Glowing Wand,Genius Wand,Lightning Truncheon,Holy Crystal,Winter Crown
+Lylia,Mage,"Push, Damage",2,Flicker,Custom Mage Emblem,Agility,Bargain Hunter,Impure Rage,Magic Shoes,Glowing Wand,Wishing Lantern,Divine Glaive,Winter Crown,Blood Wings
+Lylia,Mage,"Push, Damage",3,Flameshot,Custom Mage Emblem,Inspire,Bargain Hunter,Impure Rage,Enchanted Talisman,Magic Shoes,Glowing Wand,Ice Queen Wand,Divine Glaive,Brute Force Breastplate
+Marcel,Support,"Crowd Control, Support",1,Revitalize,Custom Support Emblem,Agility,Wilderness Blessing,Focusing Mark,Rapid Boots,Thunder Belt,Flask of the Oasis,Oracle,Blood Wings,Immortality
+Marcel,Support,"Crowd Control, Support",2,Revitalize,Custom Tank Emblem,Agility,Pull Yourself Together,Focusing Mark,Magic Shoes,Thunder Belt,Flask of the Oasis,Oracle,Dominance Ice,Immortality
+Marcel,Support,"Crowd Control, Support",3,Flicker,Custom Support Emblem,Inspire,Wilderness Blessing,Quantum Charge,Tough Boots,Thunder Belt,Oracle,Dominance Ice,Guardian Helmet,Antique Cuirass
+Martis,Fighter,"Finisher, Charge",1,Retribution,Custom Fighter Emblem,Thrill,Festival of Blood,Killing Spree,Tough Boots,Sky Piercer,War Axe,Blade of Despair,Queen's Wings,Malefic Roar
+Martis,Fighter,"Finisher, Charge",2,Retribution,Custom Fighter Emblem,Rupture,Seasoned Hunter,Killing Spree,Sky Piercer,Tough Boots,Endless Battle,Malefic Roar,Blade of Despair,Queen's Wings
+Martis,Fighter,"Finisher, Charge",3,Vengeance,Custom Fighter Emblem,War Cry,Festival of Blood,Swift,Swift Boots,Blade of Despair,War Axe,Oracle,Queen's Wings,Guardian Helmet
+Masha,"Fighter, Tank","Push, Damage",1,Flicker,Custom Assassin Emblem,Lethal Ignition,Master Assassin,Thrill,Blade of the Heptaseas,Rapid Boots,Blade of Despair,Malefic Roar,Sea Halberd,Hunter Strike
+Masha,"Fighter, Tank","Push, Damage",2,Petrify,Custom Assassin Emblem,Vitality,Master Assassin,Lethal Ignition,Tough Boots,Corrosion Scythe,Brute Force Breastplate,Oracle,Sea Halberd,Blade of Despair
+Masha,"Fighter, Tank","Push, Damage",3,Flicker,Custom Assassin Emblem,Thrill,Master Assassin,Lethal Ignition,Rapid Boots,Blade of the Heptaseas,Sky Piercer,Malefic Roar,Sea Halberd,Blade of Despair
+Mathilda,"Support, Assassin","Initiator, Guard",1,Sprint,Custom Support Emblem,Agility,Wilderness Blessing,Quantum Charge,Rapid Boots,Thunder Belt,Queen's Wings,Flask of the Oasis,Brute Force Breastplate,Ice Queen Wand
+Mathilda,"Support, Assassin","Initiator, Guard",2,Aegis,Custom Support Emblem,Agility,Bargain Hunter,Temporal Reign,Enchanted Talisman,Arcane Boots,Holy Crystal,Blood Wings,Brute Force Breastplate,Oracle
+Melissa,Marksman,"Finisher, Damage",1,Inspire,Custom Marksman Emblem,Fatal,Master Assassin,Weakness Finder,Haas' Claws,Windtalker,Malefic Gun,Berserker's Fury,Sea Halberd,Blade of Despair
+Melissa,Marksman,"Finisher, Damage",2,Inspire,Custom Marksman Emblem,Fatal,Bargain Hunter,Focusing Mark,Corrosion Scythe,Demon Hunter Sword,Golden Staff,Sky Piercer,Malefic Gun,Wind of Nature
+Melissa,Marksman,"Finisher, Damage",3,Inspire,Custom Fighter Emblem,Master Assassin,Weakness Finder,Fatal,Windtalker,Warrior Boots,Haas' Claws,Malefic Gun,Rose Gold Meteor,Sea Halberd
+Minotaur,"Tank, Support",Crowd Control,1,Revitalize,Custom Support Emblem,Agility,Wilderness Blessing,Concussive Blast,Flask of the Oasis,Oracle,Magic Shoes,Radiant Armor,Chastise Pauldron,Immortality
+Minotaur,"Tank, Support",Crowd Control,2,Revitalize,Custom Common Emblem,Vitality,Weapon Master,Concussive Blast,Magic Shoes,Oracle,Guardian Helmet,Fleeting Time,Endless Battle,War Axe
+Minotaur,"Tank, Support",Crowd Control,3,Revitalize,Custom Tank Emblem,Wilderness Blessing,Impure Rage,Agility,Tough Boots,Flask of the Oasis,Oracle,Antique Cuirass,Chastise Pauldron,Fleeting Time
+Minsitthar,Fighter,"Initiator, Crowd Control",1,Flicker,Custom Marksman Emblem,Swift,Pull Yourself Together,Weakness Finder,Corrosion Scythe,Tough Boots,Demon Hunter Sword,Golden Staff,Guardian Helmet,Dominance Ice
+Minsitthar,Fighter,"Initiator, Crowd Control",2,Flicker,Custom Tank Emblem,Swift,Tenacity,Weakness Finder,Swift Boots,Windtalker,Berserker's Fury,Corrosion Scythe,Rose Gold Meteor,Haas' Claws
+Minsitthar,Fighter,"Initiator, Crowd Control",3,Flicker,Custom Marksman Emblem,Swift,Weapon Master,Brave Smite,Swift Boots,Windtalker,Golden Staff,Blade of the Heptaseas,Sea Halberd,Malefic Roar
+Miya,Marksman,"Finisher, Damage",1,Inspire,Custom Marksman Emblem,Bargain Hunter,Quantum Charge,Fatal,Windtalker,Berserker's Fury,Haas' Claws,Malefic Gun,Sea Halberd,Blade of Despair
+Miya,Marksman,"Finisher, Damage",2,Inspire,Custom Marksman Emblem,Inspire,Bargain Hunter,Quantum Charge,Berserker's Fury,Corrosion Scythe,Haas' Claws,Malefic Roar,Rose Gold Meteor,Blade of Despair
+Miya,Marksman,"Finisher, Damage",3,Inspire,Custom Marksman Emblem,Agility,Weapon Master,War Cry,Windtalker,Corrosion Scythe,Demon Hunter Sword,Golden Staff,Malefic Gun,Blade of Despair
+Moskov,Marksman,"Finisher, Chase",1,Inspire,Custom Marksman Emblem,Swift,Master Assassin,Quantum Charge,Corrosion Scythe,Swift Boots,Golden Staff,Haas' Claws,Malefic Gun,Sea Halberd
+Moskov,Marksman,"Finisher, Chase",2,Inspire,Custom Marksman Emblem,Quantum Charge,Wilderness Blessing,Swift,Windtalker,Haas' Claws,Berserker's Fury,Great Dragon Spear,Malefic Gun,Sea Halberd
+Moskov,Marksman,"Finisher, Chase",3,Flicker,Custom Fighter Emblem,Quantum Charge,Thrill,Master Assassin,Tough Boots,Corrosion Scythe,Golden Staff,Demon Hunter Sword,Malefic Gun,Rose Gold Meteor
+Nana,Mage,"Poke, Burst",1,Flameshot,Custom Mage Emblem,Rupture,Bargain Hunter,Impure Rage,Arcane Boots,Blood Wings,Lightning Truncheon,Genius Wand,Holy Crystal,Divine Glaive
+Nana,Mage,"Poke, Burst",2,Flicker,Custom Mage Emblem,Inspire,Bargain Hunter,Lethal Ignition,Arcane Boots,Genius Wand,Lightning Truncheon,Holy Crystal,Divine Glaive,Blood Wings
+Nana,Mage,"Poke, Burst",3,Flameshot,Custom Assassin Emblem,Rupture,Wilderness Blessing,Lethal Ignition,Arcane Boots,Genius Wand,Enchanted Talisman,Blood Wings,Lightning Truncheon,Holy Crystal
+Natalia,Assassin,"Chase, Finisher",1,,Custom Assassin Emblem,Fatal,Lethal Ignition,Master Assassin,Rapid Boots,Blade of the Heptaseas,Berserker's Fury,Great Dragon Spear,Blade of Despair,Malefic Roar
+Natalia,Assassin,"Chase, Finisher",2,Execute,Custom Assassin Emblem,Fatal,Master Assassin,Lethal Ignition,Rapid Boots,Blade of the Heptaseas,Berserker's Fury,Hunter Strike,Blade of Despair,Malefic Roar
+Natalia,Assassin,"Chase, Finisher",3,Execute,Custom Assassin Emblem,Fatal,Master Assassin,Lethal Ignition,Blade of the Heptaseas,Rapid Boots,Berserker's Fury,Endless Battle,Great Dragon Spear,Sea Halberd
+Natan,Marksman,"Burst, Magic Damage",1,Aegis,Custom Mage Emblem,Swift,Bargain Hunter,Weakness Finder,Feather of Heaven,Arcane Boots,Concentrated Energy,Windtalker,Holy Crystal,Divine Glaive
+Natan,Marksman,"Burst, Magic Damage",2,Flicker,Custom Fighter Emblem,Weakness Finder,Bargain Hunter,Inspire,Arcane Boots,Feather of Heaven,Demon Hunter Sword,Windtalker,Holy Crystal,Divine Glaive
+Natan,Marksman,"Burst, Magic Damage",3,Flicker,Custom Mage Emblem,Bargain Hunter,Impure Rage,Inspire,Swift Boots,Feather of Heaven,Golden Staff,Windtalker,Starlium Scythe,Concentrated Energy
+Nolan,Assassin,"Chase, Burst",1,Retribution,Custom Assassin Emblem,Rupture,Seasoned Hunter,Killing Spree,Blade of the Heptaseas,Magic Shoes,Hunter Strike,Sky Piercer,Malefic Gun,Blade of Despair
+Nolan,Assassin,"Chase, Burst",2,Retribution,Custom Assassin Emblem,Thrill,Seasoned Hunter,Lethal Ignition,Blade of the Heptaseas,Tough Boots,Hunter Strike,Blade of Despair,Malefic Roar,Great Dragon Spear
+Novaria,Mage,"Burst, Poke",1,Flicker,Custom Assassin Emblem,Rupture,Weapon Master,Impure Rage,Arcane Boots,Sky Piercer,Lightning Truncheon,Holy Crystal,Genius Wand,Divine Glaive
+Novaria,Mage,"Burst, Poke",2,Flicker,Custom Mage Emblem,Inspire,Bargain Hunter,Lethal Ignition,Arcane Boots,Sky Piercer,Holy Crystal,Divine Glaive,Genius Wand,Demon Hunter Sword
+Novaria,Mage,"Burst, Poke",3,Flameshot,Custom Assassin Emblem,Impure Rage,Rupture,Weapon Master,Arcane Boots,Sky Piercer,Lightning Truncheon,Holy Crystal,Wishing Lantern,Divine Glaive
+Obsidia,Marksman,"Finisher, Damage",1,Inspire,Custom Assassin Emblem,Weapon Master,Swift,Weakness Finder,Windtalker,Corrosion Scythe,Haas' Claws,Golden Staff,Demon Hunter Sword,Blade of Despair
+Obsidia,Marksman,"Finisher, Damage",2,Aegis,Custom Marksman Emblem,Swift,Tenacity,Weakness Finder,Swift Boots,Corrosion Scythe,Golden Staff,Demon Hunter Sword,Malefic Gun,Wind of Nature
+Obsidia,Marksman,"Finisher, Damage",3,Flicker,Custom Marksman Emblem,Fatal,Killing Spree,Bargain Hunter,Windtalker,Haas' Claws,Sky Piercer,Berserker's Fury,Sea Halberd,Malefic Gun
+Odette,Mage,"Burst, Poke",1,Flicker,Custom Mage Emblem,Festival of Blood,Lethal Ignition,Inspire,Sky Piercer,Arcane Boots,Holy Crystal,Blood Wings,Concentrated Energy,Queen's Wings
+Odette,Mage,"Burst, Poke",2,Sprint,Custom Mage Emblem,Inspire,Bargain Hunter,Impure Rage,Arcane Boots,Genius Wand,Lightning Truncheon,Divine Glaive,Holy Crystal,Glowing Wand
+Odette,Mage,"Burst, Poke",3,Flicker,Custom Mage Emblem,Rupture,Bargain Hunter,Lethal Ignition,Arcane Boots,Glowing Wand,Concentrated Energy,Holy Crystal,Sky Piercer,Winter Crown
+Paquito,"Fighter, Assassin","Chase, Damage",1,Flicker,Custom Assassin Emblem,Rupture,Weapon Master,Impure Rage,Tough Boots,Hunter Strike,War Axe,Queen's Wings,Malefic Roar,Immortality
+Paquito,"Fighter, Assassin","Chase, Damage",2,Flicker,Custom Fighter Emblem,Thrill,Festival of Blood,Quantum Charge,Tough Boots,War Axe,Brute Force Breastplate,Oracle,Queen's Wings,Dominance Ice
+Paquito,"Fighter, Assassin","Chase, Damage",3,Flicker,Custom Fighter Emblem,Thrill,Festival of Blood,Lethal Ignition,Tough Boots,Hunter Strike,Malefic Roar,Sea Halberd,Blade of Despair,Rose Gold Meteor
+Pharsa,Mage,"Burst, Poke",1,Flameshot,Custom Mage Emblem,Wilderness Blessing,Agility,Lethal Ignition,Magic Shoes,Lightning Truncheon,Sky Piercer,Ice Queen Wand,Blood Wings,Holy Crystal
+Pharsa,Mage,"Burst, Poke",2,Flicker,Custom Mage Emblem,Wilderness Blessing,Lethal Ignition,Rupture,Arcane Boots,Glowing Wand,Lightning Truncheon,Divine Glaive,Holy Crystal,Winter Crown
+Pharsa,Mage,"Burst, Poke",3,Flicker,Custom Mage Emblem,Pull Yourself Together,Agility,Lethal Ignition,Arcane Boots,Enchanted Talisman,Sky Piercer,Holy Crystal,Divine Glaive,Blood Wings
+Phoveus,Fighter,"Regen, Damage",1,Flicker,Custom Fighter Emblem,Vitality,Festival of Blood,Brave Smite,Thunder Belt,Warrior Boots,War Axe,Chastise Pauldron,Oracle,Antique Cuirass
+Phoveus,Fighter,"Regen, Damage",2,Vengeance,Custom Fighter Emblem,Brave Smite,Festival of Blood,Firmness,Tough Boots,Thunder Belt,War Axe,Brute Force Breastplate,Oracle,Queen's Wings
+Phoveus,Fighter,"Regen, Damage",3,Vengeance,Custom Fighter Emblem,Agility,Festival of Blood,Brave Smite,Thunder Belt,War Axe,Queen's Wings,Dominance Ice,Chastise Pauldron,Immortality
+Rafaela,Support,"Regen, Guard",1,Flicker,Custom Support Emblem,Inspire,Wilderness Blessing,Focusing Mark,Rapid Boots,Enchanted Talisman,Flask of the Oasis,Clock of Destiny,Oracle,Holy Crystal
+Rafaela,Support,"Regen, Guard",2,Purify,Custom Tank Emblem,Vitality,Tenacity,Brave Smite,Brute Force Breastplate,Chastise Pauldron,Oracle,Enchanted Talisman,Queen's Wings,Holy Crystal
+Rafaela,Support,"Regen, Guard",3,Arrival,Custom Support Emblem,Agility,Wilderness Blessing,Quantum Charge,Enchanted Talisman,Blood Wings,Ice Queen Wand,Magic Shoes,Oracle,Queen's Wings
+Roger,"Fighter, Marksman","Finisher, Burst",1,Retribution,Custom Assassin Emblem,Swift,Seasoned Hunter,War Cry,Tough Boots,Thunder Belt,War Axe,Windtalker,Haas' Claws,Rose Gold Meteor
+Roger,"Fighter, Marksman","Finisher, Burst",2,Ice Retribution,Custom Fighter Emblem,Fatal,Seasoned Hunter,Killing Spree,Tough Boots,War Axe,Brute Force Breastplate,Haas' Claws,Rose Gold Meteor,Malefic Roar
+Ruby,Fighter,"Crowd Control, Regen",1,Flicker,Custom Fighter Emblem,Vitality,Festival of Blood,Brave Smite,Tough Boots,War Axe,Queen's Wings,Endless Battle,Sea Halberd,Oracle
+Ruby,Fighter,"Crowd Control, Regen",2,Flicker,Custom Fighter Emblem,Thrill,Festival of Blood,Brave Smite,War Axe,Tough Boots,Brute Force Breastplate,Queen's Wings,Oracle,Sea Halberd
+Ruby,Fighter,"Crowd Control, Regen",3,Flicker,Custom Fighter Emblem,Brave Smite,Festival of Blood,Agility,Tough Boots,War Axe,Dominance Ice,Queen's Wings,Chastise Pauldron,Athena's Shield
+Saber,Assassin,"Charge, Finisher",1,Inspire,Custom Assassin Emblem,Thrill,Bargain Hunter,Weakness Finder,Magic Shoes,Hunter Strike,Sky Piercer,Endless Battle,Blade of Despair,Sea Halberd
+Saber,Assassin,"Charge, Finisher",2,Retribution,Custom Assassin Emblem,Swift,Seasoned Hunter,Temporal Reign,Magic Shoes,War Axe,Sky Piercer,Endless Battle,Antique Cuirass,Immortality
+Saber,Assassin,"Charge, Finisher",3,Retribution,Custom Assassin Emblem,Rupture,Wilderness Blessing,Killing Spree,Rapid Boots,Blade of the Heptaseas,Sky Piercer,Hunter Strike,Blade of Despair,Malefic Roar
+Selena,"Assassin, Mage","Initiator, Finisher",1,,Custom Mage Emblem,Inspire,Weapon Master,Impure Rage,Arcane Boots,Enchanted Talisman,Lightning Truncheon,Wishing Lantern,Glowing Wand,Divine Glaive
+Selena,"Assassin, Mage","Initiator, Finisher",2,Flicker,Custom Mage Emblem,Agility,Bargain Hunter,Impure Rage,Enchanted Talisman,Clock of Destiny,Lightning Truncheon,Starlium Scythe,Wishing Lantern,Holy Crystal
+Selena,"Assassin, Mage","Initiator, Finisher",3,Revitalize,Custom Support Emblem,Agility,Wilderness Blessing,Lethal Ignition,Magic Shoes,Enchanted Talisman,Flask of the Oasis,Starlium Scythe,Glowing Wand,Immortality
+Silvanna,Fighter,"Initiator, Magic Damage",1,Petrify,Custom Mage Emblem,Rupture,Weapon Master,Lethal Ignition,Arcane Boots,Genius Wand,Feather of Heaven,Concentrated Energy,Holy Crystal,Winter Crown
+Silvanna,Fighter,"Initiator, Magic Damage",2,Petrify,Custom Mage Emblem,Thrill,Pull Yourself Together,Concussive Blast,Arcane Boots,Feather of Heaven,Chastise Pauldron,Guardian Helmet,Concentrated Energy,Immortality
+Silvanna,Fighter,"Initiator, Magic Damage",3,Petrify,Custom Mage Emblem,Swift,Master Assassin,Lethal Ignition,Arcane Boots,Feather of Heaven,Concentrated Energy,Winter Crown,Dominance Ice,Divine Glaive
+Sora,"Fighter, Assassin","Charge, Burst",1,Ice Retribution,Custom Assassin Emblem,Firmness,Master Assassin,Brave Smite,Rapid Boots,War Axe,Antique Cuirass,Dominance Ice,Oracle,Guardian Helmet
+Sora,"Fighter, Assassin","Charge, Burst",2,Flicker,Custom Fighter Emblem,Brave Smite,Festival of Blood,Thrill,Tough Boots,Queen's Wings,Oracle,Guardian Helmet,Brute Force Breastplate,Winter Crown
+Sora,"Fighter, Assassin","Charge, Burst",3,Flicker,Custom Fighter Emblem,Vitality,War Cry,Festival of Blood,Queen's Wings,Tough Boots,War Axe,Dominance Ice,Guardian Helmet,Oracle
+Sun,Fighter,"Push, Damage",1,Petrify,Custom Common Emblem,Swift,Master Assassin,War Cry,Windtalker,Rapid Boots,Corrosion Scythe,Haas' Claws,Demon Hunter Sword,Sea Halberd
+Sun,Fighter,"Push, Damage",2,Petrify,Custom Support Emblem,Agility,Wilderness Blessing,Temporal Reign,Rapid Boots,Windtalker,Corrosion Scythe,Great Dragon Spear,Endless Battle,Sea Halberd
+Sun,Fighter,"Push, Damage",3,Bloody Retribution,Custom Assassin Emblem,Fatal,Seasoned Hunter,Killing Spree,Magic Shoes,Corrosion Scythe,Windtalker,Rose Gold Meteor,Blade of Despair,Haas' Claws
+Suyou,"Assassin, Fighter","Chase, Burst",1,Bloody Retribution,Custom Marksman Emblem,Thrill,Seasoned Hunter,Lethal Ignition,Magic Shoes,Hunter Strike,War Axe,Malefic Roar,Brute Force Breastplate,Blade of Despair
+Suyou,"Assassin, Fighter","Chase, Burst",2,Ice Retribution,Custom Assassin Emblem,Thrill,Seasoned Hunter,Impure Rage,Magic Shoes,Hunter Strike,War Axe,Queen's Wings,Malefic Roar,Blade of Despair
+Suyou,"Assassin, Fighter","Chase, Burst",3,Ice Retribution,Custom Marksman Emblem,Thrill,Seasoned Hunter,Killing Spree,Magic Shoes,Hunter Strike,War Axe,Malefic Roar,Queen's Wings,Rose Gold Meteor
+Terizla,"Fighter, Tank","Burst, Crowd Control",1,Vengeance,Custom Fighter Emblem,Brave Smite,Festival of Blood,Agility,Tough Boots,War Axe,Queen's Wings,Oracle,Dominance Ice,Guardian Helmet
+Terizla,"Fighter, Tank","Burst, Crowd Control",2,Flicker,Custom Fighter Emblem,Festival of Blood,Vitality,Brave Smite,Tough Boots,Queen's Wings,Dominance Ice,Brute Force Breastplate,Oracle,Guardian Helmet
+Terizla,"Fighter, Tank","Burst, Crowd Control",3,Vengeance,Custom Fighter Emblem,Thrill,Bargain Hunter,War Cry,Tough Boots,War Axe,Oracle,Queen's Wings,Brute Force Breastplate,Dominance Ice
+Thamuz,Fighter,"Chase, Damage",1,Vengeance,Custom Support Emblem,Thrill,Festival of Blood,Temporal Reign,Tough Boots,Corrosion Scythe,Demon Hunter Sword,Oracle,Golden Staff,Guardian Helmet
+Thamuz,Fighter,"Chase, Damage",2,Vengeance,Custom Support Emblem,Agility,Festival of Blood,Temporal Reign,War Axe,Great Dragon Spear,Corrosion Scythe,Demon Hunter Sword,Chastise Pauldron,Guardian Helmet
+Thamuz,Fighter,"Chase, Damage",3,Retribution,Custom Fighter Emblem,Thrill,Festival of Blood,Temporal Reign,Tough Boots,Corrosion Scythe,War Axe,Oracle,Queen's Wings,Guardian Helmet
+Tigreal,Tank,Crowd Control,1,Flicker,Custom Common Emblem,Vitality,Wilderness Blessing,Concussive Blast,Rapid Boots,Fleeting Time,Dominance Ice,Guardian Helmet,Oracle,Immortality
+Tigreal,Tank,Crowd Control,2,Flicker,Custom Tank Emblem,Vitality,Pull Yourself Together,Focusing Mark,Tough Boots,Dominance Ice,Fleeting Time,Antique Cuirass,Athena's Shield,Immortality
+Tigreal,Tank,Crowd Control,3,Flicker,Custom Tank Emblem,Wilderness Blessing,Agility,Concussive Blast,Tough Boots,Antique Cuirass,Dominance Ice,Fleeting Time,Guardian Helmet,Chastise Pauldron
+Uranus,Tank,Regen,1,Flicker,Custom Common Emblem,Agility,Tenacity,Brave Smite,Tough Boots,Oracle,Chastise Pauldron,Radiant Armor,Antique Cuirass,Guardian Helmet
+Uranus,Tank,Regen,2,Revitalize,Custom Common Emblem,Impure Rage,Tenacity,Agility,Tough Boots,Thunder Belt,Oracle,Antique Cuirass,Athena's Shield,Radiant Armor
+Uranus,Tank,Regen,3,Revitalize,Custom Common Emblem,Vitality,Tenacity,Lethal Ignition,Demon Shoes,Clock of Destiny,Lightning Truncheon,Guardian Helmet,Chastise Pauldron,Oracle
+Vale,Mage,"Burst, Crowd Control",1,Flameshot,Custom Mage Emblem,Agility,Weapon Master,Lethal Ignition,Arcane Boots,Genius Wand,Lightning Truncheon,Blood Wings,Divine Glaive,Holy Crystal
+Vale,Mage,"Burst, Crowd Control",2,Flameshot,Custom Mage Emblem,Inspire,Pull Yourself Together,Concussive Blast,Lightning Truncheon,Wishing Lantern,Clock of Destiny,Guardian Helmet,Cursed Helmet,Athena's Shield
+Valentina,Mage,"Burst, Finisher",1,Flicker,Custom Common Emblem,Inspire,Wilderness Blessing,Brave Smite,Tough Boots,Queen's Wings,Oracle,Brute Force Breastplate,Antique Cuirass,Athena's Shield
+Valentina,Mage,"Burst, Finisher",2,Flicker,Custom Mage Emblem,Inspire,Wilderness Blessing,Impure Rage,Magic Shoes,Glowing Wand,Blood Wings,Lightning Truncheon,Divine Glaive,Holy Crystal
+Valentina,Mage,"Burst, Finisher",3,Flicker,Custom Tank Emblem,Thrill,Tenacity,Temporal Reign,Glowing Wand,Magic Shoes,Queen's Wings,Brute Force Breastplate,Radiant Armor,Immortality
+Valir,Mage,"Damage, Guard",1,Flameshot,Custom Common Emblem,Inspire,Bargain Hunter,Weakness Finder,Magic Shoes,Enchanted Talisman,Ice Queen Wand,Thunder Belt,Wishing Lantern,Brute Force Breastplate
+Valir,Mage,"Damage, Guard",2,Flicker,Custom Mage Emblem,Agility,Pull Yourself Together,Impure Rage,Demon Shoes,Ice Queen Wand,Glowing Wand,Dominance Ice,Athena's Shield,Immortality
+Valir,Mage,"Damage, Guard",3,Flicker,Custom Common Emblem,Thrill,Festival of Blood,Temporal Reign,Enchanted Talisman,Concentrated Energy,Ice Queen Wand,Holy Crystal,Divine Glaive,Blood Wings
+Vexana,Mage,"Poke, Control",1,Flicker,Custom Mage Emblem,Impure Rage,Wilderness Blessing,Inspire,Tough Boots,Glowing Wand,Blood Wings,Lightning Truncheon,Divine Glaive,Holy Crystal
+Vexana,Mage,"Poke, Control",2,Flicker,Custom Mage Emblem,Agility,Bargain Hunter,Lethal Ignition,Arcane Boots,Sky Piercer,Lightning Truncheon,Glowing Wand,Divine Glaive,Holy Crystal
+Vexana,Mage,"Poke, Control",3,Revitalize,Custom Mage Emblem,Inspire,Bargain Hunter,Lethal Ignition,Ice Queen Wand,Glowing Wand,Wishing Lantern,Enchanted Talisman,Fleeting Time,Holy Crystal
+Wanwan,Marksman,"Finisher, Burst",1,Inspire,Custom Marksman Emblem,Weakness Finder,Bargain Hunter,Swift,Corrosion Scythe,Windtalker,Haas' Claws,Berserker's Fury,Sea Halberd,Rose Gold Meteor
+Wanwan,Marksman,"Finisher, Burst",2,Inspire,Custom Marksman Emblem,Weakness Finder,Master Assassin,Swift,Corrosion Scythe,Windtalker,Demon Hunter Sword,Malefic Gun,Berserker's Fury,Sea Halberd
+Wanwan,Marksman,"Finisher, Burst",3,Inspire,Custom Marksman Emblem,Fatal,Master Assassin,Weakness Finder,Corrosion Scythe,Swift Boots,Windtalker,Demon Hunter Sword,Berserker's Fury,Wind of Nature
+Xavier,Mage,"Damage, Burst",1,Flameshot,Custom Mage Emblem,Rupture,Bargain Hunter,Lethal Ignition,Arcane Boots,Glowing Wand,Lightning Truncheon,Wishing Lantern,Holy Crystal,Divine Glaive
+Xavier,Mage,"Damage, Burst",2,Flicker,Custom Mage Emblem,Inspire,Weapon Master,Impure Rage,Magic Shoes,Glowing Wand,Enchanted Talisman,Sky Piercer,Brute Force Breastplate,Blood Wings
+Xavier,Mage,"Damage, Burst",3,Flicker,Custom Mage Emblem,Agility,Weapon Master,Impure Rage,Magic Shoes,Enchanted Talisman,Glowing Wand,Wishing Lantern,Divine Glaive,Blood Wings
+Yin,"Fighter, Assassin","Burst, Control",1,Retribution,Custom Marksman Emblem,Thrill,Seasoned Hunter,Lethal Ignition,Blade of Despair,Rapid Boots,War Axe,Hunter Strike,Blade of the Heptaseas,Malefic Roar
+Yin,"Fighter, Assassin","Burst, Control",2,Retribution,Custom Assassin Emblem,Thrill,Weapon Master,Lethal Ignition,Magic Shoes,Hunter Strike,Sky Piercer,Sea Halberd,Malefic Roar,Blade of Despair
+Yin,"Fighter, Assassin","Burst, Control",3,Ice Retribution,Custom Fighter Emblem,Killing Spree,Master Assassin,Thrill,Tough Boots,Sea Halberd,Rose Gold Meteor,Hunter Strike,Queen's Wings,Oracle
+Yve,Mage,"Poke, Burst",1,Flicker,Custom Mage Emblem,Pull Yourself Together,Impure Rage,Rupture,Arcane Boots,Ice Queen Wand,Clock of Destiny,Divine Glaive,Blood Wings,Holy Crystal
+Yve,Mage,"Poke, Burst",2,Flicker,Custom Mage Emblem,Agility,Bargain Hunter,Impure Rage,Magic Shoes,Enchanted Talisman,Glowing Wand,Wishing Lantern,Ice Queen Wand,Blood Wings
+Yve,Mage,"Poke, Burst",3,Purify,Custom Mage Emblem,Inspire,Tenacity,Impure Rage,Tough Boots,Glowing Wand,Lightning Truncheon,Blood Wings,Ice Queen Wand,Divine Glaive
+Zetian,Mage,"Damage, Crowd Control",1,Flicker,Custom Mage Emblem,Rupture,Wilderness Blessing,Impure Rage,Lightning Truncheon,Arcane Boots,Glowing Wand,Divine Glaive,Wishing Lantern,Holy Crystal
+Zetian,Mage,"Damage, Crowd Control",2,Flicker,Custom Mage Emblem,Inspire,Bargain Hunter,Impure Rage,Arcane Boots,Lightning Truncheon,Divine Glaive,Holy Crystal,Wishing Lantern,Blood Wings
+Zetian,Mage,"Damage, Crowd Control",3,Flicker,Custom Mage Emblem,Agility,Weapon Master,Impure Rage,Magic Shoes,Enchanted Talisman,Glowing Wand,Wishing Lantern,Divine Glaive,Blood Wings
+Zhask,Mage,"Chase, Damage",1,Arrival,Custom Tank Emblem,Thrill,Weapon Master,Impure Rage,Arcane Boots,Lightning Truncheon,Genius Wand,Fleeting Time,Holy Crystal,Immortality
+Zhask,Mage,"Chase, Damage",2,Vengeance,Custom Mage Emblem,Rupture,Tenacity,Temporal Reign,Demon Shoes,Windtalker,Glowing Wand,Divine Glaive,Cursed Helmet,Blade Armor
+Zhask,Mage,"Chase, Damage",3,Flicker,Custom Mage Emblem,Agility,Wilderness Blessing,Impure Rage,Magic Shoes,Genius Wand,Glowing Wand,Blood Wings,Divine Glaive,Immortality
+Zhuxin,Mage,"Damage, Crowd Control",1,Flicker,Custom Common Emblem,Agility,Brave Smite,Pull Yourself Together,Demon Shoes,Elegant Gem,Sky Piercer,Lightning Truncheon,Wishing Lantern,Blood Wings
+Zhuxin,Mage,"Damage, Crowd Control",2,Flicker,Custom Common Emblem,Agility,Wilderness Blessing,Brave Smite,Rapid Boots,Clock of Destiny,Sky Piercer,Glowing Wand,Wishing Lantern,Blood Wings
+Zhuxin,Mage,"Damage, Crowd Control",3,Flameshot,Custom Common Emblem,Inspire,Wilderness Blessing,Brave Smite,Tough Boots,Clock of Destiny,Wishing Lantern,Holy Crystal,Glowing Wand,Lightning Truncheon
+Zilong,"Fighter, Assassin","Chase, Damage",1,Inspire,Custom Marksman Emblem,Swift,Master Assassin,War Cry,Rapid Boots,Demon Hunter Sword,Golden Staff,Corrosion Scythe,Malefic Roar,Queen's Wings
+Zilong,"Fighter, Assassin","Chase, Damage",2,Inspire,Custom Assassin Emblem,War Cry,Master Assassin,Fatal,Tough Boots,Windtalker,Haas' Claws,Berserker's Fury,Rose Gold Meteor,Sea Halberd
+Zilong,"Fighter, Assassin","Chase, Damage",3,Inspire,Custom Marksman Emblem,Fatal,Master Assassin,Weakness Finder,Swift Boots,Windtalker,Berserker's Fury,Haas' Claws,Great Dragon Spear,Malefic Roar

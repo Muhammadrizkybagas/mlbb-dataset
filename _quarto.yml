@@ -1,0 +1,61 @@
+project:
+  type: website
+
+# TITLE TOC
+website:
+  title: "Looker Studio Data Analytics Bootcamp"
+  repo-url: https://github.com/Muhammadrizkybagas
+  repo-actions: [source, edit]
+  navbar: false
+  
+# SIDEBAR
+  sidebar:
+    logo: img/logo.png
+    title: "Looker Studio Data Analytics Bootcamp"
+    pinned: true
+    style: "docked"
+    search: true
+    
+    tools:
+      - icon: github
+        href: "https://github.com/Muhammadrizkybagas"
+      - icon: instagram
+        href: "https://instagram.com/mhmmd.rizky_bagas"
+      - icon: globe
+        href: "https://muhammadrizkybagas.github.io/portofolio1/"
+       
+    contents:
+      - text: "**INTRODUCTION**"
+        href: intro.qmd
+      - section: "**BAB**"
+        contents:
+          - text: "1. Data in R"
+            href: chapter1.qmd
+            
+          - text: "2. Understanding Data"
+            href: chapter2.qmd
+            
+          - text: "3. Visualization"
+            href: chapter3.qmd
+            
+          - text: "4. Data Exploration"
+            href: chapter4.qmd
+            
+# END SIDEBAR
+    
+  page-footer:
+    center: "© 2026 AXIS - DATA VISUALIZATION WITH RSTUDIO"
+    right: "Created with ❤️ by Rizky Bagas"
+
+# THEME
+format:
+  html:
+    theme: cosmo
+    link-citations: true
+    css: css/styles.css
+    toc: true
+    number-sections: true
+
+# REFERENCES
+bibliography: referensi/referensi.bib
+csl: referensi/ieee.csl

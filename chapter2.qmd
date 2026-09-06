@@ -1,0 +1,77 @@
+---
+title: "UNDERSTANDING DATA VISUALIZATION"
+date: today
+---
+ 
+
+# Apa yang Ingin Kita Ketahui?
+
+
+# Bar Chart
+
+
+# Line Chart
+
+
+# Scatter Plot
+
+
+# Histogram
+
+
+# Boxplot
+
+
+# Memilih Grafik yang Tepat
+
+
+# Kesalahan dalam Visualisasi
+
+
+# Bad Visualization Challenge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

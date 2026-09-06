@@ -1,0 +1,252 @@
+---
+title: "WORKING WITH DATA IN R STUDIO"
+date: today
+---
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+library(DiagrammeR)
+library(DT)
+library(knitr)
+library(base64enc)
+
+```
+
+
+# Mengenal RStudio
+
+> RStudio adalah Integrated Development Environment (IDE) yang digunakan untuk bekerja dengan bahasa pemrograman R.
+
+RStudio menyediakan beberapa area utama untuk bekerja:
+
+- `Source` → tempat menulis kode dan dokumen.
+- `Console` → tempat menjalankan perintah R.
+- `Environment` → melihat data dan objek yang sedang digunakan.
+- `Files` / `Plots` / `Packages` → mengelola file, melihat grafik, dan library.
+
+
+---
+
+
+# Mengenal R Markdown dan Flex Dashboard
+
+R Markdown memungkinkan teks, kode R, tabel, dan hasil visualisasi ditulis dalam satu dokumen.
+Dokumen tersebut kemudian dapat dirender menjadi sebuah output yang lebih terstruktur.
+
+Di kegiatan ini, kita akan menggunakan **Flexdashboard.**
+
+**Flexdashboard** → package yang digunakan untuk membuat dashboard dari dokumen R Markdown. Dashboard dapat berisi grafik, tabel, angka ringkasan, atau komponen lainnya.
+
+Struktur sederhananya:
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+grViz("
+digraph r_dashboard_flow {
+
+  graph [
+    rankdir = TB,
+    bgcolor = 'transparent',
+    margin = 0.2,
+    nodesep = 0.4,
+    ranksep = 0.4
+  ]
+
+  node [
+    shape = box,
+    style = 'rounded,filled',
+    fontname = 'Arial',
+    fontsize = 16,
+    margin = '0.3,0.18',
+    width = 3.8,
+    color = '#1F4E78',
+    penwidth = 1.8
+  ]
+
+  edge [
+    color = '#555555',
+    penwidth = 1.8,
+    arrowsize = 0.7
+  ]
+
+  RCode [
+    label = 'R Code',
+    fillcolor = '#EAF2F8'
+  ]
+
+  RMarkdown [
+    label = 'R Markdown',
+    fillcolor = '#EAF2F8'
+  ]
+
+  Flexdashboard [
+    label = 'Flexdashboard',
+    fillcolor = '#EAF2F8'
+  ]
+
+  Dashboard [
+    label = 'Dashboard',
+    fillcolor = '#FFF3CD',
+    fontsize = 18
+  ]
+
+  RCode -> RMarkdown
+  RMarkdown -> Flexdashboard
+  Flexdashboard -> Dashboard
+}
+")
+```
+
+Flexdashboard juga menyediakan sistem layout berbasis `row` dan `column`, sehingga beberapa visualisasi dapat disusun dalam satu halaman.
+
+
+## Instalasi Flex Dashboard
+
+Sebelum membuat dashboard, package `flexdashboard` perlu di-install.
+Buka Console di RStudio, kemudian jalankan:
+
+
+`install.packages("flexdashboard")`
+
+
+atau kalian juga bisa install package dengan cara klik bagian Package → Install → cari package `flexdashboard`kemudian install.
+
+Setelah proses instalasi selesai, package dapat digunakan dalam project.
+
+
+`library(flexdashboard)`
+
+
+:::{.callout-warning title="Ingat"}
+Instalasi package cukup dilakukan satu kali pada komputer. Setelah ter-install, package dapat digunakan kembali pada project lainnya.
+:::
+
+
+---
+
+
+## Membuat Flex Dashboard
+
+Cara termudah adalah menggunakan template yang sudah disediakan oleh RStudio.
+
+1. Buka RStudio.
+2. Klik menu **File** > **New File** > **R Markdown**.
+3. Pada jendela yang muncul, pilih tab **From Template** di sebelah kiri.
+4. Pilih **Flex Dashboard** dari daftar, lalu klik **OK**,
+
+
+## Pahami Struktur Dasar
+
+RStudio akan membukakan file .Rmd dengan kerangka dasar. Bagian atas (YAML) akan terlihat seperti ini:
+
+```
+
+---
+title: "Dashboard Saya"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+      
+```
+
+- Simpan file `.Rmd` tersebut.
+- Klik tombol **Knit** di bagian atas editor RStudio untuk melihat hasil pratinjau dashboard dalam bentuk halaman web HTML
+
+
+---
+
+
+# Mengenal Dataset
+
+Sampai tahap ini, kita sudah mengenal RStudio dan cara menggunakan `flexdashboard`.
+Sekarang kita mulai bekerja dengan dataset.
+
+**Dataset** → kumpulan data yang disusun dalam bentuk tertentu sehingga dapat digunakan untuk analisis.
+
+Dalam analisis data, dataset biasanya terdiri dari:
+
+- `Rows` — observasi atau data
+- `Columns` — variabel atau atribut
+
+Contoh:
+
+| **Name**    | **Role**     |
+| ----------- | ------------ |
+| Miya        | Marksman     |
+| Balmond     | Fighter      |
+| Saber       | Assassin     |
+| Alice       | Mage         |
+| Tigreal     | Tank         |
+
+Dataset yang akan digunakan pada latihan ini adalah dataset ini berisi informasi mengenai hero dari game **Mobile Legends**.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+# baca dataset
+data <- read.csv("data/hero.csv", stringsAsFactors = FALSE)
+image_folder <- "img/images-hero"
+image_files <- file.path(image_folder, data$images.hero)
+
+data$images.hero <- sapply(image_files, function(x) {
+  
+  if (file.exists(x)) {
+    paste0(
+      '<img src="',
+      knitr::image_uri(x),
+      '" style="height:80px; width:auto; object-fit:contain; border-radius:100%">'
+    )
+  } else {
+    "Gambar tidak ada"
+  }
+})
+
+# tsmpilkan tabel
+datatable(
+  data,
+  escape = FALSE,
+  filter = "top",
+  rownames = FALSE,
+  options = list(
+    pageLength = 5,
+    scrollX = TRUE
+  )
+)
+
+```
+
+
+# Membaca Data dari GitHub
+
+
+# Menggunakan Raw GitHub URL
+
+
+# Memeriksa Data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

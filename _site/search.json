@@ -1,0 +1,250 @@
+[
+  {
+    "objectID": "chapter1.html",
+    "href": "chapter1.html",
+    "title": "WORKING WITH DATA IN R STUDIO",
+    "section": "",
+    "text": "RStudio adalah Integrated Development Environment (IDE) yang digunakan untuk bekerja dengan bahasa pemrograman R.\n\nRStudio menyediakan beberapa area utama untuk bekerja:\n\nSource → tempat menulis kode dan dokumen.\nConsole → tempat menjalankan perintah R.\nEnvironment → melihat data dan objek yang sedang digunakan.\nFiles / Plots / Packages → mengelola file, melihat grafik, dan library.",
+    "crumbs": [
+      "**BAB**",
+      "1. Data in R"
+    ]
+  },
+  {
+    "objectID": "chapter1.html#apa-itu-looker-studio",
+    "href": "chapter1.html#apa-itu-looker-studio",
+    "title": "LOOKER STUDIO FUNDAMENTALS”",
+    "section": "",
+    "text": "Singkatnya Looker Studio alat gratis dari Google untuk bisa olah data mentah (seperti yang ada di Excel atau Spreadsheet) menjadi Dashboard (laporan visual yang interaktif dan rapi). Daripada pusing melihat ribuan baris angka di tabel, kita bisa langsung melihat pola dan trennya melalui grafik.\nDalam lingkungan bisnis dasbor digunakan untuk:\n\nMemantau KPI\nMengidentifikasi masalah\ndan mendukung pengambilan keputusan.\n\nSebelum membuat Dashboard, penting untuk kita memahami bagaimana data dihubungkan, disusun, dan divisualisasikan di Looker Studio.\nPada materi ini, data yang digunakan adalah dataset sederhana tentang peserta trial class. Dataset ini berisi informasi seperti kelas, jurusan asal, minat prodi, pengalaman menggunakan AI, nilai quiz, dan status follow-up.\n\n\n\n\n\n\nNoteTujuan Materi\n\n\n\nFokus materi ini pada pengenalan jenis grafik yang umum digunakan dalam Dashboard, serta bagaimana memilih dimension dan metric yang sesuai.",
+    "crumbs": [
+      "**BAB**",
+      "1. Looker Studio Fundamentals"
+    ]
+  },
+  {
+    "objectID": "chapter1.html#struktur-dataset",
+    "href": "chapter1.html#struktur-dataset",
+    "title": "LOOKER STUDIO FUNDAMENTALS”",
+    "section": "",
+    "text": "Sebelum membuat visualisasi, kita perlu memahami isi data terlebih dahulu. Setiap kolom dalam dataset memiliki fungsi tertentu. Dataset dapat kita lihat seperti di bawah ini:\n\n\n\n\n\n\nData seperti ini dapat digunakan untuk melihat gambaran umum peserta, minat mereka terhadap bidang tertentu, serta perubahan pemahaman setelah mengikuti kegiatan.\n\n\n\nDi Looker Studio, visualisasi dibuat dengan mengatur dimension dan metric.\nDimension adalah kategori yang digunakan untuk mengelompokkan data. Contohnya adalah kelas, jurusan_asal, minat_prodi_awal, dan pernah_pakai_ai.\nMetric adalah nilai angka yang dihitung. Contohnya adalah jumlah peserta, rata-rata skor, atau total peningkatan nilai.\n\n\n\n\n\n\n\n\nIstilah\nFungsi\nContoh\n\n\n\n\nDimension\nMengelompokkan data\njurusan_asal, kelas, sesi\n\n\nMetric\nMenghitung nilai\nRecord Count, AVG(data_interest_score)\n\n\n\n\n\n\n\n\n\nNoteCara Mudah\n\n\n\nDimension digunakan untuk menjawab “berdasarkan apa?”, sedangkan metric digunakan untuk menjawab “berapa nilainya?”.\n\n\n\n\n\n\nKPI Card digunakan untuk menampilkan angka penting secara ringkas. Komponen ini biasanya diletakkan di bagian atas dasbor karena berisi informasi utama yang ingin langsung dilihat.\nContoh KPI yang digunakan pada dashboard trial class:\n\n\n\n\n\n\n\n\nKPI\nMetric\nKeterangan\n\n\n\n\nTotal Peserta\nRecord Count\nMenghitung jumlah peserta\n\n\nAvg Minat Data\nAVG(data_interest_score)\nRata-rata minat siswa terhadap data\n\n\nAvg Peningkatan Quiz\nAVG(peningkatan_skor)\nRata-rata peningkatan nilai quiz\n\n\nTertarik Sains Data\nAVG(tertarik_sains_data_flag)\nPersentase siswa yang tertarik dengan Sains Data\n\n\n\nKPI tidak digunakan untuk menampilkan detail data, tetapi untuk memberikan gambaran cepat terhadap kondisi umum data.\n\n\n\n\n\n\nTipKapan Menggunakan KPI Card?\n\n\n\nGunakan KPI Card untuk angka utama yang ingin dilihat terlebih dahulu, seperti total peserta, rata-rata nilai, atau persentase tertentu.\n\n\n\n\n\n\nBar chart digunakan untuk membandingkan nilai antar kategori. Grafik ini cocok digunakan jika kita ingin melihat kategori mana yang memiliki jumlah paling tinggi atau paling rendah.\nContoh penggunaan bar chart pada dataset trial class:\n\n\n\n\n\n\n\n\nPertanyaan\nDimension\nMetric\n\n\n\n\nJurusan asal mana yang paling banyak mengikuti trial class?\njurusan_asal\nRecord Count\n\n\nSekolah mana yang memiliki peserta terbanyak?\nsekolah\nRecord Count\n\n\nTarget karier apa yang paling banyak dipilih siswa?\ncareer_goal\nRecord Count\n\n\n\n\n\n\n\n\n\nBar chart mudah dibaca karena perbandingan antar kategori terlihat langsung dari panjang atau tinggi grafiknya.\n\n\n\n\nDonut chart digunakan untuk melihat komposisi atau proporsi dari suatu kategori. Grafik ini cocok digunakan jika jumlah kategorinya tidak terlalu banyak.\nContoh penggunaan donut chart:\n\n\n\n\n\n\n\n\nPertanyaan\nDimension\nMetric\n\n\n\n\nProdi apa yang paling banyak diminati siswa?\nminat_prodi_awal\nRecord Count\n\n\nBerapa banyak siswa yang pernah menggunakan AI?\npernah_pakai_ai\nRecord Count\n\n\nBagaimana status follow-up peserta?\nstatus_follow_up\nRecord Count\n\n\n\n\n\n\n\n\n\nWarningCatatan\n\n\n\nDonut chart sebaiknya digunakan untuk kategori yang jumlahnya sedikit. Jika terlalu banyak kategori, hasil visualisasi akan sulit dibaca.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWarningCatatan\n\n\n\nDonut chart sebaiknya digunakan untuk kategori yang jumlahnya sedikit. Jika terlalu banyak kategori, hasil visualisasi akan sulit dibaca.\n\n\n\n\n\n\nLine chart digunakan untuk melihat perubahan data berdasarkan waktu. Grafik ini biasanya digunakan jika dataset memiliki kolom tanggal.\n\n\n\n\n\n\n\n\nPertanyaan\nDimension\nMetric\n\n\n\n\nBagaimana tren peserta dari waktu ke waktu?\ntanggal\nRecord Count\n\n\nApakah jumlah peserta meningkat setiap sesi?\ntanggal atau sesi\nRecord Count\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWarningCatatan\n\n\n\nLine chart membantu melihat pola naik turun data, terutama jika data memiliki urutan waktu yang jelas.\n\n\n\n\n\n\nTable digunakan untuk menampilkan detail data. Berbeda dengan chart, table tidak hanya menunjukkan ringkasan, tetapi juga menampilkan isi data secara langsung.\nContoh kolom yang dapat ditampilkan dalam table:\n\n\n\nField\nKeterangan\n\n\n\n\nnama_siswa\nNama peserta\n\n\nsekolah\nAsal sekolah\n\n\njurusan_asal\nJurusan asal\n\n\nminat_prodi_awal\nProdi yang diminati\n\n\ndata_interest_score\nSkor minat terhadap data\n\n\nstatus_follow_up\nStatus tindak lanjut\n\n\n\nTable dapat digunakan untuk melihat daftar peserta yang perlu diperhatikan lebih lanjut, misalnya peserta dengan minat tinggi atau status follow-up tertentu.\nSetelah memahami jenis visualisasi dasar, tahap berikutnya adalah membuat dashboard secara langsung di Looker Studio menggunakan dataset trial class.",
+    "crumbs": [
+      "**BAB**",
+      "1. Looker Studio Fundamentals"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#filter-kelas",
+    "href": "chapter2.html#filter-kelas",
+    "title": "PRAKTIK MEMBUAT DASHBOARD DI LOOKER STUDIO",
+    "section": "6.1 Filter Kelas",
+    "text": "6.1 Filter Kelas\n\nKlik Tambahkan kontrol.\nPilih Daftar drop-down.\nLetakkan filter di bagian kiri dashboard.\nPada bagian Dimension, pilih:\n\n\nkelas\n\n\nUbah judul filter menjadi:\n\n\nFilter Kelas\n\n\n\n\n\nVideo",
+    "crumbs": [
+      "**BAB**",
+      "2. Praktikum"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#filter-kelas-1",
+    "href": "chapter2.html#filter-kelas-1",
+    "title": "PRAKTIK MEMBUAT DASHBOARD DI LOOKER STUDIO",
+    "section": "6.2 Filter Kelas",
+    "text": "6.2 Filter Kelas\nBuat filter kedua dengan cara yang sama.\n\n\n\nPengaturan\nIsi\n\n\n\n\nJenis kontrol\nDaftar drop-down\n\n\nKolom kontrol\nkelas\n\n\nMetrik\nRecord Count",
+    "crumbs": [
+      "**BAB**",
+      "2. Praktikum"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#filter-jurusan-asal",
+    "href": "chapter2.html#filter-jurusan-asal",
+    "title": "PRAKTIK MEMBUAT DASHBOARD DI LOOKER STUDIO",
+    "section": "6.3 Filter Jurusan Asal",
+    "text": "6.3 Filter Jurusan Asal\nBuat filter kedua.\n\n\n\nPengaturan\nIsi\n\n\n\n\nJenis kontrol\nDaftar drop-down\n\n\nKolom kontrol\njurusan_asal\n\n\nMetrik\nRecord Count",
+    "crumbs": [
+      "**BAB**",
+      "2. Praktikum"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#filter-minat-prodi",
+    "href": "chapter2.html#filter-minat-prodi",
+    "title": "PRAKTIK MEMBUAT DASHBOARD DI LOOKER STUDIO",
+    "section": "6.4 Filter Minat Prodi",
+    "text": "6.4 Filter Minat Prodi\nBuat filter ketiga.\n\n\n\nPengaturan\nIsi\n\n\n\n\nJenis kontrol\nDaftar drop-down\n\n\nKolom kontrol\nminat_prodi_awal\n\n\nMetrik\nRecord Count\n\n\n\n\n\n\n\n\n\nTipFungsi Filter\n\n\n\nFilter membuat dashboard menjadi interaktif. Saat filter dipilih, angka dan grafik pada dashboard akan ikut berubah.",
+    "crumbs": [
+      "**BAB**",
+      "2. Praktikum"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#kartu-skor-total-peserta",
+    "href": "chapter2.html#kartu-skor-total-peserta",
+    "title": "PRAKTIK MEMBUAT DASHBOARD DI LOOKER STUDIO",
+    "section": "7.1 Kartu Skor Total Peserta",
+    "text": "7.1 Kartu Skor Total Peserta\n\nKlik Tambahkan diagram.\nPilih Kartu skor.\nLetakkan di bagian atas dashboard.\nPada bagian Metric, pilih:\n\n\nRecord Count\n\n\nUbah judul menjadi:\n\n\nTotal Peserta\n\nKartu ini akan menampilkan jumlah peserta berdasarkan data yang sedang aktif.",
+    "crumbs": [
+      "**BAB**",
+      "2. Praktikum"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#kartu-skor-avg-minat-data",
+    "href": "chapter2.html#kartu-skor-avg-minat-data",
+    "title": "PRAKTIK MEMBUAT DASHBOARD DI LOOKER STUDIO",
+    "section": "7.2 Kartu Skor Avg Minat Data",
+    "text": "7.2 Kartu Skor Avg Minat Data\nBuat kartu skor kedua.\n\n\n\nPengaturan\nIsi\n\n\n\n\nDiagram\nKartu skor\n\n\nMetric\ndata_interest_score\n\n\nAggregation\nAverage\n\n\nJudul\nAvg Minat Data\n\n\n\n\n\n\n\n\n\n\nWarningPerhatikan Aggregation\n\n\n\nJika nilai rata-rata terlihat terlalu besar, kemungkinan aggregation masih menggunakan SUM. Ubah aggregation menjadi Average.",
+    "crumbs": [
+      "**BAB**",
+      "2. Praktikum"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#kartu-skor-avg-peningkatan-quiz",
+    "href": "chapter2.html#kartu-skor-avg-peningkatan-quiz",
+    "title": "PRAKTIK MEMBUAT DASHBOARD DI LOOKER STUDIO",
+    "section": "7.3 Kartu Skor Avg Peningkatan Quiz",
+    "text": "7.3 Kartu Skor Avg Peningkatan Quiz\nBuat kartu skor ketiga. Tutorial masih sama dengan yang sebelumnya.\n\n\n\nPengaturan\nIsi\n\n\n\n\nDiagram\nKartu skor\n\n\nMetric\npeningkatan_skor\n\n\nAggregation\nAverage\n\n\nJudul\nAvg Peningkatan Quiz\n\n\n\nKartu ini digunakan untuk melihat rata-rata peningkatan nilai siswa setelah mengikuti materi.",
+    "crumbs": [
+      "**BAB**",
+      "2. Praktikum"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#kartu-skor-tertarik-sains-data",
+    "href": "chapter2.html#kartu-skor-tertarik-sains-data",
+    "title": "PRAKTIK MEMBUAT DASHBOARD DI LOOKER STUDIO",
+    "section": "7.4 Kartu Skor Tertarik Sains Data",
+    "text": "7.4 Kartu Skor Tertarik Sains Data\nBuat kartu skor keempat.\n\n\n\nPengaturan\nIsi\n\n\n\n\nDiagram\nKartu skor\n\n\nMetric\ntertarik_sains_data_flag\n\n\nAggregation\nAverage\n\n\nFormat angka\nPercent\n\n\nJudul\nTertarik Sains Data\n\n\n\n\nJika formatnya belum persen, ubah tipe angka menjadi Percent pada bagian style atau pengaturan angka.",
+    "crumbs": [
+      "**BAB**",
+      "2. Praktikum"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#bar-chart-peserta-per-jurusan",
+    "href": "chapter2.html#bar-chart-peserta-per-jurusan",
+    "title": "PRAKTIK MEMBUAT DASHBOARD DI LOOKER STUDIO",
+    "section": "9.1 Bar Chart Peserta per Jurusan",
+    "text": "9.1 Bar Chart Peserta per Jurusan\nBar chart digunakan untuk membandingkan jumlah peserta berdasarkan jurusan asal.\n\nKlik Tambahkan diagram.\nPilih Diagram batang vertikal.\nAtur data sebagai berikut:\n\n\n\n\nPengaturan\nIsi\n\n\n\n\nDimension\njurusan_asal\n\n\nMetric\nRecord Count\n\n\nJudul\nPeserta per Jurusan\n\n\n\n\nGrafik ini melihat jurusan asal mana yang paling banyak mengikuti trial class.\n\n\n\n\n\n\nTipKapan Memakai Bar Chart?\n\n\n\nGunakan bar chart jika ingin membandingkan jumlah antar kategori, seperti jurusan, sekolah, atau target karier.",
+    "crumbs": [
+      "**BAB**",
+      "2. Praktikum"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#chart-skor-quiz-pre-vs-post",
+    "href": "chapter2.html#chart-skor-quiz-pre-vs-post",
+    "title": "PRAKTIK MEMBUAT DASHBOARD DI LOOKER STUDIO",
+    "section": "9.2 Chart Skor Quiz Pre vs Post",
+    "text": "9.2 Chart Skor Quiz Pre vs Post\nChart ini digunakan untuk membandingkan nilai quiz sebelum dan setelah materi.\n\nKlik Tambahkan diagram.\nPilih Diagram batang atau Diagram kolom.\nGunakan pengaturan berikut:\n\n\n\n\nPengaturan\nIsi\n\n\n\n\nDimension\nsesi\n\n\nMetric 1\nskor_quiz_pre\n\n\nAggregation Metric 1\nAverage\n\n\nMetric 2\nskor_quiz_post\n\n\nAggregation Metric 2\nAverage\n\n\nJudul\nSkor Quiz Pre vs Post\n\n\n\n\nChart ini digunakan untuk melihat apakah nilai siswa meningkat setelah mengikuti trial class.\n\n\n\n\n\n\nNoteCara Membaca\n\n\n\nJika nilai post lebih tinggi daripada nilai pre, berarti setelah mengikuti materi siswa mengalami peningkatan pemahaman.",
+    "crumbs": [
+      "**BAB**",
+      "2. Praktikum"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#tabel-follow-up-siswa",
+    "href": "chapter2.html#tabel-follow-up-siswa",
+    "title": "PRAKTIK MEMBUAT DASHBOARD DI LOOKER STUDIO",
+    "section": "9.3 Tabel Follow-up Siswa",
+    "text": "9.3 Tabel Follow-up Siswa\nTabel digunakan untuk melihat detail data peserta. Pada dashboard ini, tabel digunakan untuk melihat siswa yang bisa di-follow-up.\n\nKlik Tambahkan diagram.\nPilih Tabel.\nMasukkan field berikut:\n\n\n\n\nField\n\n\n\n\nnama_siswa\n\n\nsekolah\n\n\ndata_interest_score\n\n\nstatus_follow_up\n\n\n\n\nUbah judul tabel menjadi:\n\n\nFollow-up Murid\n\n\nTabel ini bisa digunakan untuk melihat siswa yang memiliki skor minat tinggi atau status follow-up tertentu.\n\n\n\n\n\n\nTipContoh Penggunaan\n\n\n\nJika ada siswa dengan minat tinggi dan status follow-up masih hot, data tersebut bisa menjadi prioritas untuk ditindaklanjuti.",
+    "crumbs": [
+      "**BAB**",
+      "2. Praktikum"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#ringkasan-praktikum",
+    "href": "chapter2.html#ringkasan-praktikum",
+    "title": "PRAKTIK MEMBUAT DASHBOARD DI LOOKER STUDIO",
+    "section": "11.1 Ringkasan Praktikum",
+    "text": "11.1 Ringkasan Praktikum\nPada praktikum ini, kita sudah membuat dashboard sederhana di Looker Studio dengan beberapa komponen utama.\n\n\n\nKomponen\nFungsi\n\n\n\n\nFilter dropdown\nMenyaring data berdasarkan kategori tertentu\n\n\nKartu skor\nMenampilkan angka utama\n\n\nDonut chart\nMelihat komposisi data\n\n\nBar chart\nMembandingkan data antar kategori\n\n\nTabel\nMenampilkan detail data peserta\n\n\n\nDashboard ini dapat digunakan untuk membaca gambaran umum peserta trial class, melihat minat siswa, dan membantu menentukan data follow-up.",
+    "crumbs": [
+      "**BAB**",
+      "2. Praktikum"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Introduction to Data Visualization",
+    "section": "",
+    "text": "Pada bagian ini, kita akan mengenal dasar-dasar visualisasi data. Fokusnya bukan pada membuat grafik sebanyak mungkin, tetapi memahami mengapa, kapan, dan bagaimana sebuah grafik digunakan.\n\n1 Apa Itu Data Visualization\nData visualization adalah proses menyajikan data dalam bentuk visual agar informasi lebih mudah dipahami. Visualisasi dapat berupa grafik, diagram, peta, tabel, dashboard\nTujuan utamanya adalah membantu kita melihat informasi yang sulit ditemukan dari data mentah. Visualisasi dapat membantu menemukan:\n\nPola\nPerbedaan\nTren\nHubungan\nNilai yang tidak biasa\n\n\n\n\n\n\n\n\nNoteNote\n\n\n\nVisualisasi bukan sekadar membuat data terlihat menarik tapi dapat digunakan untuk membantu memahami data.\n\n\n\n\n\n2 Mengapa Data Perlu Divisualisasikan\nData dalam bentuk tabel dapat memberikan informasi yang lengkap. Namun, semakin banyak data yang tersedia, semakin sulit pola terlihat secara langsung.\n\nVisualisasi membantu menyederhanakan informasi tersebut.\n\nContohnya, data berikut dapat menunjukkan jumlah peserta berdasarkan kategori:\n\n\n\nKategori\nJumlah\n\n\n\n\nA\n80\n\n\nB\n60\n\n\nC\n40\n\n\nD\n25\n\n\n\nAngka tersebut dapat dibaca dari tabel. Namun, grafik membuat perbedaan antar kategori dapat dikenali dengan lebih cepat.\n\n\n\n\n\n\n\n\n\n\n\n\n3 Data, Informasi, dan Insight\nData, informasi, dan insight memiliki peran yang berbeda.\n\nData → merupakan nilai atau fakta yang dikumpulkan.\nInformasi → memberikan konteks terhadap data. &gt; Contoh: Kategori F memiliki jumlah paling tinggi.\nInsight → pemahaman yang diperoleh setelah data dianalisis. &gt; Kategori F memiliki jumlah angka yang jauh lebih tinggi dibandingkan kategori lainnya.\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipNote\n\n\n\nInsight membutuhkan interpretasi. Grafik yang bagus belum tentu menghasilkan insight yang bagus.\n\n\n\n\n\n4 Memilih Visualisasi yang Tepat\nTidak semua data cocok menggunakan grafik yang sama. Pemilihan visualisasi harus disesuaikan dengan pertanyaan yang ingin dijawab.\n\n\n\nTujuan\nVisualisasi\n\n\n\n\nMembandingkan kategori\nBar Chart\n\n\nMelihat perubahan\nLine Chart\n\n\nMelihat hubungan\nScatter Plot\n\n\nMelihat distribusi\nHistogram\n\n\nMelihat sebaran kelompok\nBoxplot\n\n\n\nContohnya:\n\n\n\n\n\n\nTipBar Chart\n\n\n\nKategori mana yang memiliki nilai paling tinggi?\n\n\n\n\n\n\n\n\nTipLine Chart\n\n\n\nBagaimana perubahan nilai dari waktu ke waktu?\n\n\n\n\n\n\n\n\nTipScatter Plot\n\n\n\nApakah dua variabel memiliki hubungan?\n\n\n\n\n\n\n\n\n\n\n\n5 Contoh Sederhana\nSekarang kita lihat contoh sederhana. Terdapat data jumlah peserta berdasarkan program studi.\n\n\n\nProgram Studi\nJumlah\n\n\n\n\nSains Data\n42\n\n\nInformatika\n35\n\n\nBisnis Digital\n28\n\n\nDesain Produk\n21\n\n\n\nPertanyaan yang ingin dijawab:\n\nProgram studi mana yang memiliki jumlah peserta paling banyak?\n\nKarena fokusnya adalah membandingkan beberapa kategori, Bar Chart dapat digunakan. Hasil visualisasinya akan memperlihatkan perbedaan jumlah dengan lebih jelas.\n\n\n\n\n\n\n\n\n\n\n\n\n6 Apa yang Akan Kita Kerjakan\nDalam kegiatan ini, prosesnya akan berjalan melalui beberapa tahap:\n\n\n\n\n\n\nKita akan menggunakan RStudio untuk menjalankan proses tersebut. Beberapa hal yang akan dipelajari:\n\nMengambil data\nMemahami struktur data\nMembuat visualisasi\nMemilih grafik yang sesuai\nMembaca pola\nMenemukan insight\nMenyajikan hasil analisis\n\nPada bagian berikutnya, kita akan mulai bekerja dengan RStudio dan Dashboard.\n\n\n\n\n\n\n\n\n\n\n\n\nNoteRemember\n\n\n\nStart with a question, not a chart.\nTentukan apa yang ingin diketahui terlebih dahulu. Setelah itu, pilih visualisasi yang paling sesuai.",
+    "crumbs": [
+      "**INTRODUCTION**"
+    ]
+  },
+  {
+    "objectID": "chapter5.html",
+    "href": "chapter5.html",
+    "title": "UNDERSTANDING DATA VISUALIZATION",
+    "section": "",
+    "text": "1 Apa yang Ingin Kita Ketahui?\n\n\n2 Bar Chart\n\n\n3 Line Chart\n\n\n4 Scatter Plot\n\n\n5 Histogram\n\n\n6 Boxplot\n\n\n7 Memilih Grafik yang Tepat\n\n\n8 Kesalahan dalam Visualisasi\n\n\n9 Bad Visualization Challenge"
+  },
+  {
+    "objectID": "chapter3.html",
+    "href": "chapter3.html",
+    "title": "FROM VISUALIZATION TO INSIGHT",
+    "section": "",
+    "text": "1 Membaca Sebuah Grafik\n\n\n2 Menemukan Pola\n\n\n3 Membandingkan Kelompok\n\n\n4 Menemukan Hubungan\n\n\n5 Menulis Insight\n\n\n6 Insight vs Kesimpulan\n\n\n7 Correlation ≠ Causation\n\n\n8 Data Storytelling",
+    "crumbs": [
+      "**BAB**",
+      "3. Visualization"
+    ]
+  },
+  {
+    "objectID": "chapter2.html",
+    "href": "chapter2.html",
+    "title": "UNDERSTANDING DATA VISUALIZATION",
+    "section": "",
+    "text": "1 Apa yang Ingin Kita Ketahui?\n\n\n2 Bar Chart\n\n\n3 Line Chart\n\n\n4 Scatter Plot\n\n\n5 Histogram\n\n\n6 Boxplot\n\n\n7 Memilih Grafik yang Tepat\n\n\n8 Kesalahan dalam Visualisasi\n\n\n9 Bad Visualization Challenge",
+    "crumbs": [
+      "**BAB**",
+      "2. Understanding Data Visualization"
+    ]
+  },
+  {
+    "objectID": "chapter4.html",
+    "href": "chapter4.html",
+    "title": "DATA EXPLORATION CHALLENGE",
+    "section": "",
+    "text": "1 Project Overview\n\n\n2 Pembagian Kelompok\n\n\n3 Dataset\n\n\n4 Project Mission\n\n\n5 Project Requirements\n\n\n6 Panduan Pengerjaan\n\n\n7 Visualisasi Minimum\n\n\n8 Insight dan Kesimpulan\n\n\n9 Publishing to RPubs\n\n\n10 Submission",
+    "crumbs": [
+      "**BAB**",
+      "4. Data Exploration Challenge"
+    ]
+  },
+  {
+    "objectID": "chapter1.html#instalasi-flex-dashboard",
+    "href": "chapter1.html#instalasi-flex-dashboard",
+    "title": "WORKING WITH DATA IN R STUDIO",
+    "section": "2.1 Instalasi Flex Dashboard",
+    "text": "2.1 Instalasi Flex Dashboard\nSebelum membuat dashboard, package flexdashboard perlu di-install. Buka Console di RStudio, kemudian jalankan:\ninstall.packages(\"flexdashboard\")\natau kalian juga bisa install package dengan cara klik bagian Package → Install → cari package flexdashboardkemudian install.\nSetelah proses instalasi selesai, package dapat digunakan dalam project.\nlibrary(flexdashboard)\n\n\n\n\n\n\nWarningIngat\n\n\n\nInstalasi package cukup dilakukan satu kali pada komputer. Setelah ter-install, package dapat digunakan kembali pada project lainnya.",
+    "crumbs": [
+      "**BAB**",
+      "1. Data in R"
+    ]
+  },
+  {
+    "objectID": "chapter1.html#membuat-flex-dashboard",
+    "href": "chapter1.html#membuat-flex-dashboard",
+    "title": "WORKING WITH DATA IN R STUDIO",
+    "section": "2.2 Membuat Flex Dashboard",
+    "text": "2.2 Membuat Flex Dashboard\nCara termudah adalah menggunakan template yang sudah disediakan oleh RStudio.\n\nBuka RStudio.\nKlik menu File &gt; New File &gt; R Markdown.\nPada jendela yang muncul, pilih tab From Template di sebelah kiri.\nPilih Flex Dashboard dari daftar, lalu klik OK,",
+    "crumbs": [
+      "**BAB**",
+      "1. Data in R"
+    ]
+  },
+  {
+    "objectID": "chapter1.html#pahami-struktur-dasar",
+    "href": "chapter1.html#pahami-struktur-dasar",
+    "title": "WORKING WITH DATA IN R STUDIO",
+    "section": "2.3 Pahami Struktur Dasar",
+    "text": "2.3 Pahami Struktur Dasar\nRStudio akan membukakan file .Rmd dengan kerangka dasar. Bagian atas (YAML) akan terlihat seperti ini:\n\n---\ntitle: \"Dashboard Saya\"\noutput: \n  flexdashboard::flex_dashboard:\n    orientation: columns\n    vertical_layout: fill\n---\n      \n\nSimpan file .Rmd tersebut.\nKlik tombol Knit di bagian atas editor RStudio untuk melihat hasil pratinjau dashboard dalam bentuk halaman web HTML",
+    "crumbs": [
+      "**BAB**",
+      "1. Data in R"
+    ]
+  }
+]
