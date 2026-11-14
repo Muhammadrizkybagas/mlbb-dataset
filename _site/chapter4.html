@@ -2,21 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-09-05">
+<meta name="dcterms.date" content="2026-11-14">
 
-<title>DATA EXPLORATION CHALLENGE – Looker Studio Data Analytics Bootcamp</title>
+<title>Publish dan Deploy Bookdown ke Github – DATA VISUALIZATION WITH RSTUDIO</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-104f2622452aeaad4c018a66f4effed7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6622afbb6a93371a7f6aaa1c40799739.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter1.html"><strong>BAB</strong></a></li><li class="breadcrumb-item"><a href="./chapter4.html">4. Data Exploration Challenge</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter1.html"><strong>BAB</strong></a></li><li class="breadcrumb-item"><a href="./chapter4.html">4. Publish Bookdown ke Github</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -103,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
       <img src="./img/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Looker Studio Data Analytics Bootcamp</a> 
+      <a href="./">DATA VISUALIZATION WITH RSTUDIO</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/Muhammadrizkybagas" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
     <a href="https://instagram.com/mhmmd.rizky_bagas" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
@@ -136,25 +139,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. Working with Data in R</span></a>
+ <span class="menu-text">1. Baca Raw Github</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2. Understanding Data Visualization</span></a>
+ <span class="menu-text">2. Memilih Visualisai</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3. From Visualization to Insight</span></a>
+ <span class="menu-text">3. Bookdown di Rstudio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter4.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">4. Data Exploration Challenge</span></a>
+ <span class="menu-text">4. Publish Bookdown ke Github</span></a>
   </div>
 </li>
       </ul>
@@ -169,25 +172,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview"><span class="header-section-number">1</span> Project Overview</a></li>
-  <li><a href="#pembagian-kelompok" id="toc-pembagian-kelompok" class="nav-link" data-scroll-target="#pembagian-kelompok"><span class="header-section-number">2</span> Pembagian Kelompok</a></li>
-  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset"><span class="header-section-number">3</span> Dataset</a></li>
-  <li><a href="#project-mission" id="toc-project-mission" class="nav-link" data-scroll-target="#project-mission"><span class="header-section-number">4</span> Project Mission</a></li>
-  <li><a href="#project-requirements" id="toc-project-requirements" class="nav-link" data-scroll-target="#project-requirements"><span class="header-section-number">5</span> Project Requirements</a></li>
-  <li><a href="#panduan-pengerjaan" id="toc-panduan-pengerjaan" class="nav-link" data-scroll-target="#panduan-pengerjaan"><span class="header-section-number">6</span> Panduan Pengerjaan</a></li>
-  <li><a href="#visualisasi-minimum" id="toc-visualisasi-minimum" class="nav-link" data-scroll-target="#visualisasi-minimum"><span class="header-section-number">7</span> Visualisasi Minimum</a></li>
-  <li><a href="#insight-dan-kesimpulan" id="toc-insight-dan-kesimpulan" class="nav-link" data-scroll-target="#insight-dan-kesimpulan"><span class="header-section-number">8</span> Insight dan Kesimpulan</a></li>
-  <li><a href="#publishing-to-rpubs" id="toc-publishing-to-rpubs" class="nav-link" data-scroll-target="#publishing-to-rpubs"><span class="header-section-number">9</span> Publishing to RPubs</a></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">10</span> Submission</a></li>
+  <li><a href="#persiapan-awal" id="toc-persiapan-awal" class="nav-link active" data-scroll-target="#persiapan-awal"><span class="header-section-number">1</span> Persiapan Awal</a></li>
+  <li><a href="#buat-repository-baru" id="toc-buat-repository-baru" class="nav-link" data-scroll-target="#buat-repository-baru"><span class="header-section-number">2</span> Buat Repository Baru</a></li>
+  <li><a href="#menghubungkan-project-rstudio" id="toc-menghubungkan-project-rstudio" class="nav-link" data-scroll-target="#menghubungkan-project-rstudio"><span class="header-section-number">3</span> Menghubungkan Project RStudio</a></li>
+  <li><a href="#render-project" id="toc-render-project" class="nav-link" data-scroll-target="#render-project"><span class="header-section-number">4</span> Render Project</a></li>
+  <li><a href="#pubslih-ke-github-pages" id="toc-pubslih-ke-github-pages" class="nav-link" data-scroll-target="#pubslih-ke-github-pages"><span class="header-section-number">5</span> Pubslih ke Github Pages</a></li>
+  <li><a href="#update-website-jika-ada-perubahan" id="toc-update-website-jika-ada-perubahan" class="nav-link" data-scroll-target="#update-website-jika-ada-perubahan"><span class="header-section-number">6</span> Update Website Jika Ada Perubahan</a></li>
+  <li><a href="#rangkuman-alur-publikasi" id="toc-rangkuman-alur-publikasi" class="nav-link" data-scroll-target="#rangkuman-alur-publikasi"><span class="header-section-number">7</span> Rangkuman Alur Publikasi</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Muhammadrizkybagas/blob/main/chapter4.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/Muhammadrizkybagas/edit/main/chapter4.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter1.html"><strong>BAB</strong></a></li><li class="breadcrumb-item"><a href="./chapter4.html">4. Data Exploration Challenge</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter1.html"><strong>BAB</strong></a></li><li class="breadcrumb-item"><a href="./chapter4.html">4. Publish Bookdown ke Github</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">DATA EXPLORATION CHALLENGE</h1>
+<h1 class="title">Publish dan Deploy Bookdown ke Github</h1>
 </div>
 
 
@@ -198,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 5, 2026</p>
+      <p class="date">November 14, 2026</p>
     </div>
   </div>
   
@@ -210,35 +210,229 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="project-overview" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Project Overview</h1>
+<p>Pada tahap ini, kita akan mempelajari cara mengunggah project Quarto Book ke GitHub dan mempublikasikannya menggunakan GitHub Pages.</p>
+<blockquote class="blockquote">
+<p>Tujuannya adalah agar buku digital yang sebelumnya hanya bisa dibuka melalui komputer sendiri dapat diakses secara online melalui sebuah link website.</p>
+</blockquote>
+<p>Prosesnya dibagi menjadi dua bagian:</p>
+<ol type="1">
+<li><strong>Push ke GitHub</strong>: Mengunggah seluruh file project Quarto ke repository GitHub.</li>
+<li><strong>Deploy ke GitHub Pages</strong>: Mengubah hasil render Quarto menjadi website HTML yang dapat diakses secara publik.</li>
+</ol>
+<hr>
+<section id="persiapan-awal" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Persiapan Awal</h1>
+<ol type="1">
+<li>Install Git: Unduh dan install <a href="https://git-scm.com/install">Git</a>.</li>
+<li>Konfigurasi Identitas: Buka Git Bash, lalu masukkan nama dan email GitHub Anda:</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Buka Git Bash">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Buka Git Bash
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>git config --global user.name "Username Github Kamu"</code></p>
+<p><code>git config --global user.email "emailkamu@example.com"</code></p>
+<p><img class="fotbar" src="img/gitbash.png"></p>
+<ol start="3" type="1">
+<li>Cek apakah konfigurasi berhasil tersimpan:</li>
+</ol>
+<p><code>git config --global --list</code></p>
+<p>Harusnya ada hasilnya seperti ini:</p>
+<p><code>user.name=Muhammadrizkybagas</code></p>
+<p><code>user.email=muhammadrizkybagas9@gmail.com</code></p>
+<p><img class="fotbar" src="img/gitbash-2.png"></p>
+</div>
+</div>
 </section>
-<section id="pembagian-kelompok" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Pembagian Kelompok</h1>
+<section id="buat-repository-baru" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Buat Repository Baru</h1>
+<p>Pertama, kita perlu membuat repository sebagai tempat penyimpanan project Quarto Book.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Langkah-langkah">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Langkah-langkah
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Buka browser dan kunjungi <h href="https://github.com/">GitHub.</h></li>
+<li>Login menggunakan akun GitHub.</li>
+<li>Klik tombol <strong>New Repository</strong>.</li>
+<li>Isi nama repository, misalnya <code>Bookdown-Quarto</code>.</li>
+<li>Pilih visibility repository menjadi <strong>Public</strong> agar website dapat diakses secara publik.</li>
+<li>Jangan centang Add README, <code>.gitignore</code>, atau License jika project sudah memiliki file sendiri.</li>
+<li>Klik <strong>Create Repository</strong>.`</li>
+</ol>
+</div>
+</div>
+<p><img class="fotbar" src="img/github-1.png"></p>
+<hr>
 </section>
-<section id="dataset" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Dataset</h1>
+<section id="menghubungkan-project-rstudio" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Menghubungkan Project RStudio</h1>
+<p>Setelah repository berhasil dibuat, kita perlu menghubungkan folder project Quarto yang ada di komputer dengan repository GitHub.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Langkah-langkah">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Langkah-langkah
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Gunakan short cut <code>Windows + R</code> untuk membuka <strong>Command Prompt</strong>.</li>
+<li>Pastikan path folder sudah direct ke folder bookdown quarto.</li>
+<li>Jalankan perintah berikut:</li>
+</ol>
+<p><code>git init</code></p>
+<p><code>git add .</code></p>
+<p><code>git commit -m "Initial commit</code></p>
+<p>Perintah tersebut berfungsi untuk:</p>
+<ul>
+<li><code>git init</code>: Mengaktifkan Git pada folder project.</li>
+<li><code>git add .</code>: Menyiapkan seluruh file untuk diunggah.</li>
+<li><code>git commit</code>: Menyimpan perubahan project ke dalam riwayat Git.</li>
+</ul>
+<p>Selanjutnya, hubungkan project dengan repository GitHub yang sudah dibuat.</p>
+<p>Salin URL repository GitHub, kemudian jalankan:</p>
+<p><code>git branch -M main</code></p>
+<p><code>git remote add origin https://github.com/Muhammadrizkybagas/bookdown-template.git</code></p>
+<p><code>git push -u origin main</code></p>
+</div>
+</div>
 </section>
-<section id="project-mission" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Project Mission</h1>
+<section id="render-project" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Render Project</h1>
+<p>Sebelum dipublikasikan, kita perlu memastikan seluruh materi dapat di-render dengan baik.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Langkah-langkah">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Langkah-langkah
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Buka kembali <strong>Terminal</strong> di RStudio.</li>
+<li>Pastikan terminal berada di direktori utama project.</li>
+<li>Jalankan perintah:</li>
+</ol>
+<p><code>quarto render</code></p>
+<p><img class="fotbar" src="img/terminal-1.png"></p>
+<ol start="4" type="1">
+<li>Tekan Enter.</li>
+<li>Tunggu hingga proses render selesai.</li>
+<li>Pastikan tidak ada pesan error.</li>
+</ol>
+</div>
+</div>
 </section>
-<section id="project-requirements" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Project Requirements</h1>
+<section id="pubslih-ke-github-pages" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Pubslih ke Github Pages</h1>
+<p>Setelah proses render berhasil, kita akan mempublikasikan buku digital menggunakan perintah <code>quarto publish gh-pages</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Langkah-langkah">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Langkah-langkah
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Pastikan Terminal masih berada di folder utama project.</li>
+<li>Pastikan kita sedang berada di branch main, bukan gh-pages.</li>
+<li>Jalankan perintah berikut:</li>
+</ol>
+<p><code>quarto publish gh-pages</code></p>
+<p><img class="fotbar" src="img/terminal-2.png"></p>
+<ol start="4" type="1">
+<li>Tekan Enter.</li>
+<li>Jika muncul konfirmasi publikasi, ketik Y atau pilih Yes.</li>
+<li>Tunggu sampai proses render dan publish selesai.</li>
+<li>Jika diminta melakukan autentikasi GitHub, ikuti petunjuk yang muncul.</li>
+</ol>
+</div>
+</div>
+<p><strong>Apa yang terjadi ketika perintah dijalankan?</strong></p>
+<ul>
+<li>Quarto melakukan render project.</li>
+<li>Hasil HTML disiapkan untuk publikasi.</li>
+<li>Quarto membuat branch gh-pages jika belum tersedia.</li>
+<li>Hasil website diunggah ke GitHub.</li>
+<li>GitHub Pages memproses website agar dapat diakses secara online.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Catatan">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Catatan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Perlu diketahui bahwa <code>quarto publish gh-pages</code> secara default sudah melakukan render ulang. Jadi, <code>quarto render</code> sebelumnya berfungsi untuk memastikan project berhasil dibangun sebelum dipublikasikan.</p>
+</div>
+</div>
 </section>
-<section id="panduan-pengerjaan" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Panduan Pengerjaan</h1>
+<section id="update-website-jika-ada-perubahan" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Update Website Jika Ada Perubahan</h1>
+<p>Jika mahasiswa melakukan perubahan materi atau menambahkan bab baru, website perlu diperbarui agar menampilkan versi terbaru.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Update Website">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Update Website
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Jalankan perintah berikut melalui Terminal RStudio:</p>
+<blockquote class="blockquote">
+<p>Menyimpan perubahan ke GitHub git add . git commit -m “Update materi Quarto Book” git push origin main</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Render dan publish ulang <code>quarto render</code> <code>quarto publish gh-pages</code></p>
+</blockquote>
+</div>
+</div>
+<p>Setelah proses selesai, buka kembali URL GitHub Pages. Website akan menampilkan materi terbaru.</p>
 </section>
-<section id="visualisasi-minimum" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Visualisasi Minimum</h1>
-</section>
-<section id="insight-dan-kesimpulan" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Insight dan Kesimpulan</h1>
-</section>
-<section id="publishing-to-rpubs" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Publishing to RPubs</h1>
-</section>
-<section id="submission" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Submission</h1>
+<section id="rangkuman-alur-publikasi" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Rangkuman Alur Publikasi</h1>
+<p><strong>Workflow Publish Quarto Book</strong></p>
+<ol type="1">
+<li><p><strong>Buat repository GitHub</strong></p>
+<p>Menyiapkan tempat penyimpanan project.</p></li>
+<li><p><strong>Push project ke GitHub</strong></p>
+<p>Mengunggah file <code>.qmd</code>, <code>_quarto.yml</code>, dan file pendukung ke branch main.</p></li>
+<li><p><strong>Render project</strong></p>
+<p>Menjalankan <code>quarto render</code> untuk menghasilkan HTML.</p></li>
+<li><p><strong>Publish ke GitHub Pages</strong></p>
+<p>Menjalankan <code>quarto publish gh-pages</code> untuk mengunggah hasil website.</p></li>
+<li><p><strong>Website berhasil di-deploy</strong></p>
+<p>Buku digital dapat diakses melalui URL GitHub Pages.</p></li>
+</ol>
+<p>PERINTAH UTAMA</p>
+<pre><code>quarto render
+quarto publish gh-pages
+</code></pre>
 
 
 </section>

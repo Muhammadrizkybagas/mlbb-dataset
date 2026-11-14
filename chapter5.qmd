@@ -1,49 +1,484 @@
 ---
-title: "UNDERSTANDING DATA VISUALIZATION"
+title: "Seven Tools Analysis"
 date: today
 ---
  
 
-# Apa yang Ingin Kita Ketahui?
 
+# Apa Itu 7 QC Tools?
 
-# Bar Chart
-
-
-# Line Chart
-
-
-# Scatter Plot
-
-
-# Histogram
-
-
-# Boxplot
-
-
-# Memilih Grafik yang Tepat
-
-
-# Kesalahan dalam Visualisasi
-
-
-# Bad Visualization Challenge
+:::{.callout-note title="Definisi"}
+Definisi: 7 QC Tools (Seven Quality Control Tools), metode statistik sederhana yang digunakan secara sistematis mengidentifikasi, menganalisis, dan menyelesaikan masalah yang berkaitan dengan kualitas.
+:::
 
 
 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#| label: fig-5w1h
+#| fig-cap: "Gambaran Umum 7 QC Tools dengan Pendekatan 5W + 1H"
+#| fig-width: 12
+#| fig-height: 8
+#| out-width: 100%
+
+library(ggplot2)
+
+
+buat_oval <- function(x, y, rx, ry, nama, jumlah = 100) {
+  sudut <- seq(0, 2 * pi, length.out = jumlah)
+
+  data.frame(
+    x = x + rx * cos(sudut),
+    y = y + ry * sin(sudut),
+    kelompok = nama
+  )
+}
+
+
+oval <- data.frame(
+  nama = c("What", "Why", "Who", "When", "Where", "How"),
+  x = c(8.4, 8.2, 8.2, 8.4, 8.2, 8.2),
+  y = c(9.0, 7.5, 6.0, 4.5, 3.0, 1.3),
+  rx = c(3.8, 1.65, 1.35, 2.5, 1.45, 1.7),
+  ry = c(0.65, 0.7, 0.75, 0.7, 0.75, 0.8),
+  warna = c("#ADD8E6", "#FDE2E0", "#DDEEDD",
+            "#FFF7CC", "#E6E4FA", "#DFEEEE")
+)
+
+
+data_oval <- do.call(
+  rbind,
+  lapply(seq_len(nrow(oval)), function(i) {
+    buat_oval(
+      oval$x[i],
+      oval$y[i],
+      oval$rx[i],
+      oval$ry[i],
+      oval$nama[i]
+    )
+  })
+)
+
+
+diamond <- data.frame(
+  x = c(0.2, 2.1, 4.0, 2.1),
+  y = c(5.0, 6.1, 5.0, 3.9)
+)
+
+
+garis <- data.frame(
+  x = c(3.6, 3.6, 3.6, 3.6, 3.6, 3.6),
+  y = c(5.8, 5.4, 5.1, 4.8, 4.5, 4.2),
+  xend = c(4.8, 6.5, 6.7, 5.9, 6.7, 6.5),
+  yend = c(8.6, 7.5, 6.0, 4.5, 3.0, 1.5)
+)
+
+
+teks <- data.frame(
+  x = c(8.4, 8.2, 8.2, 8.4, 8.2, 8.2),
+  y = c(9.0, 7.5, 6.0, 4.5, 3.0, 1.3),
+  isi = c(
+    paste(
+      "What\n",
+      "- 7 alat statistik dasar\n",
+      "- Mengidentifikasi, menganalisis, dan menyelesaikan masalah kualitas\n",
+      "- Check Sheet, Histogram, Pareto, Fishbone, Scatter, Control Chart, Flowchart"
+    ),
+    paste(
+      "Why\n",
+      "- Mempermudah penyelesaian masalah\n",
+      "- Berdasarkan data, bukan asumsi\n",
+      "- Meningkatkan kualitas dan efisiensi"
+    ),
+    paste(
+      "Who\n",
+      "- Manajer kualitas\n",
+      "- Operator produksi\n",
+      "- Tim Kaizen\n",
+      "- Profesional lintas bidang"
+    ),
+    paste(
+      "When\n",
+      "- Ketika masalah kualitas muncul\n",
+      "- Dalam kegiatan perbaikan berkelanjutan\n",
+      "- Saat audit dan CAPA (Tindakan Perbaikan dan Pencegahan)"
+    ),
+    paste(
+      "Where\n",
+      "- Industri manufaktur\n",
+      "- Rumah sakit\n",
+      "- Institusi pendidikan\n",
+      "- Instansi pemerintahan"
+    ),
+    paste(
+      "How\n",
+      "- Mengumpulkan data proses\n",
+      "- Memilih QC Tool yang sesuai\n",
+      "- Membuat visualisasi dan menganalisis\n",
+      "- Mengambil keputusan dan melakukan tindakan"
+    )
+  ),
+  warna_teks = c(
+    "#153A8A", "#C62828", "#168B20",
+    "#987000", "#59249A", "#3986B8"
+  ),
+  ukuran = c(3.5, 3.8, 3.8, 3.6, 3.8, 3.8)
+)
+
+# Create diagram
+ggplot() +
+
+  geom_curve(
+    data = garis,
+    aes(x = x, y = y, xend = xend, yend = yend),
+    curvature = 0.12,
+    color = "grey75",
+    linewidth = 0.35
+  ) +
+
+  geom_polygon(
+    data = diamond,
+    aes(x = x, y = y),
+    fill = "#08B6E8",
+    color = NA
+  ) +
+
+  # Main text
+  annotate(
+    "text",
+    x = 2.1,
+    y = 5.0,
+    label = "7 QC Tools\n&\n5W + 1H Approach",
+    size = 4,
+    color = "#071B67",
+    lineheight = 1.2
+  ) +
+
+
+  geom_polygon(
+    data = data_oval,
+    aes(x = x, y = y, group = kelompok, fill = kelompok),
+    color = NA
+  ) +
+
+  scale_fill_manual(
+    values = setNames(oval$warna, oval$nama)
+  ) +
+
+  # Menambahkan teks pada setiap oval
+  geom_text(
+    data = teks,
+    aes(x = x, y = y, label = isi, color = warna_teks),
+    size = 3,
+    lineheight = 1.15
+  ) +
+
+  scale_color_identity() +
+
+  coord_fixed(
+    xlim = c(0, 12.3),
+    ylim = c(0.3, 9.8),
+    expand = FALSE
+  ) +
+
+  theme_void() +
+
+  theme(
+    legend.position = "none",
+    plot.margin = margin(10, 10, 10, 10)
+  )
+```
+
+
+## What
+
+7 QC Tools → tujuh alat statistik dasar yang digunakan untuk membantu mengidentifikasi, menganalisis, dan menyelesaikan masalah kualitas secara sistematis.
+
+Ketujuh alat tersebut adalah:
+
+1. **Check Sheet** – Lembar untuk mencatat dan mengumpulkan data.
+2. **Histogram** – Grafik untuk melihat persebaran data.
+3. **Pareto Chart** – Grafik untuk mengetahui masalah yang paling dominan.
+4. **Fishbone Diagram** – Diagram untuk mencari kemungkinan penyebab suatu masalah.
+5. **Scatter Diagram** – Grafik untuk melihat hubungan antara dua variabel.
+6. **Control Chart** – Grafik untuk memantau kestabilan suatu proses.
+7. **Flowchart** – Diagram untuk menggambarkan tahapan suatu proses.
 
 
 
 
 
+## Why
+
+Mengapa kita perlu mempelajari dan menggunakan 7 QC Tools?
+
+Berikut beberapa alasannya:
+
+- **Mudah digunakan:** Alat-alat ini relatif mudah dipahami, bahkan oleh orang yang belum memiliki latar belakang statistik.
+- **Berdasarkan data:** Membantu kita mengambil keputusan berdasarkan fakta, bukan sekadar dugaan.
+- **Membantu menemukan masalah:** Mempermudah kita mengetahui masalah yang sedang terjadi.
+- **Meningkatkan efisiensi:** Membantu menemukan bagian proses yang perlu diperbaiki.
+- **Meningkatkan kualitas:** Membantu organisasi meningkatkan kualitas produk maupun pelayanan sehingga kepuasan pelanggan juga meningkat.
+
+Contohnya, daripada langsung menyimpulkan bahwa keterlambatan pengiriman disebabkan oleh kurir, kita dapat mengumpulkan data terlebih dahulu untuk mengetahui penyebab sebenarnya.
 
 
 
 
 
+## Who
+
+7 QC Tools tidak hanya digunakan oleh perusahaan besar atau orang yang bekerja di bidang pengendalian kualitas.
+
+Beberapa pihak yang dapat menggunakannya antara lain:
+
+- **Quality Manager:** Orang yang bertanggung jawab terhadap pengelolaan kualitas.
+- **Production Operator:** Pekerja yang terlibat langsung dalam proses produksi.
+- **Supervisor:** Orang yang mengawasi jalannya suatu proses.
+- **Kaizen Team:** Tim yang berfokus pada perbaikan secara berkelanjutan.
+- **Auditor:** Orang yang melakukan pemeriksaan atau evaluasi terhadap suatu proses.
+- **Profesional dari berbagai bidang:** Misalnya bidang pendidikan, kesehatan, pelayanan publik, dan lainnya.
+
+Artinya, siapa pun yang ingin memahami dan memperbaiki suatu masalah dapat memanfaatkan 7 QC Tools.
 
 
+
+
+
+## Where
+
+Penerapan 7 QC Tools tidak terbatas pada perusahaan manufaktur atau pabrik saja.
+
+Beberapa contoh penerapannya adalah:
+
+1. **Industri Manufaktur:** Memeriksa jumlah produk cacat selama proses produksi.
+2. **Rumah Sakit:** Menganalisis penyebab lamanya waktu pelayanan pasien.
+3. **Perusahaan Jasa:** Menganalisis penyebab keterlambatan pelayanan pelanggan.
+4. **Institusi Pendidikan:** Mengevaluasi proses pembelajaran dan kehadiran mahasiswa.
+5. **Instansi Pemerintahan:** Memantau kualitas pelayanan administrasi kepada masyarakat.
+
+
+
+
+
+## When
+
+7 QC Tools dapat digunakan ketika kita menghadapi kondisi seperti:
+
+- Ketika masalah kualitas terjadi secara berulang.
+- Ketika organisasi ingin melakukan perbaikan secara berkelanjutan.
+- Ketika ingin mengetahui akar penyebab suatu masalah (*Root Cause Analysis*).
+- Ketika melakukan pemeriksaan atau audit kualitas.
+- Ketika organisasi perlu menentukan tindakan perbaikan dan pencegahan atau CAPA (*Corrective and Preventive Actions*).
+
+
+
+
+
+## How
+
+Secara umum, penggunaan 7 QC Tools dapat dilakukan melalui beberapa tahapan berikut:
+
+1. **Mengumpulkan data:** Catat informasi yang berkaitan dengan masalah yang sedang terjadi.
+2. **Memilih alat yang sesuai:** Tentukan QC Tool berdasarkan tujuan analisis.
+3. **Menyajikan data:** Buat tabel, grafik, atau diagram menggunakan data yang telah dikumpulkan.
+4. **Menganalisis data:** Perhatikan pola, frekuensi, hubungan, dan perubahan yang terjadi.
+5. **Menemukan penyebab masalah:** Identifikasi faktor-faktor yang kemungkinan menjadi penyebab masalah.
+6. **Menentukan solusi:** Buat rencana perbaikan berdasarkan hasil analisis.
+7. **Melakukan evaluasi:** Pantau apakah solusi yang diterapkan berhasil memperbaiki kondisi sebelumnya.
+
+
+
+
+## Penerapan 7 Alat QC
+
+7 QC Tools dapat digunakan untuk membantu organisasi menemukan masalah, mengetahui penyebabnya, dan menentukan solusi berdasarkan data.
+
+Sebagai contoh, kita gunakan kasus **keterlambatan pengiriman barang**.
+
+Pertama, perusahaan menggunakan **Check Sheet (Lembar Periksa)** untuk mencatat data keterlambatan, seperti tanggal, waktu, dan penyebabnya. Selanjutnya, data dianalisis menggunakan **Histogram** untuk melihat pola keterlambatan dan **Pareto Chart (Bagan Pareto)** untuk mengetahui penyebab yang paling sering terjadi.
+
+Setelah itu, **Fishbone Diagram (Diagram Tulang Ikan)** digunakan untuk mencari kemungkinan penyebab masalah berdasarkan faktor Manusia, Mesin, Metode, Material, dan Lingkungan. **Scatter Diagram (Diagram Sebar)** membantu melihat hubungan antara faktor tertentu dengan keterlambatan, sedangkan **Control Chart (Bagan Kontrol)** digunakan untuk memantau kestabilan proses pengiriman.
+
+Terakhir, **Flowchart (Bagan Alur)** digunakan untuk menggambarkan tahapan proses pengiriman dan membantu menemukan bagian yang berpotensi menimbulkan masalah.
+
+
+
+# Alur Penerapan 7 QC Tools
+
+Berikut gambaran tahapan penerapan 7 QC Tools dalam menangani masalah keterlambatan pengiriman barang.
+
+
+
+
+```{r}
+#| label: fig-alur-penerapan-qc
+#| fig-cap: "Alur Penerapan 7 QC Tools pada Kasus Keterlambatan Pengiriman"
+#| echo: false
+#| warning: false
+#| message: false
+
+library(DiagrammeR)
+
+grViz("
+digraph qc_tools {
+
+  graph [
+    rankdir = TB,
+    bgcolor = white,
+    nodesep = 0.7,
+    ranksep = 0.9,
+    margin = 0.3
+  ]
+
+  node [
+    fontname = 'Arial',
+    fontsize = 18,
+    style = filled,
+    color = '#777777',
+    penwidth = 1.5,
+    margin = 0.25
+  ]
+
+  edge [
+    fontname = 'Arial',
+    fontsize = 16,
+    color = '#555555',
+    arrowsize = 1.2,
+    penwidth = 1.5
+  ]
+
+  start [
+    label = 'Mulai:\\nIdentifikasi Masalah',
+    shape = ellipse,
+    fillcolor = '#75C6E8',
+    width = 4.5,
+    height = 1.2
+  ]
+
+  check [
+    label = 'Check Sheet\\nMengumpulkan Data Keterlambatan',
+    shape = parallelogram,
+    fillcolor = '#C5E8CF',
+    width = 5.5,
+    height = 1.3
+  ]
+
+  histogram [
+    label = 'Histogram\\nMelihat Distribusi Keterlambatan',
+    shape = box,
+    fillcolor = '#F9D99B',
+    width = 5.5,
+    height = 1.3
+  ]
+
+  pareto [
+    label = 'Pareto Chart\\nMenentukan Penyebab Dominan',
+    shape = box,
+    fillcolor = '#F9D99B',
+    width = 5.5,
+    height = 1.3
+  ]
+
+  fishbone [
+    label = 'Fishbone Diagram\\nMencari Akar Penyebab (4M/1E)',
+    shape = box,
+    fillcolor = '#F9D99B',
+    width = 5.5,
+    height = 1.3
+  ]
+
+  scatter [
+    label = 'Scatter Diagram\\nMelihat Hubungan Antarvariabel',
+    shape = box,
+    fillcolor = '#F9D99B',
+    width = 5.5,
+    height = 1.3
+  ]
+
+  control [
+    label = 'Control Chart\\nMemantau Keterlambatan',
+    shape = box,
+    fillcolor = '#F9D99B',
+    width = 5.5,
+    height = 1.3
+  ]
+
+  flow [
+    label = 'Flowchart\\nMemetakan Alur Proses Pengiriman',
+    shape = box,
+    fillcolor = '#F9D99B',
+    width = 5.5,
+    height = 1.3
+  ]
+
+  decision [
+    label = 'Apakah Proses\\nSudah Stabil?',
+    shape = diamond,
+    fillcolor = '#F2B7B7',
+    width = 4,
+    height = 2
+  ]
+
+  mitigation [
+    label = 'Mitigasi Risiko\\nPelayanan, Pelatihan,\\nPelacakan, dan Armada',
+    shape = box,
+    fillcolor = '#F4C5D2',
+    width = 5,
+    height = 1.8
+  ]
+
+  finish [
+    label = 'Selesai:\\nTindak Lanjut dan Evaluasi',
+    shape = ellipse,
+    fillcolor = '#75C6E8',
+    width = 4.5,
+    height = 1.2
+  ]
+
+  note [
+    label = 'Catatan:\\nGunakan kombinasi alat QC\\ndan validasi akar penyebab',
+    shape = note,
+    fillcolor = '#FFF7CC',
+    color = '#C5A94D',
+    fontsize = 14,
+    width = 3.5,
+    height = 1.5
+  ]
+
+  start -> check
+  check -> histogram
+  histogram -> pareto
+  pareto -> fishbone
+  fishbone -> scatter
+  scatter -> control
+  control -> flow
+  flow -> decision
+
+  decision -> finish [
+    label = 'Ya'
+  ]
+
+  decision -> mitigation [
+    label = 'Tidak'
+  ]
+
+  mitigation -> finish
+
+  flow -> note [
+    style = dashed,
+    arrowhead = none,
+    color = '#999999'
+  ]
+
+  {rank = same; decision; note}
+}
+", width = "100%", height = "1200px")
+```
+
+
+Dengan menggunakan 7 QC Tools, perusahaan dapat menentukan tindakan perbaikan berdasarkan hasil analisis data. Contohnya adalah memberikan pelatihan kepada kurir, melakukan perawatan kendaraan secara berkala, dan meningkatkan sistem pelacakan pengiriman.
+
+Intinya, 7 QC Tools membantu kita memahami masalah secara lebih terstruktur sehingga keputusan yang diambil lebih tepat dan risiko operasional dapat dikurangi.
 
 
 
