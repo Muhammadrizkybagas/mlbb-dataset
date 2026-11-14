@@ -73,6 +73,16 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="site_libs/viz-1.8.2/viz.js"></script>
+
+<link href="site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+
+<script src="site_libs/grViz-binding-1.0.12/grViz.js"></script>
+
 
 
 <link rel="stylesheet" href="css/styles.css">
@@ -167,8 +177,20 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#gambaran-tutorial" id="toc-gambaran-tutorial" class="nav-link active" data-scroll-target="#gambaran-tutorial"><span class="header-section-number">1</span> Gambaran tutorial</a>
+  <ul class="collapse">
+  <li><a href="#download-dan-install-quarto" id="toc-download-dan-install-quarto" class="nav-link" data-scroll-target="#download-dan-install-quarto"><span class="header-section-number">1.1</span> Download dan Install Quarto</a></li>
+  <li><a href="#pastikan-quarto-terintegrasi-dengan-rstudio" id="toc-pastikan-quarto-terintegrasi-dengan-rstudio" class="nav-link" data-scroll-target="#pastikan-quarto-terintegrasi-dengan-rstudio"><span class="header-section-number">1.2</span> Pastikan Quarto Terintegrasi dengan RStudio</a></li>
+  <li><a href="#membuat-projek-baru" id="toc-membuat-projek-baru" class="nav-link" data-scroll-target="#membuat-projek-baru"><span class="header-section-number">1.3</span> Membuat Projek Baru</a></li>
+  <li><a href="#render-digital-book" id="toc-render-digital-book" class="nav-link" data-scroll-target="#render-digital-book"><span class="header-section-number">1.4</span> Render Digital Book</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/Muhammadrizkybagas/blob/main/chapter3.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/Muhammadrizkybagas/edit/main/chapter3.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -198,8 +220,182 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Berbeda dengan Bookdown yang menggunakan R Markdown (<code>.Rmd</code>), pada tutorial ini kita akan menggunakan format <code>.qmd</code> dan konfigurasi Quarto melalui file <code>_quarto.yml</code>.</p>
+<section id="gambaran-tutorial" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Gambaran tutorial</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div class="grViz html-widget html-fill-item" id="htmlwidget-5a2af0ab010cb719978f" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-5a2af0ab010cb719978f">{"x":{"diagram":"\ndigraph bookdown {\n\n  graph [\n    layout = dot,\n    rankdir = TB,\n    bgcolor = white,\n    nodesep = 0.35,\n    ranksep = 0.45\n  ]\n\n  node [\n    shape = box,\n    style = \"rounded,filled\",\n    fontname = \"Arial\",\n    fontsize = 16,\n    color = \"#800020\",\n    fillcolor = \"#FFF9F2\",\n    fontcolor = \"#333333\",\n    penwidth = 1.5,\n    width = 4,\n    height = 0.6\n  ]\n\n  edge [\n    color = \"#800020\",\n    penwidth = 1.5,\n    arrowsize = 0.8\n  ]\n\n  step1 [label = \"1. Download dan instal Quarto\"]\n  step2 [label = \"2. Memastikan Quarto terintegrasi dengan RStudio\"]\n  step3 [label = \"3. Membuat project baru di RStudio\"]\n  step4 [label = \"4. Membuat struktur folder dan file\"]\n  step5 [label = \"5. Membuat konfigurasi _quarto.yml\"]\n  step6 [label = \"6. Membuat halaman utama dan chapter .qmd\"]\n  step7 [label = \"7. Menjalankan Render\"]\n  step8 [label = \"8. Melihat hasil Bookdown melalui browser\"]\n\n  step1 -> step2\n  step2 -> step3\n  step3 -> step4\n  step4 -> step5\n  step5 -> step6\n  step6 -> step7\n  step7 -> step8\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Catatan">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Catatan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quarto sebenarnya memiliki fitur Book Project sendiri. Jadi, kita akan menggunakan Quarto Book, yaitu pendekatan yang menghasilkan buku digital dengan navigasi bab seperti tampilan tutorial yang kamu tunjukkan.</p>
+</div>
+</div>
+<section id="download-dan-install-quarto" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="download-dan-install-quarto"><span class="header-section-number">1.1</span> Download dan Install Quarto</h2>
+<p><strong>Quarto</strong> → perangkat lunak yang digunakan untuk mengolah file <code>.qmd</code> menjadi dokumen HTML, PDF, website, maupun buku digital.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Cara Instalasi">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Cara Instalasi
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Buka browser (Chrome atau browser lainnya).</li>
+<li>Kunjungi website resmi Quarto: <a href="https://quarto.org/docs/download/">Download Quarto.</a></li>
+<li>Pilih installer sesuai sistem operasi. Karena menggunakan Windows, pilih Windows Installer (.msi).</li>
+<li>Tunggu sampai proses download selesai.</li>
+<li>Buka file installer yang sudah diunduh.</li>
+<li>Ikuti proses instalasi dengan menekan tombol Next hingga selesai.</li>
+<li>Setelah instalasi selesai, Quarto sudah bisa digunakan.</li>
+</ol>
+</div>
+</div>
+<p><img class="fotbar" src="img/quarto-install.png"></p>
+</section>
+<section id="pastikan-quarto-terintegrasi-dengan-rstudio" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="pastikan-quarto-terintegrasi-dengan-rstudio"><span class="header-section-number">1.2</span> Pastikan Quarto Terintegrasi dengan RStudio</h2>
+<p>Setelah Quarto berhasil diinstal, langkah berikutnya adalah memastikan RStudio dapat mengenali Quarto.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Cek Quarto di RStudio">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Cek Quarto di RStudio
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Buka aplikasi RStudio.</li>
+<li>Pilih menu <strong>Tools</strong> → <strong>Terminal</strong> → <strong>New Terminal</strong>.</li>
+<li>Ketik perintah berikut:</li>
+</ol>
+<p><code>quarto --version</code></p>
+<ol start="4" type="1">
+<li>Tekan <strong>Enter</strong>.</li>
+<li>Jika berhasil, terminal akan menampilkan nomor versi Quarto yang terinstal.</li>
+</ol>
+<p><code>1.10.18</code></p>
+</div>
+</div>
+<p><img class="fotbar" src="img/quarto-version.png"></p>
+<blockquote class="blockquote">
+<p>Jika nomor versi muncul, berarti Quarto sudah berhasil terinstal dan dapat dikenali oleh sistem.</p>
+</blockquote>
+<div class="callout callout-style-default callout-warning callout-titled" title="Perhatikan">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Perhatikan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Jika muncul pesan <code>quarto is not recognized</code>, tutup dan buka kembali RStudio. Jika masih terjadi, periksa instalasi dan PATH Quarto di Windows.</p>
+<p>Packages yang perlu di install:</p>
+<ol type="1">
+<li>Bookdown</li>
+<li>Quarto</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="membuat-projek-baru" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="membuat-projek-baru"><span class="header-section-number">1.3</span> Membuat Projek Baru</h2>
+<p>Selanjutnya, kita akan membuat project khusus untuk menyimpan seluruh file buku digital.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Langkah-langkah">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Langkah-langkah
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Buka RStudio</li>
+<li>Klik menu <strong>File</strong> → <strong>New Project</strong>.</li>
+</ol>
+<p><img class="fotbar" src="img/satu.png"></p>
+<ol start="3" type="1">
+<li>Pilih <strong>New Directory</strong>.</li>
+</ol>
+<p><img class="fotbar" src="img/dua.png"></p>
+<ol start="4" type="1">
+<li>Pilih <strong>Quarto Book</strong> Project jika tersedia pada versi RStudio yang digunakan.</li>
+</ol>
+<p><img class="fotbar" src="img/tiga.png"></p>
+<ol start="5" type="1">
+<li>Isi nama project, misalnya:</li>
+</ol>
+<p><img class="fotbar" src="img/empat.png"></p>
+<ol start="6" type="1">
+<li>Tentukan lokasi penyimpanan project.</li>
+<li>Klik <strong>Create Project</strong>.</li>
+</ol>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Setelah project berhasil dibuat, RStudio akan membuka project tersebut secara otomatis.</p>
+</blockquote>
+<div class="callout callout-style-default callout-warning callout-titled" title="Perhatikan">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Perhatikan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Jika pilihan Quarto Book tidak tersedia, kita tetap bisa membuat project kosong melalui New Directory, kemudian menambahkan konfigurasi Quarto secara manual pada tahap berikutnya.</p>
+</div>
+</div>
+</section>
+<section id="render-digital-book" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="render-digital-book"><span class="header-section-number">1.4</span> Render Digital Book</h2>
+<p>Setelah semua file selesai dibuat, langkah selanjutnya adalah melakukan proses Render untuk mengubah seluruh file <code>.qmd</code> menjadi buku digital berbentuk HTML.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Cara Render">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Cara Render
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Buka salah satu file <code>.qmd</code> di RStudio.</li>
+<li>Klik tombol <strong>Render</strong> pada bagian atas Source Editor.</li>
+<li>Tunggu sampai proses selesai.</li>
+<li>Hasil dokumen akan ditampilkan melalui Viewer atau browser sesuai pengaturan RStudio.</li>
+</ol>
+</div>
+</div>
+<p><img class="fotbar" src="img/quarto-render.png"></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -275,7 +471,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/Muhammadrizkybagas\.github\.io\/mlbb-dataset\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -610,7 +806,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
 <p>© 2026 AXIS - DATA VISUALIZATION WITH RSTUDIO</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/Muhammadrizkybagas/blob/main/chapter3.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/Muhammadrizkybagas/edit/main/chapter3.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Muhammadrizkybagas/blob/main/chapter3.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/Muhammadrizkybagas/edit/main/chapter3.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Created with ❤️ by Rizky Bagas</p>
 </div>

@@ -12,9 +12,9 @@
   {
     "objectID": "chapter4.html",
     "href": "chapter4.html",
-    "title": "DATA EXPLORATION CHALLENGE",
+    "title": "Publish dan Deploy Bookdown ke Github",
     "section": "",
-    "text": "1 Project Overview\n\n\n2 Pembagian Kelompok\n\n\n3 Dataset\n\n\n4 Project Mission\n\n\n5 Project Requirements\n\n\n6 Panduan Pengerjaan\n\n\n7 Visualisasi Minimum\n\n\n8 Insight dan Kesimpulan\n\n\n9 Publishing to RPubs\n\n\n10 Submission",
+    "text": "Pada tahap ini, kita akan mempelajari cara mengunggah project Quarto Book ke GitHub dan mempublikasikannya menggunakan GitHub Pages.\n\nTujuannya adalah agar buku digital yang sebelumnya hanya bisa dibuka melalui komputer sendiri dapat diakses secara online melalui sebuah link website.\n\nProsesnya dibagi menjadi dua bagian:\n\nPush ke GitHub: Mengunggah seluruh file project Quarto ke repository GitHub.\nDeploy ke GitHub Pages: Mengubah hasil render Quarto menjadi website HTML yang dapat diakses secara publik.\n\n\n\n1 Persiapan Awal\n\nInstall Git: Unduh dan install Git.\nKonfigurasi Identitas: Buka Git Bash, lalu masukkan nama dan email GitHub Anda:\n\n\n\n\n\n\n\nTipBuka Git Bash\n\n\n\ngit config --global user.name \"Username Github Kamu\"\ngit config --global user.email \"emailkamu@example.com\"\n\n\nCek apakah konfigurasi berhasil tersimpan:\n\ngit config --global --list\nHarusnya ada hasilnya seperti ini:\nuser.name=Muhammadrizkybagas\nuser.email=muhammadrizkybagas9@gmail.com\n\n\n\n\n\n2 Buat Repository Baru\nPertama, kita perlu membuat repository sebagai tempat penyimpanan project Quarto Book.\n\n\n\n\n\n\nNoteLangkah-langkah\n\n\n\n\nBuka browser dan kunjungi GitHub.\nLogin menggunakan akun GitHub.\nKlik tombol New Repository.\nIsi nama repository, misalnya Bookdown-Quarto.\nPilih visibility repository menjadi Public agar website dapat diakses secara publik.\nJangan centang Add README, .gitignore, atau License jika project sudah memiliki file sendiri.\nKlik Create Repository.`\n\n\n\n\n\n\n\n3 Menghubungkan Project RStudio\nSetelah repository berhasil dibuat, kita perlu menghubungkan folder project Quarto yang ada di komputer dengan repository GitHub.\n\n\n\n\n\n\nTipLangkah-langkah\n\n\n\n\nGunakan short cut Windows + R untuk membuka Command Prompt.\nPastikan path folder sudah direct ke folder bookdown quarto.\nJalankan perintah berikut:\n\ngit init\ngit add .\ngit commit -m \"Initial commit\nPerintah tersebut berfungsi untuk:\n\ngit init: Mengaktifkan Git pada folder project.\ngit add .: Menyiapkan seluruh file untuk diunggah.\ngit commit: Menyimpan perubahan project ke dalam riwayat Git.\n\nSelanjutnya, hubungkan project dengan repository GitHub yang sudah dibuat.\nSalin URL repository GitHub, kemudian jalankan:\ngit branch -M main\ngit remote add origin https://github.com/Muhammadrizkybagas/bookdown-template.git\ngit push -u origin main\n\n\n\n\n4 Render Project\nSebelum dipublikasikan, kita perlu memastikan seluruh materi dapat di-render dengan baik.\n\n\n\n\n\n\nTipLangkah-langkah\n\n\n\n\nBuka kembali Terminal di RStudio.\nPastikan terminal berada di direktori utama project.\nJalankan perintah:\n\nquarto render\n\n\nTekan Enter.\nTunggu hingga proses render selesai.\nPastikan tidak ada pesan error.\n\n\n\n\n\n5 Pubslih ke Github Pages\nSetelah proses render berhasil, kita akan mempublikasikan buku digital menggunakan perintah quarto publish gh-pages.\n\n\n\n\n\n\nTipLangkah-langkah\n\n\n\n\nPastikan Terminal masih berada di folder utama project.\nPastikan kita sedang berada di branch main, bukan gh-pages.\nJalankan perintah berikut:\n\nquarto publish gh-pages\n\n\nTekan Enter.\nJika muncul konfirmasi publikasi, ketik Y atau pilih Yes.\nTunggu sampai proses render dan publish selesai.\nJika diminta melakukan autentikasi GitHub, ikuti petunjuk yang muncul.\n\n\n\nApa yang terjadi ketika perintah dijalankan?\n\nQuarto melakukan render project.\nHasil HTML disiapkan untuk publikasi.\nQuarto membuat branch gh-pages jika belum tersedia.\nHasil website diunggah ke GitHub.\nGitHub Pages memproses website agar dapat diakses secara online.\n\n\n\n\n\n\n\nNoteCatatan\n\n\n\nPerlu diketahui bahwa quarto publish gh-pages secara default sudah melakukan render ulang. Jadi, quarto render sebelumnya berfungsi untuk memastikan project berhasil dibangun sebelum dipublikasikan.\n\n\n\n\n6 Update Website Jika Ada Perubahan\nJika mahasiswa melakukan perubahan materi atau menambahkan bab baru, website perlu diperbarui agar menampilkan versi terbaru.\n\n\n\n\n\n\nTipUpdate Website\n\n\n\nJalankan perintah berikut melalui Terminal RStudio:\n\nMenyimpan perubahan ke GitHub git add . git commit -m “Update materi Quarto Book” git push origin main\n\n\nRender dan publish ulang quarto render quarto publish gh-pages\n\n\n\nSetelah proses selesai, buka kembali URL GitHub Pages. Website akan menampilkan materi terbaru.\n\n\n7 Rangkuman Alur Publikasi\nWorkflow Publish Quarto Book\n\nBuat repository GitHub\nMenyiapkan tempat penyimpanan project.\nPush project ke GitHub\nMengunggah file .qmd, _quarto.yml, dan file pendukung ke branch main.\nRender project\nMenjalankan quarto render untuk menghasilkan HTML.\nPublish ke GitHub Pages\nMenjalankan quarto publish gh-pages untuk mengunggah hasil website.\nWebsite berhasil di-deploy\nBuku digital dapat diakses melalui URL GitHub Pages.\n\nPERINTAH UTAMA\nquarto render\nquarto publish gh-pages",
     "crumbs": [
       "**BAB**",
       "4. Publish Bookdown ke Github"
@@ -120,10 +120,114 @@
     ]
   },
   {
+    "objectID": "chapter3.html",
+    "href": "chapter3.html",
+    "title": "Bagaimana Membuat Format Bookdown di RStudio",
+    "section": "",
+    "text": "Berbeda dengan Bookdown yang menggunakan R Markdown (.Rmd), pada tutorial ini kita akan menggunakan format .qmd dan konfigurasi Quarto melalui file _quarto.yml.",
+    "crumbs": [
+      "**BAB**",
+      "3. Bookdown di Rstudio"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#download-dan-install-quarto",
+    "href": "chapter3.html#download-dan-install-quarto",
+    "title": "Bagaimana Membuat Format Bookdown di RStudio",
+    "section": "1.1 Download dan Install Quarto",
+    "text": "1.1 Download dan Install Quarto\nQuarto → perangkat lunak yang digunakan untuk mengolah file .qmd menjadi dokumen HTML, PDF, website, maupun buku digital.\n\n\n\n\n\n\nNoteCara Instalasi\n\n\n\n\nBuka browser (Chrome atau browser lainnya).\nKunjungi website resmi Quarto: Download Quarto.\nPilih installer sesuai sistem operasi. Karena menggunakan Windows, pilih Windows Installer (.msi).\nTunggu sampai proses download selesai.\nBuka file installer yang sudah diunduh.\nIkuti proses instalasi dengan menekan tombol Next hingga selesai.\nSetelah instalasi selesai, Quarto sudah bisa digunakan.",
+    "crumbs": [
+      "**BAB**",
+      "3. Bookdown di Rstudio"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#pastikan-quarto-terintegrasi-dengan-rstudio",
+    "href": "chapter3.html#pastikan-quarto-terintegrasi-dengan-rstudio",
+    "title": "Bagaimana Membuat Format Bookdown di RStudio",
+    "section": "1.2 Pastikan Quarto Terintegrasi dengan RStudio",
+    "text": "1.2 Pastikan Quarto Terintegrasi dengan RStudio\nSetelah Quarto berhasil diinstal, langkah berikutnya adalah memastikan RStudio dapat mengenali Quarto.\n\n\n\n\n\n\nTipCek Quarto di RStudio\n\n\n\n\nBuka aplikasi RStudio.\nPilih menu Tools → Terminal → New Terminal.\nKetik perintah berikut:\n\nquarto --version\n\nTekan Enter.\nJika berhasil, terminal akan menampilkan nomor versi Quarto yang terinstal.\n\n1.10.18\n\n\n\n\nJika nomor versi muncul, berarti Quarto sudah berhasil terinstal dan dapat dikenali oleh sistem.\n\n\n\n\n\n\n\nWarningPerhatikan\n\n\n\nJika muncul pesan quarto is not recognized, tutup dan buka kembali RStudio. Jika masih terjadi, periksa instalasi dan PATH Quarto di Windows.\nPackages yang perlu di install:\n\nBookdown\nQuarto",
+    "crumbs": [
+      "**BAB**",
+      "3. Bookdown di Rstudio"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#membuat-projek-baru",
+    "href": "chapter3.html#membuat-projek-baru",
+    "title": "Bagaimana Membuat Format Bookdown di RStudio",
+    "section": "1.3 Membuat Projek Baru",
+    "text": "1.3 Membuat Projek Baru\nSelanjutnya, kita akan membuat project khusus untuk menyimpan seluruh file buku digital.\n\n\n\n\n\n\nTipLangkah-langkah\n\n\n\n\nBuka RStudio\nKlik menu File → New Project.\n\n\n\nPilih New Directory.\n\n\n\nPilih Quarto Book Project jika tersedia pada versi RStudio yang digunakan.\n\n\n\nIsi nama project, misalnya:\n\n\n\nTentukan lokasi penyimpanan project.\nKlik Create Project.\n\n\n\n\nSetelah project berhasil dibuat, RStudio akan membuka project tersebut secara otomatis.\n\n\n\n\n\n\n\nWarningPerhatikan\n\n\n\nJika pilihan Quarto Book tidak tersedia, kita tetap bisa membuat project kosong melalui New Directory, kemudian menambahkan konfigurasi Quarto secara manual pada tahap berikutnya.",
+    "crumbs": [
+      "**BAB**",
+      "3. Bookdown di Rstudio"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#render-digital-book",
+    "href": "chapter3.html#render-digital-book",
+    "title": "Bagaimana Membuat Format Bookdown di RStudio",
+    "section": "1.4 Render Digital Book",
+    "text": "1.4 Render Digital Book\nSetelah semua file selesai dibuat, langkah selanjutnya adalah melakukan proses Render untuk mengubah seluruh file .qmd menjadi buku digital berbentuk HTML.\n\n\n\n\n\n\nTipCara Render\n\n\n\n\nBuka salah satu file .qmd di RStudio.\nKlik tombol Render pada bagian atas Source Editor.\nTunggu sampai proses selesai.\nHasil dokumen akan ditampilkan melalui Viewer atau browser sesuai pengaturan RStudio.",
+    "crumbs": [
+      "**BAB**",
+      "3. Bookdown di Rstudio"
+    ]
+  },
+  {
     "objectID": "chapter5.html",
     "href": "chapter5.html",
-    "title": "UNDERSTANDING DATA VISUALIZATION",
+    "title": "Seven Tools Analysis",
     "section": "",
-    "text": "1 Apa yang Ingin Kita Ketahui?\n\n\n2 Bar Chart\n\n\n3 Line Chart\n\n\n4 Scatter Plot\n\n\n5 Histogram\n\n\n6 Boxplot\n\n\n7 Memilih Grafik yang Tepat\n\n\n8 Kesalahan dalam Visualisasi\n\n\n9 Bad Visualization Challenge"
+    "text": "NoteDefinisi\n\n\n\nDefinisi: 7 QC Tools (Seven Quality Control Tools), metode statistik sederhana yang digunakan secara sistematis mengidentifikasi, menganalisis, dan menyelesaikan masalah yang berkaitan dengan kualitas.\n\n\n\n\n\n\n\n\n\n\nFigure 1: Gambaran Umum 7 QC Tools dengan Pendekatan 5W + 1H\n\n\n\n\n\n\n\n7 QC Tools → tujuh alat statistik dasar yang digunakan untuk membantu mengidentifikasi, menganalisis, dan menyelesaikan masalah kualitas secara sistematis.\nKetujuh alat tersebut adalah:\n\nCheck Sheet – Lembar untuk mencatat dan mengumpulkan data.\nHistogram – Grafik untuk melihat persebaran data.\nPareto Chart – Grafik untuk mengetahui masalah yang paling dominan.\nFishbone Diagram – Diagram untuk mencari kemungkinan penyebab suatu masalah.\nScatter Diagram – Grafik untuk melihat hubungan antara dua variabel.\nControl Chart – Grafik untuk memantau kestabilan suatu proses.\nFlowchart – Diagram untuk menggambarkan tahapan suatu proses.\n\n\n\n\nMengapa kita perlu mempelajari dan menggunakan 7 QC Tools?\nBerikut beberapa alasannya:\n\nMudah digunakan: Alat-alat ini relatif mudah dipahami, bahkan oleh orang yang belum memiliki latar belakang statistik.\nBerdasarkan data: Membantu kita mengambil keputusan berdasarkan fakta, bukan sekadar dugaan.\nMembantu menemukan masalah: Mempermudah kita mengetahui masalah yang sedang terjadi.\nMeningkatkan efisiensi: Membantu menemukan bagian proses yang perlu diperbaiki.\nMeningkatkan kualitas: Membantu organisasi meningkatkan kualitas produk maupun pelayanan sehingga kepuasan pelanggan juga meningkat.\n\nContohnya, daripada langsung menyimpulkan bahwa keterlambatan pengiriman disebabkan oleh kurir, kita dapat mengumpulkan data terlebih dahulu untuk mengetahui penyebab sebenarnya.\n\n\n\n7 QC Tools tidak hanya digunakan oleh perusahaan besar atau orang yang bekerja di bidang pengendalian kualitas.\nBeberapa pihak yang dapat menggunakannya antara lain:\n\nQuality Manager: Orang yang bertanggung jawab terhadap pengelolaan kualitas.\nProduction Operator: Pekerja yang terlibat langsung dalam proses produksi.\nSupervisor: Orang yang mengawasi jalannya suatu proses.\nKaizen Team: Tim yang berfokus pada perbaikan secara berkelanjutan.\nAuditor: Orang yang melakukan pemeriksaan atau evaluasi terhadap suatu proses.\nProfesional dari berbagai bidang: Misalnya bidang pendidikan, kesehatan, pelayanan publik, dan lainnya.\n\nArtinya, siapa pun yang ingin memahami dan memperbaiki suatu masalah dapat memanfaatkan 7 QC Tools.\n\n\n\nPenerapan 7 QC Tools tidak terbatas pada perusahaan manufaktur atau pabrik saja.\nBeberapa contoh penerapannya adalah:\n\nIndustri Manufaktur: Memeriksa jumlah produk cacat selama proses produksi.\nRumah Sakit: Menganalisis penyebab lamanya waktu pelayanan pasien.\nPerusahaan Jasa: Menganalisis penyebab keterlambatan pelayanan pelanggan.\nInstitusi Pendidikan: Mengevaluasi proses pembelajaran dan kehadiran mahasiswa.\nInstansi Pemerintahan: Memantau kualitas pelayanan administrasi kepada masyarakat.\n\n\n\n\n7 QC Tools dapat digunakan ketika kita menghadapi kondisi seperti:\n\nKetika masalah kualitas terjadi secara berulang.\nKetika organisasi ingin melakukan perbaikan secara berkelanjutan.\nKetika ingin mengetahui akar penyebab suatu masalah (Root Cause Analysis).\nKetika melakukan pemeriksaan atau audit kualitas.\nKetika organisasi perlu menentukan tindakan perbaikan dan pencegahan atau CAPA (Corrective and Preventive Actions).\n\n\n\n\nSecara umum, penggunaan 7 QC Tools dapat dilakukan melalui beberapa tahapan berikut:\n\nMengumpulkan data: Catat informasi yang berkaitan dengan masalah yang sedang terjadi.\nMemilih alat yang sesuai: Tentukan QC Tool berdasarkan tujuan analisis.\nMenyajikan data: Buat tabel, grafik, atau diagram menggunakan data yang telah dikumpulkan.\nMenganalisis data: Perhatikan pola, frekuensi, hubungan, dan perubahan yang terjadi.\nMenemukan penyebab masalah: Identifikasi faktor-faktor yang kemungkinan menjadi penyebab masalah.\nMenentukan solusi: Buat rencana perbaikan berdasarkan hasil analisis.\nMelakukan evaluasi: Pantau apakah solusi yang diterapkan berhasil memperbaiki kondisi sebelumnya.\n\n\n\n\n7 QC Tools dapat digunakan untuk membantu organisasi menemukan masalah, mengetahui penyebabnya, dan menentukan solusi berdasarkan data.\nSebagai contoh, kita gunakan kasus keterlambatan pengiriman barang.\nPertama, perusahaan menggunakan Check Sheet (Lembar Periksa) untuk mencatat data keterlambatan, seperti tanggal, waktu, dan penyebabnya. Selanjutnya, data dianalisis menggunakan Histogram untuk melihat pola keterlambatan dan Pareto Chart (Bagan Pareto) untuk mengetahui penyebab yang paling sering terjadi.\nSetelah itu, Fishbone Diagram (Diagram Tulang Ikan) digunakan untuk mencari kemungkinan penyebab masalah berdasarkan faktor Manusia, Mesin, Metode, Material, dan Lingkungan. Scatter Diagram (Diagram Sebar) membantu melihat hubungan antara faktor tertentu dengan keterlambatan, sedangkan Control Chart (Bagan Kontrol) digunakan untuk memantau kestabilan proses pengiriman.\nTerakhir, Flowchart (Bagan Alur) digunakan untuk menggambarkan tahapan proses pengiriman dan membantu menemukan bagian yang berpotensi menimbulkan masalah."
+  },
+  {
+    "objectID": "chapter5.html#what",
+    "href": "chapter5.html#what",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "7 QC Tools → tujuh alat statistik dasar yang digunakan untuk membantu mengidentifikasi, menganalisis, dan menyelesaikan masalah kualitas secara sistematis.\nKetujuh alat tersebut adalah:\n\nCheck Sheet – Lembar untuk mencatat dan mengumpulkan data.\nHistogram – Grafik untuk melihat persebaran data.\nPareto Chart – Grafik untuk mengetahui masalah yang paling dominan.\nFishbone Diagram – Diagram untuk mencari kemungkinan penyebab suatu masalah.\nScatter Diagram – Grafik untuk melihat hubungan antara dua variabel.\nControl Chart – Grafik untuk memantau kestabilan suatu proses.\nFlowchart – Diagram untuk menggambarkan tahapan suatu proses."
+  },
+  {
+    "objectID": "chapter5.html#why",
+    "href": "chapter5.html#why",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "Mengapa kita perlu mempelajari dan menggunakan 7 QC Tools?\nBerikut beberapa alasannya:\n\nMudah digunakan: Alat-alat ini relatif mudah dipahami, bahkan oleh orang yang belum memiliki latar belakang statistik.\nBerdasarkan data: Membantu kita mengambil keputusan berdasarkan fakta, bukan sekadar dugaan.\nMembantu menemukan masalah: Mempermudah kita mengetahui masalah yang sedang terjadi.\nMeningkatkan efisiensi: Membantu menemukan bagian proses yang perlu diperbaiki.\nMeningkatkan kualitas: Membantu organisasi meningkatkan kualitas produk maupun pelayanan sehingga kepuasan pelanggan juga meningkat.\n\nContohnya, daripada langsung menyimpulkan bahwa keterlambatan pengiriman disebabkan oleh kurir, kita dapat mengumpulkan data terlebih dahulu untuk mengetahui penyebab sebenarnya."
+  },
+  {
+    "objectID": "chapter5.html#who",
+    "href": "chapter5.html#who",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "7 QC Tools tidak hanya digunakan oleh perusahaan besar atau orang yang bekerja di bidang pengendalian kualitas.\nBeberapa pihak yang dapat menggunakannya antara lain:\n\nQuality Manager: Orang yang bertanggung jawab terhadap pengelolaan kualitas.\nProduction Operator: Pekerja yang terlibat langsung dalam proses produksi.\nSupervisor: Orang yang mengawasi jalannya suatu proses.\nKaizen Team: Tim yang berfokus pada perbaikan secara berkelanjutan.\nAuditor: Orang yang melakukan pemeriksaan atau evaluasi terhadap suatu proses.\nProfesional dari berbagai bidang: Misalnya bidang pendidikan, kesehatan, pelayanan publik, dan lainnya.\n\nArtinya, siapa pun yang ingin memahami dan memperbaiki suatu masalah dapat memanfaatkan 7 QC Tools."
+  },
+  {
+    "objectID": "chapter5.html#where",
+    "href": "chapter5.html#where",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "Penerapan 7 QC Tools tidak terbatas pada perusahaan manufaktur atau pabrik saja.\nBeberapa contoh penerapannya adalah:\n\nIndustri Manufaktur: Memeriksa jumlah produk cacat selama proses produksi.\nRumah Sakit: Menganalisis penyebab lamanya waktu pelayanan pasien.\nPerusahaan Jasa: Menganalisis penyebab keterlambatan pelayanan pelanggan.\nInstitusi Pendidikan: Mengevaluasi proses pembelajaran dan kehadiran mahasiswa.\nInstansi Pemerintahan: Memantau kualitas pelayanan administrasi kepada masyarakat."
+  },
+  {
+    "objectID": "chapter5.html#when",
+    "href": "chapter5.html#when",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "7 QC Tools dapat digunakan ketika kita menghadapi kondisi seperti:\n\nKetika masalah kualitas terjadi secara berulang.\nKetika organisasi ingin melakukan perbaikan secara berkelanjutan.\nKetika ingin mengetahui akar penyebab suatu masalah (Root Cause Analysis).\nKetika melakukan pemeriksaan atau audit kualitas.\nKetika organisasi perlu menentukan tindakan perbaikan dan pencegahan atau CAPA (Corrective and Preventive Actions)."
+  },
+  {
+    "objectID": "chapter5.html#how",
+    "href": "chapter5.html#how",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "Secara umum, penggunaan 7 QC Tools dapat dilakukan melalui beberapa tahapan berikut:\n\nMengumpulkan data: Catat informasi yang berkaitan dengan masalah yang sedang terjadi.\nMemilih alat yang sesuai: Tentukan QC Tool berdasarkan tujuan analisis.\nMenyajikan data: Buat tabel, grafik, atau diagram menggunakan data yang telah dikumpulkan.\nMenganalisis data: Perhatikan pola, frekuensi, hubungan, dan perubahan yang terjadi.\nMenemukan penyebab masalah: Identifikasi faktor-faktor yang kemungkinan menjadi penyebab masalah.\nMenentukan solusi: Buat rencana perbaikan berdasarkan hasil analisis.\nMelakukan evaluasi: Pantau apakah solusi yang diterapkan berhasil memperbaiki kondisi sebelumnya."
+  },
+  {
+    "objectID": "chapter5.html#penerapan-7-alat-qc",
+    "href": "chapter5.html#penerapan-7-alat-qc",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "7 QC Tools dapat digunakan untuk membantu organisasi menemukan masalah, mengetahui penyebabnya, dan menentukan solusi berdasarkan data.\nSebagai contoh, kita gunakan kasus keterlambatan pengiriman barang.\nPertama, perusahaan menggunakan Check Sheet (Lembar Periksa) untuk mencatat data keterlambatan, seperti tanggal, waktu, dan penyebabnya. Selanjutnya, data dianalisis menggunakan Histogram untuk melihat pola keterlambatan dan Pareto Chart (Bagan Pareto) untuk mengetahui penyebab yang paling sering terjadi.\nSetelah itu, Fishbone Diagram (Diagram Tulang Ikan) digunakan untuk mencari kemungkinan penyebab masalah berdasarkan faktor Manusia, Mesin, Metode, Material, dan Lingkungan. Scatter Diagram (Diagram Sebar) membantu melihat hubungan antara faktor tertentu dengan keterlambatan, sedangkan Control Chart (Bagan Kontrol) digunakan untuk memantau kestabilan proses pengiriman.\nTerakhir, Flowchart (Bagan Alur) digunakan untuk menggambarkan tahapan proses pengiriman dan membantu menemukan bagian yang berpotensi menimbulkan masalah."
   }
 ]

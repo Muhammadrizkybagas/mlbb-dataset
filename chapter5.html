@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-11-14">
 
-<title>UNDERSTANDING DATA VISUALIZATION – DATA VISUALIZATION WITH RSTUDIO</title>
+<title>Seven Tools Analysis – DATA VISUALIZATION WITH RSTUDIO</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -73,6 +73,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="site_libs/viz-1.8.2/viz.js"></script>
+
+<link href="site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+
+<script src="site_libs/grViz-binding-1.0.12/grViz.js"></script>
+
 
 
 <link rel="stylesheet" href="css/styles.css">
@@ -90,15 +98,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#apa-yang-ingin-kita-ketahui" id="toc-apa-yang-ingin-kita-ketahui" class="nav-link active" data-scroll-target="#apa-yang-ingin-kita-ketahui"><span class="header-section-number">1</span> Apa yang Ingin Kita Ketahui?</a></li>
-  <li><a href="#bar-chart" id="toc-bar-chart" class="nav-link" data-scroll-target="#bar-chart"><span class="header-section-number">2</span> Bar Chart</a></li>
-  <li><a href="#line-chart" id="toc-line-chart" class="nav-link" data-scroll-target="#line-chart"><span class="header-section-number">3</span> Line Chart</a></li>
-  <li><a href="#scatter-plot" id="toc-scatter-plot" class="nav-link" data-scroll-target="#scatter-plot"><span class="header-section-number">4</span> Scatter Plot</a></li>
-  <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram"><span class="header-section-number">5</span> Histogram</a></li>
-  <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot"><span class="header-section-number">6</span> Boxplot</a></li>
-  <li><a href="#memilih-grafik-yang-tepat" id="toc-memilih-grafik-yang-tepat" class="nav-link" data-scroll-target="#memilih-grafik-yang-tepat"><span class="header-section-number">7</span> Memilih Grafik yang Tepat</a></li>
-  <li><a href="#kesalahan-dalam-visualisasi" id="toc-kesalahan-dalam-visualisasi" class="nav-link" data-scroll-target="#kesalahan-dalam-visualisasi"><span class="header-section-number">8</span> Kesalahan dalam Visualisasi</a></li>
-  <li><a href="#bad-visualization-challenge" id="toc-bad-visualization-challenge" class="nav-link" data-scroll-target="#bad-visualization-challenge"><span class="header-section-number">9</span> Bad Visualization Challenge</a></li>
+  <li><a href="#apa-itu-7-qc-tools" id="toc-apa-itu-7-qc-tools" class="nav-link active" data-scroll-target="#apa-itu-7-qc-tools"><span class="header-section-number">1</span> Apa Itu 7 QC Tools?</a>
+  <ul class="collapse">
+  <li><a href="#what" id="toc-what" class="nav-link" data-scroll-target="#what"><span class="header-section-number">1.1</span> What</a></li>
+  <li><a href="#why" id="toc-why" class="nav-link" data-scroll-target="#why"><span class="header-section-number">1.2</span> Why</a></li>
+  <li><a href="#who" id="toc-who" class="nav-link" data-scroll-target="#who"><span class="header-section-number">1.3</span> Who</a></li>
+  <li><a href="#where" id="toc-where" class="nav-link" data-scroll-target="#where"><span class="header-section-number">1.4</span> Where</a></li>
+  <li><a href="#when" id="toc-when" class="nav-link" data-scroll-target="#when"><span class="header-section-number">1.5</span> When</a></li>
+  <li><a href="#how" id="toc-how" class="nav-link" data-scroll-target="#how"><span class="header-section-number">1.6</span> How</a></li>
+  <li><a href="#penerapan-7-alat-qc" id="toc-penerapan-7-alat-qc" class="nav-link" data-scroll-target="#penerapan-7-alat-qc"><span class="header-section-number">1.7</span> Penerapan 7 Alat QC</a></li>
+  </ul></li>
+  <li><a href="#alur-penerapan-7-qc-tools" id="toc-alur-penerapan-7-qc-tools" class="nav-link" data-scroll-target="#alur-penerapan-7-qc-tools"><span class="header-section-number">2</span> Alur Penerapan 7 QC Tools</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Muhammadrizkybagas/blob/main/chapter5.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/Muhammadrizkybagas/edit/main/chapter5.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -107,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">UNDERSTANDING DATA VISUALIZATION</h1>
+<h1 class="title">Seven Tools Analysis</h1>
 </div>
 
 
@@ -130,32 +140,139 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="apa-yang-ingin-kita-ketahui" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Apa yang Ingin Kita Ketahui?</h1>
+<section id="apa-itu-7-qc-tools" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Apa Itu 7 QC Tools?</h1>
+<div class="callout callout-style-default callout-note callout-titled" title="Definisi">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Definisi
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Definisi: 7 QC Tools (Seven Quality Control Tools), metode statistik sederhana yang digunakan secara sistematis mengidentifikasi, menganalisis, dan menyelesaikan masalah yang berkaitan dengan kualitas.</p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-5w1h" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-5w1h-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="chapter5_files/figure-html/fig-5w1h-1.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-5w1h-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Gambaran Umum 7 QC Tools dengan Pendekatan 5W + 1H
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="what" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="what"><span class="header-section-number">1.1</span> What</h2>
+<p>7 QC Tools → tujuh alat statistik dasar yang digunakan untuk membantu mengidentifikasi, menganalisis, dan menyelesaikan masalah kualitas secara sistematis.</p>
+<p>Ketujuh alat tersebut adalah:</p>
+<ol type="1">
+<li><strong>Check Sheet</strong> – Lembar untuk mencatat dan mengumpulkan data.</li>
+<li><strong>Histogram</strong> – Grafik untuk melihat persebaran data.</li>
+<li><strong>Pareto Chart</strong> – Grafik untuk mengetahui masalah yang paling dominan.</li>
+<li><strong>Fishbone Diagram</strong> – Diagram untuk mencari kemungkinan penyebab suatu masalah.</li>
+<li><strong>Scatter Diagram</strong> – Grafik untuk melihat hubungan antara dua variabel.</li>
+<li><strong>Control Chart</strong> – Grafik untuk memantau kestabilan suatu proses.</li>
+<li><strong>Flowchart</strong> – Diagram untuk menggambarkan tahapan suatu proses.</li>
+</ol>
 </section>
-<section id="bar-chart" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Bar Chart</h1>
+<section id="why" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="why"><span class="header-section-number">1.2</span> Why</h2>
+<p>Mengapa kita perlu mempelajari dan menggunakan 7 QC Tools?</p>
+<p>Berikut beberapa alasannya:</p>
+<ul>
+<li><strong>Mudah digunakan:</strong> Alat-alat ini relatif mudah dipahami, bahkan oleh orang yang belum memiliki latar belakang statistik.</li>
+<li><strong>Berdasarkan data:</strong> Membantu kita mengambil keputusan berdasarkan fakta, bukan sekadar dugaan.</li>
+<li><strong>Membantu menemukan masalah:</strong> Mempermudah kita mengetahui masalah yang sedang terjadi.</li>
+<li><strong>Meningkatkan efisiensi:</strong> Membantu menemukan bagian proses yang perlu diperbaiki.</li>
+<li><strong>Meningkatkan kualitas:</strong> Membantu organisasi meningkatkan kualitas produk maupun pelayanan sehingga kepuasan pelanggan juga meningkat.</li>
+</ul>
+<p>Contohnya, daripada langsung menyimpulkan bahwa keterlambatan pengiriman disebabkan oleh kurir, kita dapat mengumpulkan data terlebih dahulu untuk mengetahui penyebab sebenarnya.</p>
 </section>
-<section id="line-chart" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Line Chart</h1>
+<section id="who" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="who"><span class="header-section-number">1.3</span> Who</h2>
+<p>7 QC Tools tidak hanya digunakan oleh perusahaan besar atau orang yang bekerja di bidang pengendalian kualitas.</p>
+<p>Beberapa pihak yang dapat menggunakannya antara lain:</p>
+<ul>
+<li><strong>Quality Manager:</strong> Orang yang bertanggung jawab terhadap pengelolaan kualitas.</li>
+<li><strong>Production Operator:</strong> Pekerja yang terlibat langsung dalam proses produksi.</li>
+<li><strong>Supervisor:</strong> Orang yang mengawasi jalannya suatu proses.</li>
+<li><strong>Kaizen Team:</strong> Tim yang berfokus pada perbaikan secara berkelanjutan.</li>
+<li><strong>Auditor:</strong> Orang yang melakukan pemeriksaan atau evaluasi terhadap suatu proses.</li>
+<li><strong>Profesional dari berbagai bidang:</strong> Misalnya bidang pendidikan, kesehatan, pelayanan publik, dan lainnya.</li>
+</ul>
+<p>Artinya, siapa pun yang ingin memahami dan memperbaiki suatu masalah dapat memanfaatkan 7 QC Tools.</p>
 </section>
-<section id="scatter-plot" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Scatter Plot</h1>
+<section id="where" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="where"><span class="header-section-number">1.4</span> Where</h2>
+<p>Penerapan 7 QC Tools tidak terbatas pada perusahaan manufaktur atau pabrik saja.</p>
+<p>Beberapa contoh penerapannya adalah:</p>
+<ol type="1">
+<li><strong>Industri Manufaktur:</strong> Memeriksa jumlah produk cacat selama proses produksi.</li>
+<li><strong>Rumah Sakit:</strong> Menganalisis penyebab lamanya waktu pelayanan pasien.</li>
+<li><strong>Perusahaan Jasa:</strong> Menganalisis penyebab keterlambatan pelayanan pelanggan.</li>
+<li><strong>Institusi Pendidikan:</strong> Mengevaluasi proses pembelajaran dan kehadiran mahasiswa.</li>
+<li><strong>Instansi Pemerintahan:</strong> Memantau kualitas pelayanan administrasi kepada masyarakat.</li>
+</ol>
 </section>
-<section id="histogram" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Histogram</h1>
+<section id="when" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="when"><span class="header-section-number">1.5</span> When</h2>
+<p>7 QC Tools dapat digunakan ketika kita menghadapi kondisi seperti:</p>
+<ul>
+<li>Ketika masalah kualitas terjadi secara berulang.</li>
+<li>Ketika organisasi ingin melakukan perbaikan secara berkelanjutan.</li>
+<li>Ketika ingin mengetahui akar penyebab suatu masalah (<em>Root Cause Analysis</em>).</li>
+<li>Ketika melakukan pemeriksaan atau audit kualitas.</li>
+<li>Ketika organisasi perlu menentukan tindakan perbaikan dan pencegahan atau CAPA (<em>Corrective and Preventive Actions</em>).</li>
+</ul>
 </section>
-<section id="boxplot" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Boxplot</h1>
+<section id="how" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="how"><span class="header-section-number">1.6</span> How</h2>
+<p>Secara umum, penggunaan 7 QC Tools dapat dilakukan melalui beberapa tahapan berikut:</p>
+<ol type="1">
+<li><strong>Mengumpulkan data:</strong> Catat informasi yang berkaitan dengan masalah yang sedang terjadi.</li>
+<li><strong>Memilih alat yang sesuai:</strong> Tentukan QC Tool berdasarkan tujuan analisis.</li>
+<li><strong>Menyajikan data:</strong> Buat tabel, grafik, atau diagram menggunakan data yang telah dikumpulkan.</li>
+<li><strong>Menganalisis data:</strong> Perhatikan pola, frekuensi, hubungan, dan perubahan yang terjadi.</li>
+<li><strong>Menemukan penyebab masalah:</strong> Identifikasi faktor-faktor yang kemungkinan menjadi penyebab masalah.</li>
+<li><strong>Menentukan solusi:</strong> Buat rencana perbaikan berdasarkan hasil analisis.</li>
+<li><strong>Melakukan evaluasi:</strong> Pantau apakah solusi yang diterapkan berhasil memperbaiki kondisi sebelumnya.</li>
+</ol>
 </section>
-<section id="memilih-grafik-yang-tepat" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Memilih Grafik yang Tepat</h1>
+<section id="penerapan-7-alat-qc" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="penerapan-7-alat-qc"><span class="header-section-number">1.7</span> Penerapan 7 Alat QC</h2>
+<p>7 QC Tools dapat digunakan untuk membantu organisasi menemukan masalah, mengetahui penyebabnya, dan menentukan solusi berdasarkan data.</p>
+<p>Sebagai contoh, kita gunakan kasus <strong>keterlambatan pengiriman barang</strong>.</p>
+<p>Pertama, perusahaan menggunakan <strong>Check Sheet (Lembar Periksa)</strong> untuk mencatat data keterlambatan, seperti tanggal, waktu, dan penyebabnya. Selanjutnya, data dianalisis menggunakan <strong>Histogram</strong> untuk melihat pola keterlambatan dan <strong>Pareto Chart (Bagan Pareto)</strong> untuk mengetahui penyebab yang paling sering terjadi.</p>
+<p>Setelah itu, <strong>Fishbone Diagram (Diagram Tulang Ikan)</strong> digunakan untuk mencari kemungkinan penyebab masalah berdasarkan faktor Manusia, Mesin, Metode, Material, dan Lingkungan. <strong>Scatter Diagram (Diagram Sebar)</strong> membantu melihat hubungan antara faktor tertentu dengan keterlambatan, sedangkan <strong>Control Chart (Bagan Kontrol)</strong> digunakan untuk memantau kestabilan proses pengiriman.</p>
+<p>Terakhir, <strong>Flowchart (Bagan Alur)</strong> digunakan untuk menggambarkan tahapan proses pengiriman dan membantu menemukan bagian yang berpotensi menimbulkan masalah.</p>
 </section>
-<section id="kesalahan-dalam-visualisasi" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Kesalahan dalam Visualisasi</h1>
 </section>
-<section id="bad-visualization-challenge" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Bad Visualization Challenge</h1>
+<section id="alur-penerapan-7-qc-tools" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Alur Penerapan 7 QC Tools</h1>
+<p>Berikut gambaran tahapan penerapan 7 QC Tools dalam menangani masalah keterlambatan pengiriman barang.</p>
+<div class="cell">
+<div id="fig-alur-penerapan-qc" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-alur-penerapan-qc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="htmlwidget-3780192fe4cf72923fe1" style="width:100%;height:1200px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3780192fe4cf72923fe1">{"x":{"diagram":"\ndigraph qc_tools {\n\n  graph [\n    rankdir = TB,\n    bgcolor = white,\n    nodesep = 0.7,\n    ranksep = 0.9,\n    margin = 0.3\n  ]\n\n  node [\n    fontname = \"Arial\",\n    fontsize = 18,\n    style = filled,\n    color = \"#777777\",\n    penwidth = 1.5,\n    margin = 0.25\n  ]\n\n  edge [\n    fontname = \"Arial\",\n    fontsize = 16,\n    color = \"#555555\",\n    arrowsize = 1.2,\n    penwidth = 1.5\n  ]\n\n  start [\n    label = \"Mulai:\\nIdentifikasi Masalah\",\n    shape = ellipse,\n    fillcolor = \"#75C6E8\",\n    width = 4.5,\n    height = 1.2\n  ]\n\n  check [\n    label = \"Check Sheet\\nMengumpulkan Data Keterlambatan\",\n    shape = parallelogram,\n    fillcolor = \"#C5E8CF\",\n    width = 5.5,\n    height = 1.3\n  ]\n\n  histogram [\n    label = \"Histogram\\nMelihat Distribusi Keterlambatan\",\n    shape = box,\n    fillcolor = \"#F9D99B\",\n    width = 5.5,\n    height = 1.3\n  ]\n\n  pareto [\n    label = \"Pareto Chart\\nMenentukan Penyebab Dominan\",\n    shape = box,\n    fillcolor = \"#F9D99B\",\n    width = 5.5,\n    height = 1.3\n  ]\n\n  fishbone [\n    label = \"Fishbone Diagram\\nMencari Akar Penyebab (4M/1E)\",\n    shape = box,\n    fillcolor = \"#F9D99B\",\n    width = 5.5,\n    height = 1.3\n  ]\n\n  scatter [\n    label = \"Scatter Diagram\\nMelihat Hubungan Antarvariabel\",\n    shape = box,\n    fillcolor = \"#F9D99B\",\n    width = 5.5,\n    height = 1.3\n  ]\n\n  control [\n    label = \"Control Chart\\nMemantau Keterlambatan\",\n    shape = box,\n    fillcolor = \"#F9D99B\",\n    width = 5.5,\n    height = 1.3\n  ]\n\n  flow [\n    label = \"Flowchart\\nMemetakan Alur Proses Pengiriman\",\n    shape = box,\n    fillcolor = \"#F9D99B\",\n    width = 5.5,\n    height = 1.3\n  ]\n\n  decision [\n    label = \"Apakah Proses\\nSudah Stabil?\",\n    shape = diamond,\n    fillcolor = \"#F2B7B7\",\n    width = 4,\n    height = 2\n  ]\n\n  mitigation [\n    label = \"Mitigasi Risiko\\nPelayanan, Pelatihan,\\nPelacakan, dan Armada\",\n    shape = box,\n    fillcolor = \"#F4C5D2\",\n    width = 5,\n    height = 1.8\n  ]\n\n  finish [\n    label = \"Selesai:\\nTindak Lanjut dan Evaluasi\",\n    shape = ellipse,\n    fillcolor = \"#75C6E8\",\n    width = 4.5,\n    height = 1.2\n  ]\n\n  note [\n    label = \"Catatan:\\nGunakan kombinasi alat QC\\ndan validasi akar penyebab\",\n    shape = note,\n    fillcolor = \"#FFF7CC\",\n    color = \"#C5A94D\",\n    fontsize = 14,\n    width = 3.5,\n    height = 1.5\n  ]\n\n  start -> check\n  check -> histogram\n  histogram -> pareto\n  pareto -> fishbone\n  fishbone -> scatter\n  scatter -> control\n  control -> flow\n  flow -> decision\n\n  decision -> finish [\n    label = \"Ya\"\n  ]\n\n  decision -> mitigation [\n    label = \"Tidak\"\n  ]\n\n  mitigation -> finish\n\n  flow -> note [\n    style = dashed,\n    arrowhead = none,\n    color = \"#999999\"\n  ]\n\n  {rank = same; decision; note}\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-alur-penerapan-qc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Alur Penerapan 7 QC Tools pada Kasus Keterlambatan Pengiriman
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Dengan menggunakan 7 QC Tools, perusahaan dapat menentukan tindakan perbaikan berdasarkan hasil analisis data. Contohnya adalah memberikan pelatihan kepada kurir, melakukan perawatan kendaraan secara berkala, dan meningkatkan sistem pelacakan pengiriman.</p>
+<p>Intinya, 7 QC Tools membantu kita memahami masalah secara lebih terstruktur sehingga keputusan yang diambil lebih tepat dan risiko operasional dapat dikurangi.</p>
 
 
 </section>
@@ -234,7 +351,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/Muhammadrizkybagas\.github\.io\/mlbb-dataset\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
