@@ -1,25 +1,18 @@
 ---
-title: "FROM VISUALIZATION TO INSIGHT"
+title: "Bagaimana Membuat Format Bookdown di RStudio"
 date: today
 ---
- 
-
-# Membaca Sebuah Grafik
 
 
-# Menemukan Pola
 
 
-# Membandingkan Kelompok
 
 
-# Menemukan Hubungan
 
 
-# Menulis Insight
 
 
-# Insight vs Kesimpulan
+
 
 
 

@@ -2,22 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="ITSB Corporation">
-<meta name="dcterms.date" content="2026-09-06">
+<meta name="dcterms.date" content="2026-11-05">
 
 <title>Introduction to Data Visualization – Looker Studio Data Analytics Bootcamp</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -40,10 +43,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-104f2622452aeaad4c018a66f4effed7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6622afbb6a93371a7f6aaa1c40799739.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -211,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 6, 2026</p>
+      <p class="date">November 5, 2026</p>
     </div>
   </div>
   
@@ -306,8 +309,8 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-1927b67728761dd566ca" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-1927b67728761dd566ca">{"x":{"diagram":"\ndigraph flowchart {\n\n  graph [\n    rankdir = TB,\n    bgcolor = \"transparent\",\n    margin = 0.2,\n    nodesep = 0.4,\n    ranksep = 0.5\n  ]\n\n  node [\n    shape = box,\n    style = \"rounded,filled\",\n    fontname = \"Arial\",\n    fontsize = 18,\n    margin = \"0.25,0.15\",\n    width = 3.8,\n    color = \"#1F4E78\",\n    penwidth = 2\n  ]\n\n  edge [\n    color = \"#555555\",\n    penwidth = 2,\n    arrowsize = 0.8\n  ]\n\n  DATA [\n    label = \"DATA\\nApa yang kita punya?\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  INFORMASI [\n    label = \"INFORMASI\\nApa yang terjadi?\",\n    fillcolor = \"#E8F4EA\"\n  ]\n\n  INSIGHT [\n    label = \"INSIGHT\\nApa yang dapat kita pahami?\",\n    fillcolor = \"#FFF3CD\"\n  ]\n\n  DATA -> INFORMASI\n  INFORMASI -> INSIGHT\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-373899ee63b41d5245d6" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-373899ee63b41d5245d6">{"x":{"diagram":"\ndigraph flowchart {\n\n  graph [\n    rankdir = TB,\n    bgcolor = \"transparent\",\n    margin = 0.2,\n    nodesep = 0.4,\n    ranksep = 0.5\n  ]\n\n  node [\n    shape = box,\n    style = \"rounded,filled\",\n    fontname = \"Arial\",\n    fontsize = 18,\n    margin = \"0.25,0.15\",\n    width = 3.8,\n    color = \"#1F4E78\",\n    penwidth = 2\n  ]\n\n  edge [\n    color = \"#555555\",\n    penwidth = 2,\n    arrowsize = 0.8\n  ]\n\n  DATA [\n    label = \"DATA\\nApa yang kita punya?\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  INFORMASI [\n    label = \"INFORMASI\\nApa yang terjadi?\",\n    fillcolor = \"#E8F4EA\"\n  ]\n\n  INSIGHT [\n    label = \"INSIGHT\\nApa yang dapat kita pahami?\",\n    fillcolor = \"#FFF3CD\"\n  ]\n\n  DATA -> INFORMASI\n  INFORMASI -> INSIGHT\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Note">
@@ -400,8 +403,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-5d8a9493903c0a481fff" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-5d8a9493903c0a481fff">{"x":{"diagram":"\ndigraph decision_guide {\n\n  graph [\n    rankdir = TB,\n    bgcolor = \"transparent\",\n    margin = 0.2,\n    nodesep = 0.6,\n    ranksep = 0.45\n  ]\n\n  node [\n    shape = box,\n    style = \"rounded,filled\",\n    fontname = \"Arial\",\n    fontsize = 15,\n    margin = \"0.25,0.15\",\n    color = \"#1F4E78\",\n    penwidth = 1.8\n  ]\n\n  edge [\n    color = \"#555555\",\n    penwidth = 1.8,\n    arrowsize = 0.7\n  ]\n\n\n  // =========================\n  // BAGIAN 1\n  // =========================\n\n  question1 [\n    label = \"APA YANG INGIN\\nDIKETAHUI?\",\n    fillcolor = \"#1F4E78\",\n    fontcolor = \"white\",\n    fontsize = 17\n  ]\n\n  compare [\n    label = \"COMPARE\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  trend [\n    label = \"TREND\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  relationship [\n    label = \"RELATIONSHIP\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  bar [\n    label = \"BAR\",\n    fillcolor = \"#D9EAF7\"\n  ]\n\n  line [\n    label = \"LINE\",\n    fillcolor = \"#D9EAF7\"\n  ]\n\n  scatter [\n    label = \"SCATTER\",\n    fillcolor = \"#D9EAF7\"\n  ]\n\n\n  question1 -> compare\n  question1 -> trend\n  question1 -> relationship\n\n  compare -> bar\n  trend -> line\n  relationship -> scatter\n\n\n  // =========================\n  // BAGIAN 2\n  // =========================\n\n  question2 [\n    label = \"BAGAIMANA DATA\\nTERSEBAR?\",\n    fillcolor = \"#1F4E78\",\n    fontcolor = \"white\",\n    fontsize = 17\n  ]\n\n  distribution [\n    label = \"DISTRIBUTION\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  spread [\n    label = \"SPREAD\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  histogram [\n    label = \"HISTOGRAM\",\n    fillcolor = \"#D9EAF7\"\n  ]\n\n  boxplot [\n    label = \"BOXPLOT\",\n    fillcolor = \"#D9EAF7\"\n  ]\n\n  question2 -> distribution\n  question2 -> spread\n\n  distribution -> histogram\n  spread -> boxplot\n\n\n  // =========================\n  // ALIGNMENT\n  // =========================\n\n  { rank = same; compare; trend; relationship }\n  { rank = same; bar; line; scatter }\n  { rank = same; distribution; spread }\n  { rank = same; histogram; boxplot }\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-13a9c0544b2fac2954b3" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-13a9c0544b2fac2954b3">{"x":{"diagram":"\ndigraph decision_guide {\n\n  graph [\n    rankdir = TB,\n    bgcolor = \"transparent\",\n    margin = 0.2,\n    nodesep = 0.6,\n    ranksep = 0.45\n  ]\n\n  node [\n    shape = box,\n    style = \"rounded,filled\",\n    fontname = \"Arial\",\n    fontsize = 15,\n    margin = \"0.25,0.15\",\n    color = \"#1F4E78\",\n    penwidth = 1.8\n  ]\n\n  edge [\n    color = \"#555555\",\n    penwidth = 1.8,\n    arrowsize = 0.7\n  ]\n\n\n  // =========================\n  // BAGIAN 1\n  // =========================\n\n  question1 [\n    label = \"APA YANG INGIN\\nDIKETAHUI?\",\n    fillcolor = \"#1F4E78\",\n    fontcolor = \"white\",\n    fontsize = 17\n  ]\n\n  compare [\n    label = \"COMPARE\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  trend [\n    label = \"TREND\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  relationship [\n    label = \"RELATIONSHIP\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  bar [\n    label = \"BAR\",\n    fillcolor = \"#D9EAF7\"\n  ]\n\n  line [\n    label = \"LINE\",\n    fillcolor = \"#D9EAF7\"\n  ]\n\n  scatter [\n    label = \"SCATTER\",\n    fillcolor = \"#D9EAF7\"\n  ]\n\n\n  question1 -> compare\n  question1 -> trend\n  question1 -> relationship\n\n  compare -> bar\n  trend -> line\n  relationship -> scatter\n\n\n  // =========================\n  // BAGIAN 2\n  // =========================\n\n  question2 [\n    label = \"BAGAIMANA DATA\\nTERSEBAR?\",\n    fillcolor = \"#1F4E78\",\n    fontcolor = \"white\",\n    fontsize = 17\n  ]\n\n  distribution [\n    label = \"DISTRIBUTION\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  spread [\n    label = \"SPREAD\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  histogram [\n    label = \"HISTOGRAM\",\n    fillcolor = \"#D9EAF7\"\n  ]\n\n  boxplot [\n    label = \"BOXPLOT\",\n    fillcolor = \"#D9EAF7\"\n  ]\n\n  question2 -> distribution\n  question2 -> spread\n\n  distribution -> histogram\n  spread -> boxplot\n\n\n  // =========================\n  // ALIGNMENT\n  // =========================\n\n  { rank = same; compare; trend; relationship }\n  { rank = same; bar; line; scatter }\n  { rank = same; distribution; spread }\n  { rank = same; histogram; boxplot }\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <hr>
@@ -456,8 +459,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Dalam kegiatan ini, prosesnya akan berjalan melalui beberapa tahap:</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-dd6e7e6e9e2792ed15f4" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-dd6e7e6e9e2792ed15f4">{"x":{"diagram":"\ndigraph analysis_flow {\n\n  graph [\n    rankdir = TB,\n    bgcolor = \"transparent\",\n    margin = 0.2,\n    nodesep = 0.4,\n    ranksep = 0.35\n  ]\n\n  node [\n    shape = box,\n    style = \"rounded,filled\",\n    fontname = \"Arial\",\n    fontsize = 16,\n    margin = \"0.3,0.18\",\n    width = 3.5,\n    color = \"#1F4E78\",\n    penwidth = 1.8\n  ]\n\n  edge [\n    color = \"#555555\",\n    penwidth = 1.8,\n    arrowsize = 0.7\n  ]\n\n  DATA [\n    label = \"DATA\",\n    fillcolor = \"#1F4E78\",\n    fontcolor = \"white\",\n    fontsize = 18\n  ]\n\n  IMPORT [\n    label = \"IMPORT\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  EXPLORE [\n    label = \"EXPLORE\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  VISUALIZE [\n    label = \"VISUALIZE\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  INTERPRET [\n    label = \"INTERPRET\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  INSIGHT [\n    label = \"INSIGHT\",\n    fillcolor = \"#FFF3CD\",\n    fontsize = 18\n  ]\n\n  DATA -> IMPORT\n  IMPORT -> EXPLORE\n  EXPLORE -> VISUALIZE\n  VISUALIZE -> INTERPRET\n  INTERPRET -> INSIGHT\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-4896312e1963faccb7da" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-4896312e1963faccb7da">{"x":{"diagram":"\ndigraph analysis_flow {\n\n  graph [\n    rankdir = TB,\n    bgcolor = \"transparent\",\n    margin = 0.2,\n    nodesep = 0.4,\n    ranksep = 0.35\n  ]\n\n  node [\n    shape = box,\n    style = \"rounded,filled\",\n    fontname = \"Arial\",\n    fontsize = 16,\n    margin = \"0.3,0.18\",\n    width = 3.5,\n    color = \"#1F4E78\",\n    penwidth = 1.8\n  ]\n\n  edge [\n    color = \"#555555\",\n    penwidth = 1.8,\n    arrowsize = 0.7\n  ]\n\n  DATA [\n    label = \"DATA\",\n    fillcolor = \"#1F4E78\",\n    fontcolor = \"white\",\n    fontsize = 18\n  ]\n\n  IMPORT [\n    label = \"IMPORT\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  EXPLORE [\n    label = \"EXPLORE\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  VISUALIZE [\n    label = \"VISUALIZE\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  INTERPRET [\n    label = \"INTERPRET\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  INSIGHT [\n    label = \"INSIGHT\",\n    fillcolor = \"#FFF3CD\",\n    fontsize = 18\n  ]\n\n  DATA -> IMPORT\n  IMPORT -> EXPLORE\n  EXPLORE -> VISUALIZE\n  VISUALIZE -> INTERPRET\n  INTERPRET -> INSIGHT\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>Kita akan menggunakan RStudio untuk menjalankan proses tersebut. Beberapa hal yang akan dipelajari:</p>
@@ -473,8 +476,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Pada bagian berikutnya, kita akan mulai bekerja dengan RStudio dan Dashboard.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-677f757bcadc6e9d704b" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-677f757bcadc6e9d704b">{"x":{"diagram":"\ndigraph roadmap {\n\n  graph [\n    rankdir = TB,\n    bgcolor = \"transparent\",\n    margin = 0.2,\n    nodesep = 0.35,\n    ranksep = 0.35\n  ]\n\n  node [\n    shape = box,\n    style = \"rounded,filled\",\n    fontname = \"Arial\",\n    fontsize = 16,\n    margin = \"0.25,0.18\",\n    color = \"#1F4E78\",\n    penwidth = 1.8\n  ]\n\n  edge [\n    color = \"#777777\",\n    penwidth = 2,\n    arrowsize = 0.7\n  ]\n\n  step01 [\n    label = \"01\\nUnderstand Data\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  step02 [\n    label = \"02\\nWork with R\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  step03 [\n    label = \"03\\nVisualize\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  step04 [\n    label = \"04\\nFind Insight\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  step05 [\n    label = \"05\\nProject\",\n    fillcolor = \"#FFF3CD\"\n  ]\n\n  step01 -> step02\n  step02 -> step03\n  step03 -> step04\n  step04 -> step05\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-c15a933c17dedda67f0d" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-c15a933c17dedda67f0d">{"x":{"diagram":"\ndigraph roadmap {\n\n  graph [\n    rankdir = TB,\n    bgcolor = \"transparent\",\n    margin = 0.2,\n    nodesep = 0.35,\n    ranksep = 0.35\n  ]\n\n  node [\n    shape = box,\n    style = \"rounded,filled\",\n    fontname = \"Arial\",\n    fontsize = 16,\n    margin = \"0.25,0.18\",\n    color = \"#1F4E78\",\n    penwidth = 1.8\n  ]\n\n  edge [\n    color = \"#777777\",\n    penwidth = 2,\n    arrowsize = 0.7\n  ]\n\n  step01 [\n    label = \"01\\nUnderstand Data\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  step02 [\n    label = \"02\\nWork with R\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  step03 [\n    label = \"03\\nVisualize\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  step04 [\n    label = \"04\\nFind Insight\",\n    fillcolor = \"#EAF2F8\"\n  ]\n\n  step05 [\n    label = \"05\\nProject\",\n    fillcolor = \"#FFF3CD\"\n  ]\n\n  step01 -> step02\n  step02 -> step03\n  step03 -> step04\n  step04 -> step05\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Remember">

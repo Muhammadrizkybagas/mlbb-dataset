@@ -2,12 +2,12 @@
   {
     "objectID": "chapter1.html",
     "href": "chapter1.html",
-    "title": "WORKING WITH DATA IN R STUDIO",
+    "title": "MEMBACA DATASET DARI RAW GITHUB",
     "section": "",
-    "text": "RStudio adalah Integrated Development Environment (IDE) yang digunakan untuk bekerja dengan bahasa pemrograman R.\n\nRStudio menyediakan beberapa area utama untuk bekerja:\n\nSource → tempat menulis kode dan dokumen.\nConsole → tempat menjalankan perintah R.\nEnvironment → melihat data dan objek yang sedang digunakan.\nFiles / Plots / Packages → mengelola file, melihat grafik, dan library.",
+    "text": "1 Apa Itu Dataset\nKumpulan data yang disusun dalam bentuk tabel, sehingga bisa dipakai untuk analisis. Sebuah dataset biasanya terdiri dari:\n\nBaris (rows): satu baris = satu observasi atau satu data.\nKolom (columns): satu kolom = satu variabel atau atribut\n\nContoh dataset kecil:\n\n\n\nName\nRole\n\n\n\n\nMiya\nMarksman\n\n\nBalmond\nFighter\n\n\nSaber\nAssassin\n\n\nAlice\nMage\n\n\nTigreal\nTank\n\n\n\nPada latihan ini kita memakai dataset hero Mobile Legends. Datasetnya berisi 133 hero dan disimpan di GitHub.\n\n\n\n2 Kenapa Dataset Disimpan di GitHub?\nDataset bisa disimpan di repository GitHub supaya bisa diakses lewat internet. Alurnya seperti ini:\n\n\n\n\n\n\n\n\n\n\n\n\nNoteKeuntungannya\n\n\n\nFile dataset tidak perlu dipindahkan manual ke setiap komputer. Selama URL masih bisa dibuka, R bisa mengambil datanya langsung.\n\n\n\n\n\n3 URL Halaman GitHub vs URL Raw\nIni hal yang paling penting: URL halaman GitHub dan URL raw itu berbeda\n\n\n\n\n\n\nTipURL Halaman Github\n\n\n\nDipakai untuk melihat file lewat browser. Contoh:\n\nhttps://github.com/Muhammadrizkybagas/mlbb-dataset/blob/main/data/hero.csv\n\n\nHalaman ini berisi tampilan website GitHub (menu, tombol, dll), bukan data mentah. Karena itu R tidak bisa membaca data dari URL ini.\n\n\n\n\n\n\n\n\n\nNoteURL Raw Github\n\n\n\nHanya berisi isi file (data mentahnya saja). Inilah yang dibutuhkan R:\nFormatnya:\nhttps://github.com/Muhammadrizkybagas/mlbb-dataset/blob/main/data/hero.csv \n\n\n\n\n\n\n\n\n\n\nTipTips\n\n\n\ncara cepat mengenali URL raw adalah dari alamatnya. Kalau diawali github.com berarti URL halaman biasa. Kalau diawali raw.githubusercontent.com berarti URL raw.\n\n\n\n\n\n4 Membaca Dataset\nSekarang kita baca datanya di R. Tulis kode berikut di chunk R pada file .qmd kamu:\n\n# baca dataset hero dari raw GitHub\nurl_hero &lt;-\n \"https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/data/hero.csv\"\ndata_hero &lt;- read.csv(url_hero, stringsAsFactors = FALSE)\n\n\nurl_hero: variabel untuk menyimpan alamat raw URL.\nread.csv(): fungsi untuk membaca file CSV, bisa dari file lokal maupun dari URL.\nstringsAsFactors = FALSE: supaya kolom teks tetap dibaca sebagai teks biasa.\ndata_hero: tempat hasil baca disimpan (berupa data frame).\n\nSetelah itu, cek isi datanya dulu sebelum dipakai:\n\nhead(data_hero) # lihat 6 baris pertama\n\n  id_hero name_hero images.hero                    role\n1       1     Aamon   aamon.png            ['assassin']\n2       2      Akai    akai.png                ['tank']\n3       3    Aldous  aldous.png             ['fighter']\n4       4     Alice   alice.png        ['tank', 'mage']\n5       5     Alpha   alpha.png             ['fighter']\n6       6   Alucard alucard.png ['fighter', 'assassin']\n\nnrow(data_hero) # jumlah baris (hasilnya 133)\n\n[1] 133\n\nnames(data_hero) # nama kolom\n\n[1] \"id_hero\"     \"name_hero\"   \"images.hero\" \"role\"       \n\n\n\n\n\n5 Menampilkan Gambar Hero\nKolom images.hero baru berisi nama file gambar (misalnya aamon.png). Supaya tampil sebagai gambar, kita ubah nama file itu menjadi tag HTML &lt;img&gt; dengan paste0().\n\n# alamat folder gambar di GitHub (raw URL)\nimage_base &lt;-\n \"https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/img/images-hero/\"\n\n# ubah nama file menjadi tag gambar\ndata_hero$images.hero &lt;- paste0(\n '&lt;img src=\"', image_base, data_hero$images.hero,\n '\" style=\"height:60px; width:auto; border-radius:50%;\"&gt;'\n)\n\n\n\n\n6 Menampilkan Dataset\nFungsi datatable() berasal dari package DT. Jika belum pernah dipasang, jalankan sekali di Console:\n\ninstall.packages(\"DT\")\n\nLalu panggil library-nya dan tampilkan tabel:\n\nlibrary(DT)\ndatatable(\n data_hero,\n escape = FALSE, # agar tag &lt;img&gt; dibaca sebagai gambar\n filter = \"top\", # kotak filter di atas tiap kolom\n rownames = FALSE, # sembunyikan nomor baris bawaan\n options = list(\n pageLength = 5, # tampilkan 5 baris per halaman\n scrollX = TRUE # tabel bisa digeser ke samping\n )\n)\n\n\n\n\n\nHasilnya adalah tabel interaktif: kamu bisa mencari data (search), memfilter per kolom, mengurutkan, dan berpindah halaman. Dataset hero ini terdiri dari 133 data, jadi akan muncul sekitar 27 halaman dengan 5 baris per halaman.\n\n\n\n7 Kode Lengkap\nSalin URL dan data raw github dapat digunakan. Lihat kode di bawah ini.\n\ndata &lt;- read.csv(\n  \"https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/data/hero.csv\"\n)\n\n# url gambar\nimage_base &lt;- \"https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/img/images-hero/\"\n\n# Ubah nama file menjadi gambar\ndata$images.hero &lt;- paste0(\n  '&lt;img src=\"',\n  image_base,\n  data$images.hero,\n  '\" style=\"height:80px; width:auto; border-radius:100%\"&gt;'\n)\n\ndatatable(\n  data,\n  escape = FALSE,\n  filter = \"top\",\n  rownames = FALSE,\n  options = list(\n    pageLength = 5,\n    scrollX = TRUE\n  )\n)\n\n\n\n\n\n\n\n8 Kesalahan Yang Sering Terjadi\n\n\n\nMasalah\nKemungkinan Penyebab\n\n\n\n\nError saat read.csv()\nMemakai URL GitHub, bukan URL raw.\n\n\nError datatable\nBelum menjalankan library(DT).\n\n\n\n\n\n9 Ringkasan\n\nDataset bisa disimpan di GitHub dan dibaca langsung oleh R.\nGunakan raw URL (raw.githubusercontent.com), bukan URL halaman biasa.\nBaca data dengan read.csv(url).\nTampilkan tabel interaktif dengan datatable() dari package DT.\nPakai escape = FALSE jika kolom berisi tag HTML seperti gambar",
     "crumbs": [
       "**BAB**",
-      "1. Data in R"
+      "1. Baca Raw Github"
     ]
   },
   {
@@ -184,23 +184,23 @@
   {
     "objectID": "chapter3.html",
     "href": "chapter3.html",
-    "title": "FROM VISUALIZATION TO INSIGHT",
+    "title": "Seven Tools Analysis",
     "section": "",
-    "text": "1 Membaca Sebuah Grafik\n\n\n2 Menemukan Pola\n\n\n3 Membandingkan Kelompok\n\n\n4 Menemukan Hubungan\n\n\n5 Menulis Insight\n\n\n6 Insight vs Kesimpulan\n\n\n7 Correlation ≠ Causation\n\n\n8 Data Storytelling",
+    "text": "NoteDefinisi\n\n\n\nDefinisi: 7 QC Tools (Seven Quality Control Tools), metode statistik sederhana yang digunakan secara sistematis mengidentifikasi, menganalisis, dan menyelesaikan masalah yang berkaitan dengan kualitas.\n\n\n\n\n\n\n\n\n\n\nFigure 1: Gambaran Umum 7 QC Tools dengan Pendekatan 5W + 1H\n\n\n\n\n\n\n\n7 QC Tools → tujuh alat statistik dasar yang digunakan untuk membantu mengidentifikasi, menganalisis, dan menyelesaikan masalah kualitas secara sistematis.\nKetujuh alat tersebut adalah:\n\nCheck Sheet – Lembar untuk mencatat dan mengumpulkan data.\nHistogram – Grafik untuk melihat persebaran data.\nPareto Chart – Grafik untuk mengetahui masalah yang paling dominan.\nFishbone Diagram – Diagram untuk mencari kemungkinan penyebab suatu masalah.\nScatter Diagram – Grafik untuk melihat hubungan antara dua variabel.\nControl Chart – Grafik untuk memantau kestabilan suatu proses.\nFlowchart – Diagram untuk menggambarkan tahapan suatu proses.\n\n\n\n\nMengapa kita perlu mempelajari dan menggunakan 7 QC Tools?\nBerikut beberapa alasannya:\n\nMudah digunakan: Alat-alat ini relatif mudah dipahami, bahkan oleh orang yang belum memiliki latar belakang statistik.\nBerdasarkan data: Membantu kita mengambil keputusan berdasarkan fakta, bukan sekadar dugaan.\nMembantu menemukan masalah: Mempermudah kita mengetahui masalah yang sedang terjadi.\nMeningkatkan efisiensi: Membantu menemukan bagian proses yang perlu diperbaiki.\nMeningkatkan kualitas: Membantu organisasi meningkatkan kualitas produk maupun pelayanan sehingga kepuasan pelanggan juga meningkat.\n\nContohnya, daripada langsung menyimpulkan bahwa keterlambatan pengiriman disebabkan oleh kurir, kita dapat mengumpulkan data terlebih dahulu untuk mengetahui penyebab sebenarnya.\n\n\n\n7 QC Tools tidak hanya digunakan oleh perusahaan besar atau orang yang bekerja di bidang pengendalian kualitas.\nBeberapa pihak yang dapat menggunakannya antara lain:\n\nQuality Manager: Orang yang bertanggung jawab terhadap pengelolaan kualitas.\nProduction Operator: Pekerja yang terlibat langsung dalam proses produksi.\nSupervisor: Orang yang mengawasi jalannya suatu proses.\nKaizen Team: Tim yang berfokus pada perbaikan secara berkelanjutan.\nAuditor: Orang yang melakukan pemeriksaan atau evaluasi terhadap suatu proses.\nProfesional dari berbagai bidang: Misalnya bidang pendidikan, kesehatan, pelayanan publik, dan lainnya.\n\nArtinya, siapa pun yang ingin memahami dan memperbaiki suatu masalah dapat memanfaatkan 7 QC Tools.\n\n\n\nPenerapan 7 QC Tools tidak terbatas pada perusahaan manufaktur atau pabrik saja.\nBeberapa contoh penerapannya adalah:\n\nIndustri Manufaktur: Memeriksa jumlah produk cacat selama proses produksi.\nRumah Sakit: Menganalisis penyebab lamanya waktu pelayanan pasien.\nPerusahaan Jasa: Menganalisis penyebab keterlambatan pelayanan pelanggan.\nInstitusi Pendidikan: Mengevaluasi proses pembelajaran dan kehadiran mahasiswa.\nInstansi Pemerintahan: Memantau kualitas pelayanan administrasi kepada masyarakat.\n\n\n\n\n7 QC Tools dapat digunakan ketika kita menghadapi kondisi seperti:\n\nKetika masalah kualitas terjadi secara berulang.\nKetika organisasi ingin melakukan perbaikan secara berkelanjutan.\nKetika ingin mengetahui akar penyebab suatu masalah (Root Cause Analysis).\nKetika melakukan pemeriksaan atau audit kualitas.\nKetika organisasi perlu menentukan tindakan perbaikan dan pencegahan atau CAPA (Corrective and Preventive Actions).\n\n\n\n\nSecara umum, penggunaan 7 QC Tools dapat dilakukan melalui beberapa tahapan berikut:\n\nMengumpulkan data: Catat informasi yang berkaitan dengan masalah yang sedang terjadi.\nMemilih alat yang sesuai: Tentukan QC Tool berdasarkan tujuan analisis.\nMenyajikan data: Buat tabel, grafik, atau diagram menggunakan data yang telah dikumpulkan.\nMenganalisis data: Perhatikan pola, frekuensi, hubungan, dan perubahan yang terjadi.\nMenemukan penyebab masalah: Identifikasi faktor-faktor yang kemungkinan menjadi penyebab masalah.\nMenentukan solusi: Buat rencana perbaikan berdasarkan hasil analisis.\nMelakukan evaluasi: Pantau apakah solusi yang diterapkan berhasil memperbaiki kondisi sebelumnya.\n\n\n\n\n7 QC Tools dapat digunakan untuk membantu organisasi menemukan masalah, mengetahui penyebabnya, dan menentukan solusi berdasarkan data.\nSebagai contoh, kita gunakan kasus keterlambatan pengiriman barang.\nPertama, perusahaan menggunakan Check Sheet (Lembar Periksa) untuk mencatat data keterlambatan, seperti tanggal, waktu, dan penyebabnya. Selanjutnya, data dianalisis menggunakan Histogram untuk melihat pola keterlambatan dan Pareto Chart (Bagan Pareto) untuk mengetahui penyebab yang paling sering terjadi.\nSetelah itu, Fishbone Diagram (Diagram Tulang Ikan) digunakan untuk mencari kemungkinan penyebab masalah berdasarkan faktor Manusia, Mesin, Metode, Material, dan Lingkungan. Scatter Diagram (Diagram Sebar) membantu melihat hubungan antara faktor tertentu dengan keterlambatan, sedangkan Control Chart (Bagan Kontrol) digunakan untuk memantau kestabilan proses pengiriman.\nTerakhir, Flowchart (Bagan Alur) digunakan untuk menggambarkan tahapan proses pengiriman dan membantu menemukan bagian yang berpotensi menimbulkan masalah.",
     "crumbs": [
       "**BAB**",
-      "3. Visualization"
+      "3. Seven QC Tools"
     ]
   },
   {
     "objectID": "chapter2.html",
     "href": "chapter2.html",
-    "title": "UNDERSTANDING DATA VISUALIZATION",
+    "title": "Memilih Visualisasi Yang Tepat",
     "section": "",
-    "text": "1 Apa yang Ingin Kita Ketahui?\n\n\n2 Bar Chart\n\n\n3 Line Chart\n\n\n4 Scatter Plot\n\n\n5 Histogram\n\n\n6 Boxplot\n\n\n7 Memilih Grafik yang Tepat\n\n\n8 Kesalahan dalam Visualisasi\n\n\n9 Bad Visualization Challenge",
+    "text": "Di bab ini kita tidak hanya belajar membuat grafik, tetapi belajar menjawab satu pertanyaan:\nSetelah bab ini, kamu bisa:",
     "crumbs": [
       "**BAB**",
-      "2. Understanding Data Visualization"
+      "2. Memilih Visualisai"
     ]
   },
   {
@@ -240,11 +240,341 @@
     "objectID": "chapter1.html#pahami-struktur-dasar",
     "href": "chapter1.html#pahami-struktur-dasar",
     "title": "WORKING WITH DATA IN R STUDIO",
-    "section": "2.3 Pahami Struktur Dasar",
-    "text": "2.3 Pahami Struktur Dasar\nRStudio akan membukakan file .Rmd dengan kerangka dasar. Bagian atas (YAML) akan terlihat seperti ini:\n\n---\ntitle: \"Dashboard Saya\"\noutput: \n  flexdashboard::flex_dashboard:\n    orientation: columns\n    vertical_layout: fill\n---\n      \n\nSimpan file .Rmd tersebut.\nKlik tombol Knit di bagian atas editor RStudio untuk melihat hasil pratinjau dashboard dalam bentuk halaman web HTML",
+    "section": "2.1 Pahami Struktur Dasar",
+    "text": "2.1 Pahami Struktur Dasar\nRStudio akan membukakan file .Rmd dengan kerangka dasar. Bagian atas (YAML) akan terlihat seperti ini:\n\nSimpan file .Rmd tersebut.\nKlik tombol Knit di bagian atas editor RStudio untuk melihat hasil pratinjau dashboard dalam bentuk halaman web HTML",
     "crumbs": [
       "**BAB**",
       "1. Data in R"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#import-dataset",
+    "href": "chapter2.html#import-dataset",
+    "title": "UNDERSTANDING DATA VISUALIZATION",
+    "section": "2.1 Import dataset",
+    "text": "2.1 Import dataset\n\nmeta &lt;- read.csv(\n  \"https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/data/meta-draftpick-ml.csv\"\n)",
+    "crumbs": [
+      "**BAB**",
+      "2. Understanding Data"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#filter-data-s-tier",
+    "href": "chapter2.html#filter-data-s-tier",
+    "title": "UNDERSTANDING DATA VISUALIZATION",
+    "section": "2.2 Filter data S-Tier",
+    "text": "2.2 Filter data S-Tier\n\nlibrary(tidyverse)\n\nmeta_s &lt;- meta %&gt;%\n  filter(\n    priority_tier == \"S-Tier\"\n  )\n\n# Liat tabel\ndatatable(\n  meta_s,\n  escape = FALSE,\n  filter = \"top\",\n  rownames = FALSE,\n  options = list(\n    pageLength = 5,\n    scrollX = TRUE\n  )\n)",
+    "crumbs": [
+      "**BAB**",
+      "2. Understanding Data"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#membuat-grafik",
+    "href": "chapter2.html#membuat-grafik",
+    "title": "UNDERSTANDING DATA VISUALIZATION",
+    "section": "2.3 Membuat Grafik",
+    "text": "2.3 Membuat Grafik\n\nggplot(meta_s, aes(x = lane)) +\n  geom_bar(fill = \"#007ab8\") +\n  geom_text(\n    stat = \"count\",\n    aes(label = after_stat(count)),\n    vjust = -0.3\n  ) +\n  labs(\n    title = \"Jumlah Hero S-Tier di Setiap Lane\",\n    x = \"Lane\",\n    y = \"Jumlah Hero\"\n  )\n\n\n\n\n\n\n\n\n\nggplot(meta_s, aes(x = lane)) +\n  geom_bar(fill = \"#007ab8\") +\n  geom_text(\n    stat = \"count\",\n    aes(label = after_stat(count)),\n    vjust = -0.3\n  ) +\n  labs(\n    title = \"Jumlah Hero S-Tier di Setiap Lane\",\n    x = \"Lane\",\n    y = \"Jumlah Hero\"\n  )\n\n\n\n\n\n\n\n\nBar chart itu membantu kita membandingkan kategori dengan lebih cepat dibandingkan membaca daftar hero satu per satu.\n\n\n\n\n\n\nNoteBa rchart\n\n\n\nBar chart = membandingkan kategori.",
+    "crumbs": [
+      "**BAB**",
+      "2. Understanding Data"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#contoh-kedua",
+    "href": "chapter2.html#contoh-kedua",
+    "title": "UNDERSTANDING DATA VISUALIZATION",
+    "section": "2.4 Contoh Kedua",
+    "text": "2.4 Contoh Kedua\n\nbuild &lt;- read.csv(\n  \"https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/data/build-item.csv\"\n)\n\n# Liat tabel\ndatatable(\n  build,\n  escape = FALSE,\n  filter = \"top\",\n  rownames = FALSE,\n  options = list(\n    pageLength = 5,\n    scrollX = TRUE\n  )\n)\n\n\n\n\n\n\n# ambil  kolom item_1 sampai item_6\nitem_count &lt;- build %&gt;%\n  select(starts_with(\"item_\")) %&gt;%\n  pivot_longer(\n    cols = everything(),\n    names_to = \"slot\",\n    values_to = \"item\"\n  ) %&gt;%\n  \n  # hapus data item yang kosong\n  filter(!is.na(item), item != \"\") %&gt;%\n  \n  # hitung jumlah setiap item yang muncul\n  count(item, sort = TRUE) %&gt;%\n  \n  # ambil 10 item yang paling sering muncul\n  slice_head(n = 10)\n\n# buat bar chart\nggplot(item_count, aes(\n  x = reorder(item, n),\n  y = n\n)) +\n  geom_col(fill = \"#2E75B6\") +\n  \n  # tampilkan nilai\n  geom_text(\n    aes(label = n),\n    hjust = -0.2\n  ) +\n  \n  # buat bar horizontal\n  coord_flip() +\n  \n  # judul + nama sumbu\n  labs(\n    title = \"10 Item yang Paling Sering Muncul\",\n    x = \"Item\",\n    y = \"Frekuensi\"\n  ) +\n  \n  expand_limits(y = max(item_count$n) * 1.1)",
+    "crumbs": [
+      "**BAB**",
+      "2. Understanding Data"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#contoh-kedua-item-paling-populer",
+    "href": "chapter2.html#contoh-kedua-item-paling-populer",
+    "title": "UNDERSTANDING DATA VISUALIZATION",
+    "section": "2.4 Contoh Kedua Item Paling Populer",
+    "text": "2.4 Contoh Kedua Item Paling Populer\n\nbuild &lt;- read.csv(\n  \"https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/data/build-item.csv\"\n)\n\n# Liat tabel\ndatatable(\n  build,\n  escape = FALSE,\n  filter = \"top\",\n  rownames = FALSE,\n  options = list(\n    pageLength = 5,\n    scrollX = TRUE\n  )\n)\n\n\n\n\n\n\n# ambil  kolom item_1 sampai item_6\nitem_count &lt;- build %&gt;%\n  select(starts_with(\"item_\")) %&gt;%\n  pivot_longer(\n    cols = everything(),\n    names_to = \"slot\",\n    values_to = \"item\"\n  ) %&gt;%\n  \n  # hapus data item yang kosong\n  filter(!is.na(item), item != \"\") %&gt;%\n  \n  # hitung jumlah setiap item yang muncul\n  count(item, sort = TRUE) %&gt;%\n  \n  # ambil 10 item yang paling sering muncul\n  slice_head(n = 10)\n\n# buat bar chart\nggplot(item_count, aes(\n  x = reorder(item, n),\n  y = n\n)) +\n  geom_col(fill = \"#2E75B6\") +\n  \n  # tampilkan nilai\n  geom_text(\n    aes(label = n),\n    hjust = -0.2\n  ) +\n  \n  # buat bar horizontal\n  coord_flip() +\n  \n  # judul + nama sumbu\n  labs(\n    title = \"10 Item yang Paling Sering Muncul\",\n    x = \"Item\",\n    y = \"Frekuensi\"\n  ) +\n  \n  expand_limits(y = max(item_count$n) * 1.1)",
+    "crumbs": [
+      "**BAB**",
+      "2. Understanding Data"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#distribusi-role-hero",
+    "href": "chapter2.html#distribusi-role-hero",
+    "title": "UNDERSTANDING DATA VISUALIZATION",
+    "section": "3.1 Distribusi Role Hero",
+    "text": "3.1 Distribusi Role Hero\nKita menggunakan kolom role dari build-item.csv. Karena satu hero dapat memiliki lebih dari satu role, kita pisah dulu datanya.\nMembuat Donut Chart\n\n\n\n\n\n\n\n\nlibrary(tidyverse)\n\n# hitung jumlah setiap role dan persentase\nrole_count &lt;- donut %&gt;%\n  separate_rows(role, sep = \",\\\\s*\") %&gt;%\n  count(role) %&gt;%\n  mutate(\n    percentage = n / sum(n) * 100\n  )\n\n# buat donut chart\nggplot(role_count, aes(\n  x = 2,\n  y = n,\n  fill = role\n)) +\n  geom_col(width = 1) +\n  geom_text(\n    aes(label = paste0(round(percentage, 1), \"%\")),\n    position = position_stack(vjust = 0.5),\n    color = \"white\",\n    size = 4\n  ) +\n  coord_polar(theta = \"y\") +\n  xlim(0.5, 2.5) +\n  scale_fill_manual(\n    values = c(\n      \"Fighter\" = \"#0D47A1\",\n      \"Mage\" = \"#1976D2\",\n      \"Assassin\" = \"#2196F3\",\n      \"Tank\" = \"#42A5F5\",\n      \"Marksman\" = \"#64B5F6\",\n      \"Support\" = \"#90CAF9\"\n    )\n  ) +\n  labs(\n    title = \"Proporsi Role Hero dalam Dataset Build\",\n    fill = \"Role\"\n  ) +\n  theme_void()",
+    "crumbs": [
+      "**BAB**",
+      "2. Understanding Data"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#apa-itu-7-qc-tools",
+    "href": "chapter3.html#apa-itu-7-qc-tools",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "Definisi: 7 QC Tools (Seven Quality Control Tools),metode statistik sederhana yang digunakan secara sistematis mengidentifikasi, menganalisis, dan menyelesaikan masalah yang berkaitan dengan kualitas.\n\n\nlibrary(ggplot2)\n\n# Fungsi untuk membuat bentuk oval\nbuat_oval &lt;- function(x, y, rx, ry, nama, jumlah = 100) {\n  sudut &lt;- seq(0, 2 * pi, length.out = jumlah)\n\n  data.frame(\n    x = x + rx * cos(sudut),\n    y = y + ry * sin(sudut),\n    kelompok = nama\n  )\n}\n\n# Data posisi dan ukuran oval\noval &lt;- data.frame(\n  nama = c(\"What\", \"Why\", \"Who\", \"When\", \"Where\", \"How\"),\n  x = c(8.4, 8.2, 8.2, 8.4, 8.2, 8.2),\n  y = c(9.0, 7.5, 6.0, 4.5, 3.0, 1.3),\n  rx = c(3.8, 1.65, 1.35, 2.5, 1.45, 1.7),\n  ry = c(0.65, 0.7, 0.75, 0.7, 0.75, 0.8),\n  warna = c(\"#ADD8E6\", \"#FDE2E0\", \"#DDEEDD\",\n            \"#FFF7CC\", \"#E6E4FA\", \"#DFEEEE\")\n)\n\n# Membuat seluruh bentuk oval\ndata_oval &lt;- do.call(\n  rbind,\n  lapply(seq_len(nrow(oval)), function(i) {\n    buat_oval(\n      oval$x[i],\n      oval$y[i],\n      oval$rx[i],\n      oval$ry[i],\n      oval$nama[i]\n    )\n  })\n)\n\n# Data bentuk belah ketupat\ndiamond &lt;- data.frame(\n  x = c(0.2, 2.1, 4.0, 2.1),\n  y = c(5.0, 6.1, 5.0, 3.9)\n)\n\n# Data garis penghubung\ngaris &lt;- data.frame(\n  x = c(3.6, 3.6, 3.6, 3.6, 3.6, 3.6),\n  y = c(5.8, 5.4, 5.1, 4.8, 4.5, 4.2),\n  xend = c(4.8, 6.5, 6.7, 5.9, 6.7, 6.5),\n  yend = c(8.6, 7.5, 6.0, 4.5, 3.0, 1.5)\n)\n\n# Teks di dalam setiap oval\nteks &lt;- data.frame(\n  x = c(8.4, 8.2, 8.2, 8.4, 8.2, 8.2),\n  y = c(9.0, 7.5, 6.0, 4.5, 3.0, 1.3),\n  isi = c(\n    paste(\n      \"What\\n\",\n      \"- 7 alat statistik dasar\\n\",\n      \"- Mengidentifikasi, menganalisis, dan menyelesaikan masalah kualitas\\n\",\n      \"- Check Sheet, Histogram, Pareto, Fishbone, Scatter, Control Chart, Flowchart\"\n    ),\n    paste(\n      \"Why\\n\",\n      \"- Mempermudah penyelesaian masalah\\n\",\n      \"- Berdasarkan data, bukan asumsi\\n\",\n      \"- Meningkatkan kualitas dan efisiensi\"\n    ),\n    paste(\n      \"Who\\n\",\n      \"- Manajer kualitas\\n\",\n      \"- Operator produksi\\n\",\n      \"- Tim Kaizen\\n\",\n      \"- Profesional lintas bidang\"\n    ),\n    paste(\n      \"When\\n\",\n      \"- Ketika masalah kualitas muncul\\n\",\n      \"- Dalam kegiatan perbaikan berkelanjutan\\n\",\n      \"- Saat audit dan CAPA (Tindakan Perbaikan dan Pencegahan)\"\n    ),\n    paste(\n      \"Where\\n\",\n      \"- Industri manufaktur\\n\",\n      \"- Rumah sakit\\n\",\n      \"- Institusi pendidikan\\n\",\n      \"- Instansi pemerintahan\"\n    ),\n    paste(\n      \"How\\n\",\n      \"- Mengumpulkan data proses\\n\",\n      \"- Memilih QC Tool yang sesuai\\n\",\n      \"- Membuat visualisasi dan menganalisis\\n\",\n      \"- Mengambil keputusan dan melakukan tindakan\"\n    )\n  ),\n  warna_teks = c(\n    \"#153A8A\", \"#C62828\", \"#168B20\",\n    \"#987000\", \"#59249A\", \"#3986B8\"\n  ),\n  ukuran = c(3.5, 3.8, 3.8, 3.6, 3.8, 3.8)\n)\n\n# Membuat diagram\nggplot() +\n\n  # Garis penghubung\n  geom_curve(\n    data = garis,\n    aes(x = x, y = y, xend = xend, yend = yend),\n    curvature = 0.12,\n    color = \"grey75\",\n    linewidth = 0.35\n  ) +\n\n  # Bentuk belah ketupat\n  geom_polygon(\n    data = diamond,\n    aes(x = x, y = y),\n    fill = \"#08B6E8\",\n    color = NA\n  ) +\n\n  # Teks utama\n  annotate(\n    \"text\",\n    x = 2.1,\n    y = 5.0,\n    label = \"7 QC Tools\\n&\\n5W + 1H Approach\",\n    size = 6,\n    color = \"#071B67\",\n    lineheight = 1.2\n  ) +\n\n  # Membuat oval dengan warna masing-masing\n  geom_polygon(\n    data = data_oval,\n    aes(x = x, y = y, group = kelompok, fill = kelompok),\n    color = NA\n  ) +\n\n  scale_fill_manual(\n    values = setNames(oval$warna, oval$nama)\n  ) +\n\n  # Menambahkan teks pada setiap oval\n  geom_text(\n    data = teks,\n    aes(x = x, y = y, label = isi, color = warna_teks),\n    size = 3.5,\n    lineheight = 1.15\n  ) +\n\n  scale_color_identity() +\n\n  coord_fixed(\n    xlim = c(0, 12.3),\n    ylim = c(0.3, 9.8),\n    expand = FALSE\n  ) +\n\n  theme_void() +\n\n  theme(\n    legend.position = \"none\",\n    plot.margin = margin(10, 10, 10, 10)\n  )\n\n\n\n\n\n\n\nFigure 1: Gambaran Umum 7 QC Tools dengan Pendekatan 5W + 1H",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#mengenal-7-qc-tools-dengan-5w-1h",
+    "href": "chapter3.html#mengenal-7-qc-tools-dengan-5w-1h",
+    "title": "Seven Tools Analysis",
+    "section": "2 1.2 Mengenal 7 QC Tools dengan 5W + 1H",
+    "text": "2 1.2 Mengenal 7 QC Tools dengan 5W + 1H\nSebelum mempelajari setiap alat lebih jauh, kita perlu memahami terlebih dahulu gambaran umum dari 7 QC Tools.\nSalah satu cara termudah untuk memahaminya adalah menggunakan metode 5W + 1H.\nMetode ini terdiri dari enam pertanyaan dasar yang membantu kita memahami suatu topik secara menyeluruh.\n\n\n\nPertanyaan\nArtinya\nPenjelasan\n\n\n\n\nWhat\nApa?\nApa yang dimaksud dengan 7 QC Tools?\n\n\nWhy\nMengapa?\nMengapa kita perlu menggunakannya?\n\n\nWho\nSiapa?\nSiapa yang dapat menggunakannya?\n\n\nWhen\nKapan?\nKapan alat ini digunakan?\n\n\nWhere\nDi mana?\nDi mana alat ini dapat diterapkan?\n\n\nHow\nBagaimana?\nBagaimana cara menggunakannya?\n\n\n\n\n2.1 1.2.1 What – Apa itu 7 QC Tools?\n7 QC Tools adalah tujuh alat statistik dasar yang digunakan untuk membantu mengidentifikasi, menganalisis, dan menyelesaikan masalah kualitas secara sistematis.\nKetujuh alat tersebut memiliki fungsi yang berbeda-beda, tetapi saling melengkapi dalam proses analisis masalah.\n\n\n2.2 1.2.2 Why – Mengapa 7 QC Tools Penting?\nMengapa kita perlu mempelajari dan menggunakan 7 QC Tools?\nBerikut beberapa alasannya:\n\nMudah digunakan: Alat-alat ini relatif mudah dipahami, bahkan oleh orang yang belum memiliki latar belakang statistik.\nBerdasarkan data: Membantu kita mengambil keputusan berdasarkan fakta, bukan sekadar dugaan.\nMembantu menemukan masalah: Mempermudah kita mengetahui masalah yang sedang terjadi.\nMeningkatkan efisiensi: Membantu menemukan bagian proses yang perlu diperbaiki.\nMeningkatkan kualitas: Membantu organisasi meningkatkan kualitas produk maupun pelayanan sehingga kepuasan pelanggan juga meningkat.\n\nContohnya, daripada langsung menyimpulkan bahwa keterlambatan pengiriman disebabkan oleh kurir, kita dapat mengumpulkan data terlebih dahulu untuk mengetahui penyebab sebenarnya.\n\n\n2.3 1.2.3 Who – Siapa yang Menggunakan 7 QC Tools?\n7 QC Tools tidak hanya digunakan oleh perusahaan besar atau orang yang bekerja di bidang pengendalian kualitas.\nBeberapa pihak yang dapat menggunakannya antara lain:\n\nQuality Manager: Orang yang bertanggung jawab terhadap pengelolaan kualitas.\nProduction Operator: Pekerja yang terlibat langsung dalam proses produksi.\nSupervisor: Orang yang mengawasi jalannya suatu proses.\nKaizen Team: Tim yang berfokus pada perbaikan secara berkelanjutan.\nAuditor: Orang yang melakukan pemeriksaan atau evaluasi terhadap suatu proses.\nProfesional dari berbagai bidang: Misalnya bidang pendidikan, kesehatan, pelayanan publik, dan lainnya.\n\nArtinya, siapa pun yang ingin memahami dan memperbaiki suatu masalah dapat memanfaatkan 7 QC Tools.\n\n\n2.4 1.2.4 Where – Di Mana 7 QC Tools Digunakan?\nPenerapan 7 QC Tools tidak terbatas pada perusahaan manufaktur atau pabrik saja.\nBeberapa contoh penerapannya adalah:\n\nIndustri Manufaktur: Memeriksa jumlah produk cacat selama proses produksi.\nRumah Sakit: Menganalisis penyebab lamanya waktu pelayanan pasien.\nPerusahaan Jasa: Menganalisis penyebab keterlambatan pelayanan pelanggan.\nInstitusi Pendidikan: Mengevaluasi proses pembelajaran dan kehadiran mahasiswa.\nInstansi Pemerintahan: Memantau kualitas pelayanan administrasi kepada masyarakat.\n\n\n\n2.5 1.2.5 When – Kapan 7 QC Tools Digunakan?\n7 QC Tools dapat digunakan ketika kita menghadapi kondisi seperti:\n\nKetika masalah kualitas terjadi secara berulang.\nKetika organisasi ingin melakukan perbaikan secara berkelanjutan.\nKetika ingin mengetahui akar penyebab suatu masalah (Root Cause Analysis).\nKetika melakukan pemeriksaan atau audit kualitas.\nKetika organisasi perlu menentukan tindakan perbaikan dan pencegahan atau CAPA (Corrective and Preventive Actions).\n\n\n\n2.6 1.2.6 How – Bagaimana Cara Menggunakan 7 QC Tools?\nSecara umum, penggunaan 7 QC Tools dapat dilakukan melalui beberapa tahapan berikut:\n\nMengumpulkan data: Catat informasi yang berkaitan dengan masalah yang sedang terjadi.\nMemilih alat yang sesuai: Tentukan QC Tool berdasarkan tujuan analisis.\nMenyajikan data: Buat tabel, grafik, atau diagram menggunakan data yang telah dikumpulkan.\nMenganalisis data: Perhatikan pola, frekuensi, hubungan, dan perubahan yang terjadi.\nMenemukan penyebab masalah: Identifikasi faktor-faktor yang kemungkinan menjadi penyebab masalah.\nMenentukan solusi: Buat rencana perbaikan berdasarkan hasil analisis.\nMelakukan evaluasi: Pantau apakah solusi yang diterapkan berhasil memperbaiki kondisi sebelumnya.",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#mengenal-ketujuh-alat-dalam-7-qc-tools",
+    "href": "chapter3.html#mengenal-ketujuh-alat-dalam-7-qc-tools",
+    "title": "Seven Tools Analysis",
+    "section": "3 1.3 Mengenal Ketujuh Alat dalam 7 QC Tools",
+    "text": "3 1.3 Mengenal Ketujuh Alat dalam 7 QC Tools\nSekarang kita akan mengenal fungsi dari masing-masing alat sebelum mempelajarinya satu per satu.\n\n\n\n\n\n\n\n\nNo.\nQC Tools\nFungsi Utama\n\n\n\n\n1\nCheck Sheet\nMengumpulkan dan mencatat data secara terstruktur.\n\n\n2\nHistogram\nMelihat distribusi atau persebaran data.\n\n\n3\nPareto Chart\nMenentukan masalah yang paling dominan.\n\n\n4\nFishbone Diagram\nMengidentifikasi kemungkinan penyebab masalah.\n\n\n5\nScatter Diagram\nMelihat hubungan antara dua variabel.\n\n\n6\nControl Chart\nMemantau kestabilan suatu proses dari waktu ke waktu.\n\n\n7\nFlowchart\nMenggambarkan alur atau tahapan suatu proses.\n\n\n\nKetujuh alat tersebut akan kita pelajari menggunakan contoh kasus agar lebih mudah dipahami.",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#penerapan-7-qc-tools-dalam-kehidupan-nyata",
+    "href": "chapter3.html#penerapan-7-qc-tools-dalam-kehidupan-nyata",
+    "title": "Seven Tools Analysis",
+    "section": "4 1.4 Penerapan 7 QC Tools dalam Kehidupan Nyata",
+    "text": "4 1.4 Penerapan 7 QC Tools dalam Kehidupan Nyata\nUntuk memahami bagaimana ketujuh alat ini saling berhubungan, kita akan menggunakan satu contoh kasus sederhana.\n\n4.1 Studi Kasus: Keterlambatan Pengiriman Barang\nBayangkan sebuah perusahaan jasa pengiriman barang mengalami masalah. Banyak pelanggan mengeluhkan barang yang datang terlambat dari waktu yang telah dijanjikan.\nPihak perusahaan ingin mengetahui penyebab keterlambatan tersebut dan mencari cara untuk menguranginya.\nBagaimana 7 QC Tools dapat membantu menyelesaikan masalah ini?\nBerikut tahapan penerapannya:\n1. Check Sheet – Mengumpulkan Data\nLangkah pertama adalah mencatat setiap kejadian keterlambatan pengiriman.\nData yang dikumpulkan dapat berupa: - Tanggal pengiriman. - Alasan keterlambatan. - Jumlah pengiriman yang terlambat. - Waktu keterlambatan.\nTujuannya adalah mendapatkan data yang dapat digunakan untuk analisis selanjutnya.\n2. Histogram – Melihat Persebaran Data\nSetelah data terkumpul, kita dapat membuat Histogram untuk melihat persebaran frekuensi keterlambatan.\nMisalnya, kita ingin mengetahui berapa banyak pengiriman yang terlambat berdasarkan durasi keterlambatannya.\nDari grafik tersebut, kita dapat melihat apakah keterlambatan biasanya terjadi dalam durasi singkat atau justru cukup lama.\n3. Pareto Chart – Menentukan Masalah Utama\nSelanjutnya, kita menggunakan Pareto Chart untuk mengetahui penyebab keterlambatan yang paling sering terjadi.\nMisalnya, terdapat beberapa penyebab: - Kemacetan lalu lintas. - Kurir terlambat berangkat. - Alamat penerima tidak lengkap. - Kendaraan mengalami kerusakan. - Dokumen pengiriman bermasalah.\nDengan Pareto Chart, perusahaan dapat mengetahui penyebab mana yang perlu diprioritaskan untuk diperbaiki.\n4. Fishbone Diagram – Mencari Akar Penyebab\nSetelah mengetahui masalah yang paling dominan, kita dapat menggunakan Fishbone Diagram untuk mencari kemungkinan penyebabnya.\nPenyebab masalah dapat dikelompokkan menjadi beberapa kategori, seperti:\n\nMan: Kurir kurang disiplin atau kurang berpengalaman.\nMachine: Kendaraan mengalami kerusakan.\nMethod: Pengaturan rute pengiriman kurang efektif.\nMaterial: Dokumen pengiriman tidak lengkap.\nEnvironment: Kemacetan atau cuaca buruk.\nMeasurement: Sistem pemantauan pengiriman kurang akurat.\n\nDengan diagram ini, kita dapat mengeksplorasi berbagai kemungkinan penyebab sebelum menentukan tindakan perbaikan.\n5. Scatter Diagram – Melihat Hubungan Antarvariabel\nBerikutnya, kita ingin mengetahui apakah jumlah pengiriman memiliki hubungan dengan jumlah keterlambatan.\nMisalnya, apakah semakin banyak barang yang harus dikirim setiap hari, semakin banyak pula keterlambatan yang terjadi?\nScatter Diagram dapat membantu kita melihat pola hubungan antara kedua variabel tersebut.\n6. Control Chart – Memantau Kestabilan Proses\nSetelah perusahaan menerapkan perbaikan, kita perlu memantau apakah kondisi pengiriman sudah lebih stabil.\nControl Chart dapat digunakan untuk memantau perubahan jumlah keterlambatan dari waktu ke waktu.\nDengan demikian, perusahaan dapat mengetahui apakah proses pengiriman masih berada dalam batas kendali atau terdapat perubahan yang perlu diperiksa lebih lanjut.\n7. Flowchart – Memahami Alur Proses\nTerakhir, Flowchart digunakan untuk menggambarkan keseluruhan proses pengiriman barang.\nMulai dari menerima pesanan, memeriksa alamat, menyiapkan barang, menentukan kurir, hingga barang diterima pelanggan.\nMelalui Flowchart, perusahaan dapat mengetahui tahapan mana yang berpotensi menimbulkan kesalahan atau hambatan.\n\n\n4.2 Kesimpulan Penerapan\nDari contoh tersebut, kita dapat memahami bahwa setiap QC Tool memiliki peran yang berbeda.\nNamun, ketujuh alat tersebut dapat digunakan secara bersama-sama untuk membantu organisasi memahami masalah, mencari penyebab, menentukan prioritas perbaikan, dan memantau hasilnya.\nHasil analisis kemudian dapat digunakan untuk menentukan tindakan perbaikan, seperti:\n\nMemberikan pelatihan kepada kurir.\nMelakukan pemeriksaan dan perawatan kendaraan secara berkala.\nMemperbaiki sistem pengaturan rute.\nMeningkatkan sistem pelacakan pengiriman.\n\nHal yang perlu diingat: 7 QC Tools membantu kita mengambil keputusan berdasarkan data. Jadi, jangan terburu-buru menentukan penyebab masalah sebelum melakukan pengumpulan dan analisis data.",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#what-apa-itu-7-qc-tools",
+    "href": "chapter3.html#what-apa-itu-7-qc-tools",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "7 QC Tools → tujuh alat statistik dasar yang digunakan untuk membantu mengidentifikasi, menganalisis, dan menyelesaikan masalah kualitas secara sistematis.\nKetujuh alat tersebut adalah:\n\nCheck Sheet – Lembar untuk mencatat dan mengumpulkan data.\nHistogram – Grafik untuk melihat persebaran data.\nPareto Chart – Grafik untuk mengetahui masalah yang paling dominan.\nFishbone Diagram – Diagram untuk mencari kemungkinan penyebab suatu masalah.\nScatter Diagram – Grafik untuk melihat hubungan antara dua variabel.\nControl Chart – Grafik untuk memantau kestabilan suatu proses.\nFlowchart – Diagram untuk menggambarkan tahapan suatu proses.",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#why-mengapa-7-qc-tools-penting",
+    "href": "chapter3.html#why-mengapa-7-qc-tools-penting",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "Mengapa kita perlu mempelajari dan menggunakan 7 QC Tools?\nBerikut beberapa alasannya:\n\nMudah digunakan: Alat-alat ini relatif mudah dipahami, bahkan oleh orang yang belum memiliki latar belakang statistik.\nBerdasarkan data: Membantu kita mengambil keputusan berdasarkan fakta, bukan sekadar dugaan.\nMembantu menemukan masalah: Mempermudah kita mengetahui masalah yang sedang terjadi.\nMeningkatkan efisiensi: Membantu menemukan bagian proses yang perlu diperbaiki.\nMeningkatkan kualitas: Membantu organisasi meningkatkan kualitas produk maupun pelayanan sehingga kepuasan pelanggan juga meningkat.\n\nContohnya, daripada langsung menyimpulkan bahwa keterlambatan pengiriman disebabkan oleh kurir, kita dapat mengumpulkan data terlebih dahulu untuk mengetahui penyebab sebenarnya.",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#who-siapa-yang-menggunakan-7-qc-tools",
+    "href": "chapter3.html#who-siapa-yang-menggunakan-7-qc-tools",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "7 QC Tools tidak hanya digunakan oleh perusahaan besar atau orang yang bekerja di bidang pengendalian kualitas.\nBeberapa pihak yang dapat menggunakannya antara lain:\n\nQuality Manager: Orang yang bertanggung jawab terhadap pengelolaan kualitas.\nProduction Operator: Pekerja yang terlibat langsung dalam proses produksi.\nSupervisor: Orang yang mengawasi jalannya suatu proses.\nKaizen Team: Tim yang berfokus pada perbaikan secara berkelanjutan.\nAuditor: Orang yang melakukan pemeriksaan atau evaluasi terhadap suatu proses.\nProfesional dari berbagai bidang: Misalnya bidang pendidikan, kesehatan, pelayanan publik, dan lainnya.\n\nArtinya, siapa pun yang ingin memahami dan memperbaiki suatu masalah dapat memanfaatkan 7 QC Tools.",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#where-di-mana-7-qc-tools-digunakan",
+    "href": "chapter3.html#where-di-mana-7-qc-tools-digunakan",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "Penerapan 7 QC Tools tidak terbatas pada perusahaan manufaktur atau pabrik saja.\nBeberapa contoh penerapannya adalah:\n\nIndustri Manufaktur: Memeriksa jumlah produk cacat selama proses produksi.\nRumah Sakit: Menganalisis penyebab lamanya waktu pelayanan pasien.\nPerusahaan Jasa: Menganalisis penyebab keterlambatan pelayanan pelanggan.\nInstitusi Pendidikan: Mengevaluasi proses pembelajaran dan kehadiran mahasiswa.\nInstansi Pemerintahan: Memantau kualitas pelayanan administrasi kepada masyarakat.",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#when-kapan-7-qc-tools-digunakan",
+    "href": "chapter3.html#when-kapan-7-qc-tools-digunakan",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "7 QC Tools dapat digunakan ketika kita menghadapi kondisi seperti:\n\nKetika masalah kualitas terjadi secara berulang.\nKetika organisasi ingin melakukan perbaikan secara berkelanjutan.\nKetika ingin mengetahui akar penyebab suatu masalah (Root Cause Analysis).\nKetika melakukan pemeriksaan atau audit kualitas.\nKetika organisasi perlu menentukan tindakan perbaikan dan pencegahan atau CAPA (Corrective and Preventive Actions).",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#how-bagaimana-cara-menggunakan-7-qc-tools",
+    "href": "chapter3.html#how-bagaimana-cara-menggunakan-7-qc-tools",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "Secara umum, penggunaan 7 QC Tools dapat dilakukan melalui beberapa tahapan berikut:\n\nMengumpulkan data: Catat informasi yang berkaitan dengan masalah yang sedang terjadi.\nMemilih alat yang sesuai: Tentukan QC Tool berdasarkan tujuan analisis.\nMenyajikan data: Buat tabel, grafik, atau diagram menggunakan data yang telah dikumpulkan.\nMenganalisis data: Perhatikan pola, frekuensi, hubungan, dan perubahan yang terjadi.\nMenemukan penyebab masalah: Identifikasi faktor-faktor yang kemungkinan menjadi penyebab masalah.\nMenentukan solusi: Buat rencana perbaikan berdasarkan hasil analisis.\nMelakukan evaluasi: Pantau apakah solusi yang diterapkan berhasil memperbaiki kondisi sebelumnya.",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#penerapan-7-alat-qc",
+    "href": "chapter3.html#penerapan-7-alat-qc",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "7 QC Tools dapat digunakan untuk membantu organisasi menemukan masalah, mengetahui penyebabnya, dan menentukan solusi berdasarkan data.\nSebagai contoh, kita gunakan kasus keterlambatan pengiriman barang.\nPertama, perusahaan menggunakan Check Sheet (Lembar Periksa) untuk mencatat data keterlambatan, seperti tanggal, waktu, dan penyebabnya. Selanjutnya, data dianalisis menggunakan Histogram untuk melihat pola keterlambatan dan Pareto Chart (Bagan Pareto) untuk mengetahui penyebab yang paling sering terjadi.\nSetelah itu, Fishbone Diagram (Diagram Tulang Ikan) digunakan untuk mencari kemungkinan penyebab masalah berdasarkan faktor Manusia, Mesin, Metode, Material, dan Lingkungan. Scatter Diagram (Diagram Sebar) membantu melihat hubungan antara faktor tertentu dengan keterlambatan, sedangkan Control Chart (Bagan Kontrol) digunakan untuk memantau kestabilan proses pengiriman.\nTerakhir, Flowchart (Bagan Alur) digunakan untuk menggambarkan tahapan proses pengiriman dan membantu menemukan bagian yang berpotensi menimbulkan masalah.",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#what",
+    "href": "chapter3.html#what",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "7 QC Tools → tujuh alat statistik dasar yang digunakan untuk membantu mengidentifikasi, menganalisis, dan menyelesaikan masalah kualitas secara sistematis.\nKetujuh alat tersebut adalah:\n\nCheck Sheet – Lembar untuk mencatat dan mengumpulkan data.\nHistogram – Grafik untuk melihat persebaran data.\nPareto Chart – Grafik untuk mengetahui masalah yang paling dominan.\nFishbone Diagram – Diagram untuk mencari kemungkinan penyebab suatu masalah.\nScatter Diagram – Grafik untuk melihat hubungan antara dua variabel.\nControl Chart – Grafik untuk memantau kestabilan suatu proses.\nFlowchart – Diagram untuk menggambarkan tahapan suatu proses.",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#why",
+    "href": "chapter3.html#why",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "Mengapa kita perlu mempelajari dan menggunakan 7 QC Tools?\nBerikut beberapa alasannya:\n\nMudah digunakan: Alat-alat ini relatif mudah dipahami, bahkan oleh orang yang belum memiliki latar belakang statistik.\nBerdasarkan data: Membantu kita mengambil keputusan berdasarkan fakta, bukan sekadar dugaan.\nMembantu menemukan masalah: Mempermudah kita mengetahui masalah yang sedang terjadi.\nMeningkatkan efisiensi: Membantu menemukan bagian proses yang perlu diperbaiki.\nMeningkatkan kualitas: Membantu organisasi meningkatkan kualitas produk maupun pelayanan sehingga kepuasan pelanggan juga meningkat.\n\nContohnya, daripada langsung menyimpulkan bahwa keterlambatan pengiriman disebabkan oleh kurir, kita dapat mengumpulkan data terlebih dahulu untuk mengetahui penyebab sebenarnya.",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#who",
+    "href": "chapter3.html#who",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "7 QC Tools tidak hanya digunakan oleh perusahaan besar atau orang yang bekerja di bidang pengendalian kualitas.\nBeberapa pihak yang dapat menggunakannya antara lain:\n\nQuality Manager: Orang yang bertanggung jawab terhadap pengelolaan kualitas.\nProduction Operator: Pekerja yang terlibat langsung dalam proses produksi.\nSupervisor: Orang yang mengawasi jalannya suatu proses.\nKaizen Team: Tim yang berfokus pada perbaikan secara berkelanjutan.\nAuditor: Orang yang melakukan pemeriksaan atau evaluasi terhadap suatu proses.\nProfesional dari berbagai bidang: Misalnya bidang pendidikan, kesehatan, pelayanan publik, dan lainnya.\n\nArtinya, siapa pun yang ingin memahami dan memperbaiki suatu masalah dapat memanfaatkan 7 QC Tools.",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#where",
+    "href": "chapter3.html#where",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "Penerapan 7 QC Tools tidak terbatas pada perusahaan manufaktur atau pabrik saja.\nBeberapa contoh penerapannya adalah:\n\nIndustri Manufaktur: Memeriksa jumlah produk cacat selama proses produksi.\nRumah Sakit: Menganalisis penyebab lamanya waktu pelayanan pasien.\nPerusahaan Jasa: Menganalisis penyebab keterlambatan pelayanan pelanggan.\nInstitusi Pendidikan: Mengevaluasi proses pembelajaran dan kehadiran mahasiswa.\nInstansi Pemerintahan: Memantau kualitas pelayanan administrasi kepada masyarakat.",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#when",
+    "href": "chapter3.html#when",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "7 QC Tools dapat digunakan ketika kita menghadapi kondisi seperti:\n\nKetika masalah kualitas terjadi secara berulang.\nKetika organisasi ingin melakukan perbaikan secara berkelanjutan.\nKetika ingin mengetahui akar penyebab suatu masalah (Root Cause Analysis).\nKetika melakukan pemeriksaan atau audit kualitas.\nKetika organisasi perlu menentukan tindakan perbaikan dan pencegahan atau CAPA (Corrective and Preventive Actions).",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#how",
+    "href": "chapter3.html#how",
+    "title": "Seven Tools Analysis",
+    "section": "",
+    "text": "Secara umum, penggunaan 7 QC Tools dapat dilakukan melalui beberapa tahapan berikut:\n\nMengumpulkan data: Catat informasi yang berkaitan dengan masalah yang sedang terjadi.\nMemilih alat yang sesuai: Tentukan QC Tool berdasarkan tujuan analisis.\nMenyajikan data: Buat tabel, grafik, atau diagram menggunakan data yang telah dikumpulkan.\nMenganalisis data: Perhatikan pola, frekuensi, hubungan, dan perubahan yang terjadi.\nMenemukan penyebab masalah: Identifikasi faktor-faktor yang kemungkinan menjadi penyebab masalah.\nMenentukan solusi: Buat rencana perbaikan berdasarkan hasil analisis.\nMelakukan evaluasi: Pantau apakah solusi yang diterapkan berhasil memperbaiki kondisi sebelumnya.",
+    "crumbs": [
+      "**BAB**",
+      "3. Seven QC Tools"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#dataset-yang-digunakan",
+    "href": "chapter2.html#dataset-yang-digunakan",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "1.1 Dataset yang Digunakan",
+    "text": "1.1 Dataset yang Digunakan\n\n\n\n\n\n\n\nDataset\nContoh variabel\n\n\n\n\nmeta-draftpick-ml.csv\nlane, priority_tier, hero_name\n\n\nplayers.csv\nrole, country, winnings\n\n\nstat-player.csv\ncurrent_ability, market_value_usd, star_power\n\n\nbuild-item.csv\nbattle_spell, item_1–item_6, role\n\n\ntournament.csv\nname_turnament, prize_pool, location\n\n\n\nPanggil library dan baca semua dataset sekali di awal. Gunakan raw URL seperti di Chapter 1.\n\nlibrary(tidyverse) # berisi ggplot2, dplyr, tidyr, stringr\nlibrary(scales) # untuk format angka (comma)\n\nurl_data &lt;- \"https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/data/\"\nmeta &lt;- read.csv(paste0(url_data, \"meta-draftpick-ml.csv\"))\nbuild &lt;- read.csv(paste0(url_data, \"build-item.csv\"))\nplayers &lt;- read.csv(paste0(url_data, \"players.csv\"))\nstat &lt;- read.csv(paste0(url_data, \"stat-player.csv\"))\n\n\n# nama kolom di stat-player.csv\nstat &lt;- stat %&gt;%\n  rename(\n    role = player_info_role,\n    current_ability = hidden_and_non_technical_hidden_current_ability,\n    market_value_usd = hidden_and_non_technical_business_market_value_usd\n )\n\n\n\n\n\n\n\nWarningPerhatikan\n\n\n\nJika library(tidyverse) belum terpasang, jalankan sekali di Console: install.packages(\"tidyverse\"). Untuk scales sama: install.packages(\"scales\").",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#bar-chart",
+    "href": "chapter2.html#bar-chart",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "2.1 Bar Chart",
+    "text": "2.1 Bar Chart\n\n\n\n\n\n\nNoteBar Chart\n\n\n\nMembandingkan nilai antar kategori. Cocok untuk pertanyaan: mana yang paling banyak? mana yang paling sedikit? bagaimana perbedaan antar kategori?\n\n\n\n2.1.1 Hero S-Tier di Setiap Lane\n\n“Lane mana yang memiliki hero S-Tier paling banyak?”\n\n\n# filter hero S-Tier, lalu hitung jumlahnya per lane\nlane_s &lt;- meta %&gt;%\n  filter(priority_tier == \"S-Tier\") %&gt;%\n  count(lane)\n\nggplot(lane_s, aes(x = reorder(lane, -n), y = n)) +\n  geom_col(fill = \"#007AB8\") +\n  geom_text(aes(label = n), vjust = -0.3) +\n  labs(\n    title = \"Jumlah Hero S-Tier di Setiap Lane\",\n    x = \"Lane\",\n    y = \"Jumlah Hero\"\n )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHasil\n\n\n\nJungler dan Roamer punya hero S-Tier terbanyak (masing-masing 5), disusul gold lane (4), lalu exp lane dan mid lane (masing-masing 3). Dengan bar chart, perbandingan ini terbaca sekilas, tidak perlu membaca daftar hero satu per satu.\n\n\n\n\n\n2.1.2 Item yang Sering Dipakai\n\n“Item apa yang paling sering muncul di build hero?”\n\n\nitem_count &lt;- build %&gt;%\n  select(starts_with(\"item_\")) %&gt;%                          # ambil kolom item_1 - item_6\n  pivot_longer(cols = everything(),\n               names_to = \"slot\", values_to = \"item\") %&gt;%\n  filter(!is.na(item), item != \"\") %&gt;%                      # buang item kosong\n  count(item, sort = TRUE) %&gt;%                              # hitung tiap item\n  slice_head(n = 10)                                        # ambil 10 teratas\n\n\nggplot(item_count, aes(x = reorder(item, n), y = n)) +\n  geom_col(fill = \"#2E75B6\") +\n  geom_text(aes(label = n), hjust = -0.2) +\n  coord_flip() +                                            # jadikan batang horizontal\n  expand_limits(y = max(item_count$n) * 1.1) +              # beri ruang untuk label angka\n  labs(title = \"10 Item yang Paling Sering Muncul\",\n       x = \"Item\", y = \"Frekuensi\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHasil\n\n\n\nTough Boots paling sering muncul (89 kali), disusul Holy Crystal (77) dan Oracle (74).\n\n\n\n\n\n\n\n\nWarningPenting\n\n\n\nKalau nama kategori panjang (seperti nama item), gunakan bar chart horizontal dengan coord_flip() agar label tidak bertabrakan.",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#histogram",
+    "href": "chapter2.html#histogram",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "2.2 Histogram",
+    "text": "2.2 Histogram\n\n\n\n\n\n\nNoteHistogram\n\n\n\nMelihat sebaran data angka: di rentang mana data paling banyak, apakah simetris atau miring, dan apakah ada nilai yang menonjol.\n\n\n\n“Bagaimana sebaran current ability para pemain?”\n\n\nggplot(stat, aes(x = current_ability)) +\n  geom_histogram(binwidth = 5, boundary = 120,\n                 fill = \"#007AB8\", color = \"white\") +\n  \n labs(\n  title = \"Sebaran Current Ability Pemain\",\n  x = \"Current Ability\",\n  y = \"Jumlah Pemain\"\n )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHasil\n\n\n\nCurrent ability berkisar 120 sampai 192. Kebanyakan pemain ada di kisaran 140-165 dengan puncak sekitar nilai 150, lalu makin tinggi ability makin sedikit pemainnya. Ada lonjakan kecil di ujung kanan (sekitar 190-195).\n\n\n\n\n\n\n\n\nWarningCoba Sendiri\n\n\n\nUbah binwidth menjadi 2 dan 10. Bin terlalu kecil membuat grafik bergerigi, bin terlalu besar menyembunyikan bentuk sebaran. Pilih yang paling jelas menunjukkan pola.\n\n\n\n2.2.1 Histogram dan Barchart\nKeduanya sama-sama berbentuk batang, jadi sering tertukar. Bedanya ada pada data di sumbu x.\n\n\n\n\n\n\n\n\n\n\nBar chart\nHistogram\n\n\n\n\nData di sumbu x\nKategori (teks), misal negara atau role\nAngka yang dikelompokkan jadi rentang (bin)\n\n\nJarak antar batang\nAda jarak\nMenempel, tanpa jarak\n\n\nUrutan batang\nBoleh diurutkan bebas (misal dari terbesar)\nTetap mengikuti urutan angka\n\n\nTujuan\nMembandingkan kategori\nMelihat bentuk sebaran data\n\n\nFungsi ggplot2\ngeom_col() atau geom_bar()\ngeom_histogram()\n\n\nContoh\nJumlah pemain per negara\nSebaran current ability\n\n\n\n\n\n\n\n\n\nTipCara Cepat Membedakan\n\n\n\nTanya: sumbu x-nya kategori atau angka? Kategori = bar chart. Angka kontinu = histogram.",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#pie-chart-dan-donut-chart",
+    "href": "chapter2.html#pie-chart-dan-donut-chart",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "2.3 Pie Chart dan Donut Chart",
+    "text": "2.3 Pie Chart dan Donut Chart\n\n\n\n\n\n\nNotePie Chart dan Donut Chart\n\n\n\nmenunjukkan proporsi tiap bagian terhadap total (100%). Cocok kalau kategorinya sedikit, maksimal 5-6, dan kita hanya ingin melihat bagian mana yang dominan.\n\n\n\n“Bagaimana komposisi role hero dalam dataset build?”\n\n\n2.3.1 Pie Chart\nSatu build bisa punya dua role (contoh: Fighter, Assassin). Kita pisahkan dulu dengan separate_rows(), sehingga build itu dihitung di kedua role.\n\nrole_count &lt;- build %&gt;%\n  separate_rows(role, sep = \",\\\\s*\") %&gt;% # pisahkan role yang berisi dua nilai\n  count(role) %&gt;%\n  mutate(persen = n / sum(n) * 100)\n\n\n# Pie chart\nggplot(role_count, aes(x = \"\", y = n, fill = role)) +\n  geom_col(width = 1, color = \"white\") +\n  geom_text(aes(label = paste0(round(persen, 1), \"%\")),\n            position = position_stack(vjust = 0.5), color = \"white\") +\n  coord_polar(theta = \"y\") +\n  labs(title = \"Proporsi Role Hero dalam Dataset Build\", fill = \"Role\") +\n  theme_void()\n\n\n\n\n\n\n\n\n\n\n2.3.2 Donut Chart\nUbah x = \"\" menjadi x = 2, lalu tambahkan xlim(0.5, 2.5) di bawah coord_polar().\n\nggplot(role_count, aes(x = 2, y = n, fill = role)) +\n  geom_col(width = 1, color = \"white\") +\n  geom_text(aes(label = paste0(round(persen, 1), \"%\")),\n            position = position_stack(vjust = 0.5), color = \"white\") +\n  coord_polar(theta = \"y\") +\n  xlim(0.5, 2.5) +\n  labs(title = \"Proporsi Role Hero dalam Dataset Build\", fill = \"Role\") +\n  theme_void()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHasil\n\n\n\nFighter paling dominan (27,6%), diikuti Mage (18,1%) dan Assassin (17,9%). Support paling kecil (8,2%).\n\n\n\n\n\n\n\n\nWarningIngat\n\n\n\nKapan jangan pakai pie? Kalau kategori lebih dari 6, atau selisih antar bagian kecil dan perlu dibandingkan teliti.",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#line-chart",
+    "href": "chapter2.html#line-chart",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "2.4 Line Chart",
+    "text": "2.4 Line Chart\n\n\n\n\n\n\nNoteLine Chart\n\n\n\nMenunjukkan perubahan atau pola berdasarkan urutan yang bermakna, terutama waktu. Garis menghubungkan titik-titik yang berurutan.\n\n\n\n“Bagaimana jumlah pemain berubah dari tahun lahir ke tahun lahir?”\n\nKolom birthday berisi teks seperti October 13, 2005 (age 20). Kita ambil 4 angka tahunnya dengan str_extract().\n\nbirth &lt;- players %&gt;%\n  mutate(tahun_lahir = as.numeric(str_extract(birthday, \"\\\\d{4}\"))) %&gt;%\n  filter(!is.na(tahun_lahir), tahun_lahir &gt;= 1994) %&gt;% # sebelum 1994 datanya sangat sedikit\n  count(tahun_lahir)\n\n\nggplot(birth, aes(x = tahun_lahir, y = n)) +\n  geom_line(color = \"#2E75B6\", linewidth = 1.2) +\n  geom_point(color = \"#2E75B6\", size = 3) +\n  scale_x_continuous(breaks = seq(1994, 2010, by = 2)) +\n  labs(\n    title = \"Jumlah Pemain Berdasarkan Tahun Lahir\",\n    x = \"Tahun Lahir\",\n    y = \"Jumlah Pemain\"\n )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHasil\n\n\n\njumlah pemain naik dari kelahiran 1994 sampai puncaknya di 2004 (115 pemain), lalu turun. Data ini hanya mencakup pemain yang mencantumkan tanggal lahir (694 pemain).\n\n\n\n\n\n\n\n\nWarningSyarat Line Chart\n\n\n\nSumbu x harus berurutan (waktu atau angka). Jangan pakai untuk kategori yang tidak berurutan, misalnya jumlah hero per lane.",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#scatter-plot",
+    "href": "chapter2.html#scatter-plot",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "2.5 Scatter Plot",
+    "text": "2.5 Scatter Plot\n\n\n\n\n\n\nNoteLine Chart\n\n\n\nMelihat hubungan antara dua variabel angka. Setiap titik mewakili satu data (di sini, satu pemain).\n\n\n\n“Apakah pemain dengan kemampuan lebih tinggi memiliki market value yang lebih besar?”\n\n\nggplot(stat, aes(x = current_ability, y = market_value_usd)) +\n  geom_point(alpha = 0.4, color = \"#2E75B6\") +\n  geom_smooth(method = \"lm\", se = FALSE, color = \"#E4572E\") +   # garis tren\n  scale_y_log10(labels = comma) +                               # skala log di sumbu y\n  labs(\n    title = \"Current Ability vs Market Value\",\n    x = \"Current Ability\",\n    y = \"Market Value (USD, skala log)\"\n )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHasil\n\n\n\nTitik-titik naik dari kiri bawah ke kanan atas. Artinya makin tinggi current ability, makin tinggi market value (hubungan positif yang kuat).\n\n\n\n\n\n\n\n\nWarningHati-hati\n\n\n\nHubungan antara dua angka belum tentu sebab-akibat. Scatter plot hanya menunjukkan bahwa keduanya bergerak bersama.",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#box-plot",
+    "href": "chapter2.html#box-plot",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "2.6 Box Plot",
+    "text": "2.6 Box Plot\n\n\n\n\n\n\nNoteBox Plot\n\n\n\nMelihat hubungan antara dua variabel angka. Setiap titik mewakili satu data (di sini, satu pemain).\n\n\n\n“Apakah current ability berbeda antar role pemain?”\n\n\nrole_utama &lt;- c(\"Roamer\", \"Mid Laner\", \"EXP Laner\", \"Gold Laner\", \"Jungler\")\n\n\nstat %&gt;%\n  filter(role %in% role_utama) %&gt;%\n  ggplot(aes(x = role, y = current_ability)) +\n  geom_boxplot(fill = \"#9CC3E6\") +\n  labs(\n    title = \"Current Ability Pemain per Role\",\n    x = \"Role\",\n    y = \"Current Ability\"\n )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipCara Membaca Box Plot\n\n\n\n\nKotak = 50% data di tengah (dari kuartil 1 sampai kuartil 3).\nGaris tebal di dalam kotak = median (nilai tengah).\nGaris di atas dan bawah kotak = rentang data yang wajar.\nTitik terpisah = outlier, yaitu nilai yang jauh dari kebanyakan data.\n\n\n\n\n\n\n\n\n\nNoteHasil\n\n\n\nKelima role punya median yang hampir sama (sekitar 152-154). Jadi role pemain tidak membuat current ability berbeda jauh. Titik-titik di bagian atas adalah pemain dengan ability sangat tinggi.",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
     ]
   }
 ]

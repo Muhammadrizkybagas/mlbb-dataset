@@ -3,7 +3,7 @@ project:
 
 # TITLE TOC
 website:
-  title: "Looker Studio Data Analytics Bootcamp"
+  title: "DATA VISUALIZATION WITH RSTUDIO"
   repo-url: https://github.com/Muhammadrizkybagas
   repo-actions: [source, edit]
   navbar: false
@@ -11,7 +11,7 @@ website:
 # SIDEBAR
   sidebar:
     logo: img/logo.png
-    title: "Looker Studio Data Analytics Bootcamp"
+    title: "DATA VISUALIZATION WITH RSTUDIO"
     pinned: true
     style: "docked"
     search: true
@@ -29,16 +29,16 @@ website:
         href: intro.qmd
       - section: "**BAB**"
         contents:
-          - text: "1. Data in R"
+          - text: "1. Baca Raw Github"
             href: chapter1.qmd
             
-          - text: "2. Understanding Data"
+          - text: "2. Memilih Visualisai"
             href: chapter2.qmd
             
-          - text: "3. Visualization"
+          - text: "3. Bookdown di Rstudio"
             href: chapter3.qmd
             
-          - text: "4. Data Exploration"
+          - text: "4. Publish Bookdown ke Github"
             href: chapter4.qmd
             
 # END SIDEBAR

@@ -2,21 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-09-05">
+<meta name="dcterms.date" content="2026-11-14">
 
-<title>FROM VISUALIZATION TO INSIGHT – Looker Studio Data Analytics Bootcamp</title>
+<title>Bagaimana Membuat Format Bookdown di RStudio – DATA VISUALIZATION WITH RSTUDIO</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-104f2622452aeaad4c018a66f4effed7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6622afbb6a93371a7f6aaa1c40799739.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter1.html"><strong>BAB</strong></a></li><li class="breadcrumb-item"><a href="./chapter3.html">3. Visualization</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter1.html"><strong>BAB</strong></a></li><li class="breadcrumb-item"><a href="./chapter3.html">3. Bookdown di Rstudio</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -103,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
       <img src="./img/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Looker Studio Data Analytics Bootcamp</a> 
+      <a href="./">DATA VISUALIZATION WITH RSTUDIO</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/Muhammadrizkybagas" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
     <a href="https://instagram.com/mhmmd.rizky_bagas" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
@@ -136,25 +139,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. Data in R</span></a>
+ <span class="menu-text">1. Baca Raw Github</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2. Understanding Data</span></a>
+ <span class="menu-text">2. Memilih Visualisai</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">3. Visualization</span></a>
+ <span class="menu-text">3. Bookdown di Rstudio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4. Data Exploration</span></a>
+ <span class="menu-text">4. Publish Bookdown ke Github</span></a>
   </div>
 </li>
       </ul>
@@ -164,28 +167,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#membaca-sebuah-grafik" id="toc-membaca-sebuah-grafik" class="nav-link active" data-scroll-target="#membaca-sebuah-grafik"><span class="header-section-number">1</span> Membaca Sebuah Grafik</a></li>
-  <li><a href="#menemukan-pola" id="toc-menemukan-pola" class="nav-link" data-scroll-target="#menemukan-pola"><span class="header-section-number">2</span> Menemukan Pola</a></li>
-  <li><a href="#membandingkan-kelompok" id="toc-membandingkan-kelompok" class="nav-link" data-scroll-target="#membandingkan-kelompok"><span class="header-section-number">3</span> Membandingkan Kelompok</a></li>
-  <li><a href="#menemukan-hubungan" id="toc-menemukan-hubungan" class="nav-link" data-scroll-target="#menemukan-hubungan"><span class="header-section-number">4</span> Menemukan Hubungan</a></li>
-  <li><a href="#menulis-insight" id="toc-menulis-insight" class="nav-link" data-scroll-target="#menulis-insight"><span class="header-section-number">5</span> Menulis Insight</a></li>
-  <li><a href="#insight-vs-kesimpulan" id="toc-insight-vs-kesimpulan" class="nav-link" data-scroll-target="#insight-vs-kesimpulan"><span class="header-section-number">6</span> Insight vs Kesimpulan</a></li>
-  <li><a href="#correlation-causation" id="toc-correlation-causation" class="nav-link" data-scroll-target="#correlation-causation"><span class="header-section-number">7</span> Correlation ≠ Causation</a></li>
-  <li><a href="#data-storytelling" id="toc-data-storytelling" class="nav-link" data-scroll-target="#data-storytelling"><span class="header-section-number">8</span> Data Storytelling</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Muhammadrizkybagas/blob/main/chapter3.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/Muhammadrizkybagas/edit/main/chapter3.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter1.html"><strong>BAB</strong></a></li><li class="breadcrumb-item"><a href="./chapter3.html">3. Visualization</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter1.html"><strong>BAB</strong></a></li><li class="breadcrumb-item"><a href="./chapter3.html">3. Bookdown di Rstudio</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">FROM VISUALIZATION TO INSIGHT</h1>
+<h1 class="title">Bagaimana Membuat Format Bookdown di RStudio</h1>
 </div>
 
 
@@ -196,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 5, 2026</p>
+      <p class="date">November 14, 2026</p>
     </div>
   </div>
   
@@ -208,32 +198,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="membaca-sebuah-grafik" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Membaca Sebuah Grafik</h1>
-</section>
-<section id="menemukan-pola" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Menemukan Pola</h1>
-</section>
-<section id="membandingkan-kelompok" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Membandingkan Kelompok</h1>
-</section>
-<section id="menemukan-hubungan" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Menemukan Hubungan</h1>
-</section>
-<section id="menulis-insight" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Menulis Insight</h1>
-</section>
-<section id="insight-vs-kesimpulan" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Insight vs Kesimpulan</h1>
-</section>
-<section id="correlation-causation" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Correlation ≠ Causation</h1>
-</section>
-<section id="data-storytelling" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Data Storytelling</h1>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -644,7 +610,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
 <p>© 2026 AXIS - DATA VISUALIZATION WITH RSTUDIO</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Muhammadrizkybagas/blob/main/chapter3.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/Muhammadrizkybagas/edit/main/chapter3.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div>
+<div class="toc-actions"><ul><li><a href="https://github.com/Muhammadrizkybagas/blob/main/chapter3.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/Muhammadrizkybagas/edit/main/chapter3.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Created with ❤️ by Rizky Bagas</p>
 </div>

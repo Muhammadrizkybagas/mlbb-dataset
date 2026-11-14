@@ -2,27 +2,65 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-09-05">
+<meta name="dcterms.date" content="2026-11-14">
 
-<title>UNDERSTANDING DATA VISUALIZATION – Looker Studio Data Analytics Bootcamp</title>
+<title>Memilih Visualisasi Yang Tepat – DATA VISUALIZATION WITH RSTUDIO</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -39,10 +77,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-104f2622452aeaad4c018a66f4effed7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6622afbb6a93371a7f6aaa1c40799739.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -84,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter1.html"><strong>BAB</strong></a></li><li class="breadcrumb-item"><a href="./chapter2.html">2. Understanding Data Visualization</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter1.html"><strong>BAB</strong></a></li><li class="breadcrumb-item"><a href="./chapter2.html">2. Memilih Visualisai</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -103,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
       <img src="./img/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Looker Studio Data Analytics Bootcamp</a> 
+      <a href="./">DATA VISUALIZATION WITH RSTUDIO</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/Muhammadrizkybagas" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
     <a href="https://instagram.com/mhmmd.rizky_bagas" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
@@ -136,25 +174,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. Working with Data in R</span></a>
+ <span class="menu-text">1. Baca Raw Github</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter2.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">2. Understanding Data Visualization</span></a>
+ <span class="menu-text">2. Memilih Visualisai</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3. From Visualization to Insight</span></a>
+ <span class="menu-text">3. Bookdown di Rstudio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">4. Data Exploration Challenge</span></a>
+ <span class="menu-text">4. Publish Bookdown ke Github</span></a>
   </div>
 </li>
       </ul>
@@ -169,24 +207,41 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#apa-yang-ingin-kita-ketahui" id="toc-apa-yang-ingin-kita-ketahui" class="nav-link active" data-scroll-target="#apa-yang-ingin-kita-ketahui"><span class="header-section-number">1</span> Apa yang Ingin Kita Ketahui?</a></li>
-  <li><a href="#bar-chart" id="toc-bar-chart" class="nav-link" data-scroll-target="#bar-chart"><span class="header-section-number">2</span> Bar Chart</a></li>
-  <li><a href="#line-chart" id="toc-line-chart" class="nav-link" data-scroll-target="#line-chart"><span class="header-section-number">3</span> Line Chart</a></li>
-  <li><a href="#scatter-plot" id="toc-scatter-plot" class="nav-link" data-scroll-target="#scatter-plot"><span class="header-section-number">4</span> Scatter Plot</a></li>
-  <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram"><span class="header-section-number">5</span> Histogram</a></li>
-  <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot"><span class="header-section-number">6</span> Boxplot</a></li>
-  <li><a href="#memilih-grafik-yang-tepat" id="toc-memilih-grafik-yang-tepat" class="nav-link" data-scroll-target="#memilih-grafik-yang-tepat"><span class="header-section-number">7</span> Memilih Grafik yang Tepat</a></li>
-  <li><a href="#kesalahan-dalam-visualisasi" id="toc-kesalahan-dalam-visualisasi" class="nav-link" data-scroll-target="#kesalahan-dalam-visualisasi"><span class="header-section-number">8</span> Kesalahan dalam Visualisasi</a></li>
-  <li><a href="#bad-visualization-challenge" id="toc-bad-visualization-challenge" class="nav-link" data-scroll-target="#bad-visualization-challenge"><span class="header-section-number">9</span> Bad Visualization Challenge</a></li>
+  <li><a href="#mulai-dari-pertanyaan" id="toc-mulai-dari-pertanyaan" class="nav-link active" data-scroll-target="#mulai-dari-pertanyaan"><span class="header-section-number">1</span> Mulai dari Pertanyaan</a>
+  <ul class="collapse">
+  <li><a href="#dataset-yang-digunakan" id="toc-dataset-yang-digunakan" class="nav-link" data-scroll-target="#dataset-yang-digunakan"><span class="header-section-number">1.1</span> Dataset yang Digunakan</a></li>
+  </ul></li>
+  <li><a href="#memilih-grafik" id="toc-memilih-grafik" class="nav-link" data-scroll-target="#memilih-grafik"><span class="header-section-number">2</span> Memilih Grafik</a>
+  <ul class="collapse">
+  <li><a href="#bar-chart" id="toc-bar-chart" class="nav-link" data-scroll-target="#bar-chart"><span class="header-section-number">2.1</span> Bar Chart</a>
+  <ul class="collapse">
+  <li><a href="#hero-s-tier-di-setiap-lane" id="toc-hero-s-tier-di-setiap-lane" class="nav-link" data-scroll-target="#hero-s-tier-di-setiap-lane"><span class="header-section-number">2.1.1</span> Hero S-Tier di Setiap Lane</a></li>
+  <li><a href="#item-yang-sering-dipakai" id="toc-item-yang-sering-dipakai" class="nav-link" data-scroll-target="#item-yang-sering-dipakai"><span class="header-section-number">2.1.2</span> Item yang Sering Dipakai</a></li>
+  </ul></li>
+  <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram"><span class="header-section-number">2.2</span> Histogram</a>
+  <ul class="collapse">
+  <li><a href="#histogram-dan-barchart" id="toc-histogram-dan-barchart" class="nav-link" data-scroll-target="#histogram-dan-barchart"><span class="header-section-number">2.2.1</span> Histogram dan Barchart</a></li>
+  </ul></li>
+  <li><a href="#pie-chart-dan-donut-chart" id="toc-pie-chart-dan-donut-chart" class="nav-link" data-scroll-target="#pie-chart-dan-donut-chart"><span class="header-section-number">2.3</span> Pie Chart dan Donut Chart</a>
+  <ul class="collapse">
+  <li><a href="#pie-chart" id="toc-pie-chart" class="nav-link" data-scroll-target="#pie-chart"><span class="header-section-number">2.3.1</span> Pie Chart</a></li>
+  <li><a href="#donut-chart" id="toc-donut-chart" class="nav-link" data-scroll-target="#donut-chart"><span class="header-section-number">2.3.2</span> Donut Chart</a></li>
+  </ul></li>
+  <li><a href="#line-chart" id="toc-line-chart" class="nav-link" data-scroll-target="#line-chart"><span class="header-section-number">2.4</span> Line Chart</a></li>
+  <li><a href="#scatter-plot" id="toc-scatter-plot" class="nav-link" data-scroll-target="#scatter-plot"><span class="header-section-number">2.5</span> Scatter Plot</a></li>
+  <li><a href="#box-plot" id="toc-box-plot" class="nav-link" data-scroll-target="#box-plot"><span class="header-section-number">2.6</span> Box Plot</a></li>
+  </ul></li>
+  <li><a href="#kesalahan-yang-sering-terjadi" id="toc-kesalahan-yang-sering-terjadi" class="nav-link" data-scroll-target="#kesalahan-yang-sering-terjadi"><span class="header-section-number">3</span> Kesalahan yang Sering Terjadi</a></li>
+  <li><a href="#ringkasan" id="toc-ringkasan" class="nav-link" data-scroll-target="#ringkasan"><span class="header-section-number">4</span> Ringkasan</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Muhammadrizkybagas/blob/main/chapter2.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/Muhammadrizkybagas/edit/main/chapter2.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter1.html"><strong>BAB</strong></a></li><li class="breadcrumb-item"><a href="./chapter2.html">2. Understanding Data Visualization</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter1.html"><strong>BAB</strong></a></li><li class="breadcrumb-item"><a href="./chapter2.html">2. Memilih Visualisai</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">UNDERSTANDING DATA VISUALIZATION</h1>
+<h1 class="title">Memilih Visualisasi Yang Tepat</h1>
 </div>
 
 
@@ -197,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 5, 2026</p>
+      <p class="date">November 14, 2026</p>
     </div>
   </div>
   
@@ -209,32 +264,759 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="apa-yang-ingin-kita-ketahui" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Apa yang Ingin Kita Ketahui?</h1>
+<p>Di bab ini kita tidak hanya belajar membuat grafik, tetapi belajar menjawab satu pertanyaan:</p>
+<blockquote class="blockquote">
+<p>Grafik apa yang paling tepat untuk data dan pertanyaan yang kita punya?</p>
+</blockquote>
+<p>Setelah bab ini, kamu bisa:</p>
+<ul>
+<li>Menentukan pertanyaan sebelum membuat grafik,</li>
+<li>Memilih jenis grafik yang sesuai dengan jenis data dan pertanyaannya,</li>
+<li>Membuat beberapa jenis grafik dengan <code>ggplot2</code> di R.</li>
+</ul>
+<hr>
+<section id="mulai-dari-pertanyaan" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Mulai dari Pertanyaan</h1>
+<p>Sebelum membuat grafik, tentukan dulu apa yang ingin dijawab. Contoh:</p>
+<blockquote class="blockquote">
+<p>“Lane mana yang memiliki hero S-Tier paling banyak?” - butuh data <code>lane</code> dan <code>priority_tier</code>.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Apakah pemain dengan kemampuan lebih tinggi punya market value lebih besar?” berarti kita butuh dua kolom angka: <code>current_ability</code> dan <code>market_value_usd</code>.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Tips">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Tips
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Prinsip sederhana: start with a question, not a chart. Jangan pilih grafik dulu, lalu mencari alasan untuk memakainya.</p>
+</div>
+</div>
+<section id="dataset-yang-digunakan" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="dataset-yang-digunakan"><span class="header-section-number">1.1</span> Dataset yang Digunakan</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Dataset</strong></th>
+<th><strong>Contoh variabel</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>meta-draftpick-ml.csv</code></td>
+<td><code>lane</code>, <code>priority_tier</code>, <code>hero_name</code></td>
+</tr>
+<tr class="even">
+<td><code>players.csv</code></td>
+<td><code>role</code>, <code>country</code>, <code>winnings</code></td>
+</tr>
+<tr class="odd">
+<td><code>stat-player.csv</code></td>
+<td><code>current_ability</code>, <code>market_value_usd</code>, <code>star_power</code></td>
+</tr>
+<tr class="even">
+<td><code>build-item.csv</code></td>
+<td><code>battle_spell</code>, <code>item_1</code>–<code>item_6</code>, <code>role</code></td>
+</tr>
+<tr class="odd">
+<td><code>tournament.csv</code></td>
+<td><code>name_turnament</code>, <code>prize_pool</code>, <code>location</code></td>
+</tr>
+</tbody>
+</table>
+<p>Panggil library dan baca semua dataset sekali di awal. Gunakan raw URL seperti di Chapter 1.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># berisi ggplot2, dplyr, tidyr, stringr</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales) <span class="co"># untuk format angka (comma)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>url_data <span class="ot">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/data/"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>meta <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(url_data, <span class="st">"meta-draftpick-ml.csv"</span>))</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>build <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(url_data, <span class="st">"build-item.csv"</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>players <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(url_data, <span class="st">"players.csv"</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>stat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste0</span>(url_data, <span class="st">"stat-player.csv"</span>))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># nama kolom di stat-player.csv</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>stat <span class="ot">&lt;-</span> stat <span class="sc">%&gt;%</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">role =</span> player_info_role,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">current_ability =</span> hidden_and_non_technical_hidden_current_ability,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">market_value_usd =</span> hidden_and_non_technical_business_market_value_usd</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a> )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Perhatikan">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Perhatikan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Jika <code>library(tidyverse)</code> belum terpasang, jalankan sekali di Console: <code>install.packages("tidyverse")</code>. Untuk scales sama: <code>install.packages("scales")</code>.</p>
+</div>
+</div>
+<hr>
 </section>
-<section id="bar-chart" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Bar Chart</h1>
 </section>
-<section id="line-chart" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Line Chart</h1>
+<section id="memilih-grafik" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Memilih Grafik</h1>
+<p>Cara paling cepat memilih grafik: lihat bentuk pertanyaannya.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pertanyaan yang ingin dijawab</th>
+<th>Grafik</th>
+<th>Contoh dari dataset</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mana yang paling banyak / sedikit? Bandingkan antar kategori</td>
+<td><strong>Bar chart</strong></td>
+<td>Hero S-Tier per lane</td>
+</tr>
+<tr class="even">
+<td>Bagaimana sebaran data angka? Di mana data paling banyak?</td>
+<td><strong>Histogram</strong></td>
+<td>Sebaran current ability</td>
+</tr>
+<tr class="odd">
+<td>Berapa proporsi tiap bagian terhadap total? (maks. 5-6 kategori)</td>
+<td><strong>Pie / Donut chart</strong></td>
+<td>Proporsi role hero</td>
+</tr>
+<tr class="even">
+<td>Bagaimana perubahan berdasarkan urutan atau waktu?</td>
+<td><strong>Line chart</strong></td>
+<td>Jumlah pemain per tahun lahir</td>
+</tr>
+<tr class="odd">
+<td>Apakah dua angka saling berhubungan?</td>
+<td><strong>Scatter plot</strong></td>
+<td>Ability vs market value</td>
+</tr>
+<tr class="even">
+<td>Bagaimana sebaran angka antar kelompok?</td>
+<td><strong>Box plot</strong></td>
+<td>Ability pemain per role</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<section id="bar-chart" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="bar-chart"><span class="header-section-number">2.1</span> Bar Chart</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Bar Chart">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Bar Chart
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Membandingkan nilai antar kategori. Cocok untuk pertanyaan: mana yang paling banyak? mana yang paling sedikit? bagaimana perbedaan antar kategori?</p>
+</div>
+</div>
+<section id="hero-s-tier-di-setiap-lane" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="hero-s-tier-di-setiap-lane"><span class="header-section-number">2.1.1</span> Hero S-Tier di Setiap Lane</h3>
+<blockquote class="blockquote">
+<p>“Lane mana yang memiliki hero S-Tier paling banyak?”</p>
+</blockquote>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># filter hero S-Tier, lalu hitung jumlahnya per lane</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>lane_s <span class="ot">&lt;-</span> meta <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(priority_tier <span class="sc">==</span> <span class="st">"S-Tier"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(lane)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(lane_s, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(lane, <span class="sc">-</span>n), <span class="at">y =</span> n)) <span class="sc">+</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#007AB8"</span>) <span class="sc">+</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> n), <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Jumlah Hero S-Tier di Setiap Lane"</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Lane"</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Jumlah Hero"</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a> )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="chapter2_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Hasil">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hasil
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Jungler</strong> dan <strong>Roamer</strong> punya hero S-Tier terbanyak (masing-masing 5), disusul gold lane (4), lalu exp lane dan mid lane (masing-masing 3). Dengan bar chart, perbandingan ini terbaca sekilas, tidak perlu membaca daftar hero satu per satu.</p>
+</div>
+</div>
+<hr>
 </section>
-<section id="scatter-plot" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Scatter Plot</h1>
+<section id="item-yang-sering-dipakai" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="item-yang-sering-dipakai"><span class="header-section-number">2.1.2</span> Item yang Sering Dipakai</h3>
+<blockquote class="blockquote">
+<p>“Item apa yang paling sering muncul di build hero?”</p>
+</blockquote>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>item_count <span class="ot">&lt;-</span> build <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"item_"</span>)) <span class="sc">%&gt;%</span>                          <span class="co"># ambil kolom item_1 - item_6</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>(),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"slot"</span>, <span class="at">values_to =</span> <span class="st">"item"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(item), item <span class="sc">!=</span> <span class="st">""</span>) <span class="sc">%&gt;%</span>                      <span class="co"># buang item kosong</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(item, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span>                              <span class="co"># hitung tiap item</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>)                                        <span class="co"># ambil 10 teratas</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(item_count, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(item, n), <span class="at">y =</span> n)) <span class="sc">+</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"#2E75B6"</span>) <span class="sc">+</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> n), <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span>                                            <span class="co"># jadikan batang horizontal</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand_limits</span>(<span class="at">y =</span> <span class="fu">max</span>(item_count<span class="sc">$</span>n) <span class="sc">*</span> <span class="fl">1.1</span>) <span class="sc">+</span>              <span class="co"># beri ruang untuk label angka</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"10 Item yang Paling Sering Muncul"</span>,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Item"</span>, <span class="at">y =</span> <span class="st">"Frekuensi"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="chapter2_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Hasil">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hasil
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tough Boots paling sering muncul (89 kali), disusul Holy Crystal (77) dan Oracle (74).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Penting">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Penting
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Kalau nama kategori panjang (seperti nama item), gunakan bar chart horizontal dengan <code>coord_flip()</code> agar label tidak bertabrakan.</p>
+</div>
+</div>
 </section>
-<section id="histogram" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Histogram</h1>
 </section>
-<section id="boxplot" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Boxplot</h1>
+<section id="histogram" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="histogram"><span class="header-section-number">2.2</span> Histogram</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Histogram">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Histogram
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Melihat sebaran data angka: di rentang mana data paling banyak, apakah simetris atau miring, dan apakah ada nilai yang menonjol.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>“Bagaimana sebaran current ability para pemain?”</p>
+</blockquote>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(stat, <span class="fu">aes</span>(<span class="at">x =</span> current_ability)) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">boundary =</span> <span class="dv">120</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> <span class="st">"#007AB8"</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a> <span class="fu">labs</span>(</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"Sebaran Current Ability Pemain"</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="st">"Current Ability"</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="st">"Jumlah Pemain"</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a> )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="chapter2_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Hasil">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hasil
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Current ability berkisar 120 sampai 192. Kebanyakan pemain ada di kisaran 140-165 dengan puncak sekitar nilai 150, lalu makin tinggi ability makin sedikit pemainnya. Ada lonjakan kecil di ujung kanan (sekitar 190-195).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Coba Sendiri">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Coba Sendiri
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ubah <code>binwidth</code> menjadi 2 dan 10. Bin terlalu kecil membuat grafik bergerigi, bin terlalu besar menyembunyikan bentuk sebaran. Pilih yang paling jelas menunjukkan pola.</p>
+</div>
+</div>
+<section id="histogram-dan-barchart" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="histogram-dan-barchart"><span class="header-section-number">2.2.1</span> Histogram dan Barchart</h3>
+<p>Keduanya sama-sama berbentuk batang, jadi sering tertukar. Bedanya ada pada <strong>data di sumbu x</strong>.</p>
+<p><img class="fotbar" src="img/histogram-dan-barchart.png"></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Bar chart</th>
+<th>Histogram</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Data di sumbu x</td>
+<td>Kategori (teks), misal negara atau role</td>
+<td>Angka yang dikelompokkan jadi rentang (bin)</td>
+</tr>
+<tr class="even">
+<td>Jarak antar batang</td>
+<td>Ada jarak</td>
+<td>Menempel, tanpa jarak</td>
+</tr>
+<tr class="odd">
+<td>Urutan batang</td>
+<td>Boleh diurutkan bebas (misal dari terbesar)</td>
+<td>Tetap mengikuti urutan angka</td>
+</tr>
+<tr class="even">
+<td>Tujuan</td>
+<td>Membandingkan kategori</td>
+<td>Melihat bentuk sebaran data</td>
+</tr>
+<tr class="odd">
+<td>Fungsi ggplot2</td>
+<td><code>geom_col()</code> atau <code>geom_bar()</code></td>
+<td><code>geom_histogram()</code></td>
+</tr>
+<tr class="even">
+<td>Contoh</td>
+<td>Jumlah pemain per negara</td>
+<td>Sebaran current ability</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled" title="Cara Cepat Membedakan">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Cara Cepat Membedakan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tanya: <strong>sumbu x-nya kategori atau angka?</strong> Kategori = bar chart. Angka kontinu = histogram.</p>
+</div>
+</div>
+<hr>
 </section>
-<section id="memilih-grafik-yang-tepat" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Memilih Grafik yang Tepat</h1>
 </section>
-<section id="kesalahan-dalam-visualisasi" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Kesalahan dalam Visualisasi</h1>
+<section id="pie-chart-dan-donut-chart" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="pie-chart-dan-donut-chart"><span class="header-section-number">2.3</span> Pie Chart dan Donut Chart</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Pie Chart dan Donut Chart">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Pie Chart dan Donut Chart
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>menunjukkan <strong>proporsi</strong> tiap bagian terhadap total (100%). Cocok kalau kategorinya sedikit, maksimal 5-6, dan kita hanya ingin melihat bagian mana yang dominan.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>“Bagaimana komposisi role hero dalam dataset build?”</p>
+</blockquote>
+<section id="pie-chart" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="pie-chart"><span class="header-section-number">2.3.1</span> Pie Chart</h3>
+<p>Satu build bisa punya dua role (contoh: <em>Fighter</em>, <em>Assassin</em>). Kita pisahkan dulu dengan <code>separate_rows()</code>, sehingga build itu dihitung di kedua role.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>role_count <span class="ot">&lt;-</span> build <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate_rows</span>(role, <span class="at">sep =</span> <span class="st">",</span><span class="sc">\\</span><span class="st">s*"</span>) <span class="sc">%&gt;%</span> <span class="co"># pisahkan role yang berisi dua nilai</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(role) <span class="sc">%&gt;%</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">persen =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n) <span class="sc">*</span> <span class="dv">100</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Pie chart</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(role_count, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> n, <span class="at">fill =</span> role)) <span class="sc">+</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">paste0</span>(<span class="fu">round</span>(persen, <span class="dv">1</span>), <span class="st">"%"</span>)),</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>), <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="at">theta =</span> <span class="st">"y"</span>) <span class="sc">+</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Proporsi Role Hero dalam Dataset Build"</span>, <span class="at">fill =</span> <span class="st">"Role"</span>) <span class="sc">+</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="chapter2_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="bad-visualization-challenge" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Bad Visualization Challenge</h1>
+<section id="donut-chart" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="donut-chart"><span class="header-section-number">2.3.2</span> Donut Chart</h3>
+<p>Ubah <code>x = ""</code> menjadi <code>x = 2</code>, lalu tambahkan <code>xlim(0.5, 2.5)</code> di bawah <code>coord_polar()</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(role_count, <span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> n, <span class="at">fill =</span> role)) <span class="sc">+</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">paste0</span>(<span class="fu">round</span>(persen, <span class="dv">1</span>), <span class="st">"%"</span>)),</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>), <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="at">theta =</span> <span class="st">"y"</span>) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="fl">0.5</span>, <span class="fl">2.5</span>) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Proporsi Role Hero dalam Dataset Build"</span>, <span class="at">fill =</span> <span class="st">"Role"</span>) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="chapter2_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Hasil">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hasil
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fighter paling dominan (27,6%), diikuti Mage (18,1%) dan Assassin (17,9%). Support paling kecil (8,2%).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Ingat">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Ingat
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Kapan jangan pakai pie?</strong> Kalau kategori lebih dari 6, atau selisih antar bagian kecil dan perlu dibandingkan teliti.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="line-chart" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="line-chart"><span class="header-section-number">2.4</span> Line Chart</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Line Chart">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Line Chart
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Menunjukkan perubahan atau pola berdasarkan urutan yang bermakna, terutama waktu. Garis menghubungkan titik-titik yang berurutan.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>“Bagaimana jumlah pemain berubah dari tahun lahir ke tahun lahir?”</p>
+</blockquote>
+<p>Kolom <code>birthday</code> berisi teks seperti October 13, 2005 (age 20). Kita ambil 4 angka tahunnya dengan <code>str_extract()</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>birth <span class="ot">&lt;-</span> players <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">tahun_lahir =</span> <span class="fu">as.numeric</span>(<span class="fu">str_extract</span>(birthday, <span class="st">"</span><span class="sc">\\</span><span class="st">d{4}"</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(tahun_lahir), tahun_lahir <span class="sc">&gt;=</span> <span class="dv">1994</span>) <span class="sc">%&gt;%</span> <span class="co"># sebelum 1994 datanya sangat sedikit</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(tahun_lahir)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(birth, <span class="fu">aes</span>(<span class="at">x =</span> tahun_lahir, <span class="at">y =</span> n)) <span class="sc">+</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"#2E75B6"</span>, <span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"#2E75B6"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1994</span>, <span class="dv">2010</span>, <span class="at">by =</span> <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Jumlah Pemain Berdasarkan Tahun Lahir"</span>,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Tahun Lahir"</span>,</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Jumlah Pemain"</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a> )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="chapter2_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Hasil">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hasil
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>jumlah pemain naik dari kelahiran 1994 sampai puncaknya di 2004 (115 pemain), lalu turun. Data ini hanya mencakup pemain yang mencantumkan tanggal lahir (694 pemain).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Syarat Line Chart">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Syarat Line Chart
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sumbu x harus berurutan <strong>(waktu atau angka)</strong>. Jangan pakai untuk kategori yang tidak berurutan, misalnya <strong>jumlah hero per lane</strong>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="scatter-plot" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="scatter-plot"><span class="header-section-number">2.5</span> Scatter Plot</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Line Chart">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Line Chart
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Melihat hubungan antara dua variabel angka. Setiap titik mewakili satu data (di sini, satu pemain).</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>“Apakah pemain dengan kemampuan lebih tinggi memiliki market value yang lebih besar?”</p>
+</blockquote>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(stat, <span class="fu">aes</span>(<span class="at">x =</span> current_ability, <span class="at">y =</span> market_value_usd)) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">color =</span> <span class="st">"#2E75B6"</span>) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"#E4572E"</span>) <span class="sc">+</span>   <span class="co"># garis tren</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>(<span class="at">labels =</span> comma) <span class="sc">+</span>                               <span class="co"># skala log di sumbu y</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Current Ability vs Market Value"</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Current Ability"</span>,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Market Value (USD, skala log)"</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a> )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="chapter2_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Hasil">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hasil
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Titik-titik naik dari kiri bawah ke kanan atas. Artinya makin tinggi current ability, makin tinggi market value (hubungan positif yang kuat).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Hati-hati">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Hati-hati
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Hubungan antara dua angka belum tentu sebab-akibat. Scatter plot hanya menunjukkan bahwa keduanya bergerak bersama.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="box-plot" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="box-plot"><span class="header-section-number">2.6</span> Box Plot</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Box Plot">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Box Plot
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Melihat hubungan antara dua variabel angka. Setiap titik mewakili satu data (di sini, satu pemain).</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>“Apakah current ability berbeda antar role pemain?”</p>
+</blockquote>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>role_utama <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Roamer"</span>, <span class="st">"Mid Laner"</span>, <span class="st">"EXP Laner"</span>, <span class="st">"Gold Laner"</span>, <span class="st">"Jungler"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>stat <span class="sc">%&gt;%</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(role <span class="sc">%in%</span> role_utama) <span class="sc">%&gt;%</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> role, <span class="at">y =</span> current_ability)) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">"#9CC3E6"</span>) <span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Current Ability Pemain per Role"</span>,</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Role"</span>,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Current Ability"</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a> )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="chapter2_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Cara Membaca Box Plot">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Cara Membaca Box Plot
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Kotak</strong> = 50% data di tengah (dari kuartil 1 sampai kuartil 3).</li>
+<li><strong>Garis tebal di dalam kotak</strong> = median (nilai tengah).</li>
+<li><strong>Garis di atas dan bawah kotak</strong> = rentang data yang wajar.</li>
+<li><strong>Titik terpisah</strong> = outlier, yaitu nilai yang jauh dari kebanyakan data.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Hasil">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hasil
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Kelima role punya median yang hampir sama (sekitar 152-154). Jadi role pemain tidak membuat current ability berbeda jauh. Titik-titik di bagian atas adalah pemain dengan ability sangat tinggi.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="kesalahan-yang-sering-terjadi" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Kesalahan yang Sering Terjadi</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Kesalahan</th>
+<th>Perbaikan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pie chart dengan banyak kategori</td>
+<td>Pakai bar chart, maksimal 5-6 bagian untuk pie</td>
+</tr>
+<tr class="even">
+<td>Line chart untuk kategori yang tidak berurutan</td>
+<td>Pakai bar chart</td>
+</tr>
+<tr class="odd">
+<td>Sumbu y bar chart tidak dimulai dari 0</td>
+<td>Mulai dari 0, supaya tinggi batang tidak menipu</td>
+</tr>
+<tr class="even">
+<td>Histogram dengan bin terlalu kecil atau terlalu besar</td>
+<td>Coba beberapa <code>binwidth</code> dan pilih yang paling jelas</td>
+</tr>
+<tr class="odd">
+<td>Memakai histogram untuk data kategori</td>
+<td>Pakai bar chart</td>
+</tr>
+<tr class="even">
+<td>Terlalu banyak warna</td>
+<td>Pakai satu warna, kecuali perlu membedakan kelompok</td>
+</tr>
+<tr class="odd">
+<td>Tanpa judul dan label sumbu</td>
+<td>Selalu isi <code>labs(title, x, y)</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ringkasan" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Ringkasan</h1>
+<ul>
+<li>Mulai dari pertanyaan, bukan dari grafik.</li>
+<li>Bar chart untuk membandingkan kategori, histogram untuk melihat sebaran angka.</li>
+<li>Pie/donut untuk proporsi dengan kategori sedikit, line chart untuk data berurutan atau waktu.</li>
+<li>Scatter plot untuk hubungan dua angka, box plot untuk membandingkan sebaran antar kelompok.</li>
+<li>Selalu beri judul dan label sumbu agar grafik bisa dipahami tanpa penjelasan.</li>
+</ul>
 
 
 </section>

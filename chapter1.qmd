@@ -1,5 +1,5 @@
 ---
-title: "WORKING WITH DATA IN R STUDIO"
+title: "MEMBACA DATASET DARI RAW GITHUB"
 date: today
 ---
 
@@ -10,46 +10,52 @@ library(DiagrammeR)
 library(DT)
 library(knitr)
 library(base64enc)
+library(ggplot2)
 
 ```
 
 
-# Mengenal RStudio
+# Apa Itu Dataset
 
-> RStudio adalah Integrated Development Environment (IDE) yang digunakan untuk bekerja dengan bahasa pemrograman R.
+Kumpulan data yang disusun dalam bentuk tabel, sehingga bisa dipakai untuk
+analisis. Sebuah dataset biasanya terdiri dari:
 
-RStudio menyediakan beberapa area utama untuk bekerja:
+- `Baris (rows)`: satu baris = satu observasi atau satu data.
+- `Kolom (columns)`: satu kolom = satu variabel atau atribut
 
-- `Source` → tempat menulis kode dan dokumen.
-- `Console` → tempat menjalankan perintah R.
-- `Environment` → melihat data dan objek yang sedang digunakan.
-- `Files` / `Plots` / `Packages` → mengelola file, melihat grafik, dan library.
+
+Contoh dataset kecil:
+
+| **Name**    | **Role**     |
+| ----------- | ------------ |
+| Miya        | Marksman     |
+| Balmond     | Fighter      |
+| Saber       | Assassin     |
+| Alice       | Mage         |
+| Tigreal     | Tank         |
+
+Pada latihan ini kita memakai dataset **hero Mobile Legends**. Datasetnya berisi 133 hero dan
+disimpan di GitHub.
 
 
 ---
 
 
-# Mengenal R Markdown dan Flex Dashboard
+# Kenapa Dataset Disimpan di GitHub?
 
-R Markdown memungkinkan teks, kode R, tabel, dan hasil visualisasi ditulis dalam satu dokumen.
-Dokumen tersebut kemudian dapat dirender menjadi sebuah output yang lebih terstruktur.
-
-Di kegiatan ini, kita akan menggunakan **Flexdashboard.**
-
-**Flexdashboard** → package yang digunakan untuk membuat dashboard dari dokumen R Markdown. Dashboard dapat berisi grafik, tabel, angka ringkasan, atau komponen lainnya.
-
-Struktur sederhananya:
+Dataset bisa disimpan di *repository* GitHub supaya bisa diakses lewat internet. Alurnya seperti ini:
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
 grViz("
-digraph r_dashboard_flow {
+digraph github_to_r {
 
   graph [
     rankdir = TB,
     bgcolor = 'transparent',
     margin = 0.2,
-    nodesep = 0.4,
-    ranksep = 0.4
+    nodesep = 0.35,
+    ranksep = 0.45
   ]
 
   node [
@@ -69,140 +75,215 @@ digraph r_dashboard_flow {
     arrowsize = 0.7
   ]
 
-  RCode [
-    label = 'R Code',
+  github [
+    label = 'GitHub Repository',
     fillcolor = '#EAF2F8'
   ]
 
-  RMarkdown [
-    label = 'R Markdown',
+  csv [
+    label = 'dataset.csv',
     fillcolor = '#EAF2F8'
   ]
 
-  Flexdashboard [
-    label = 'Flexdashboard',
+  rawfile [
+    label = 'Raw File',
     fillcolor = '#EAF2F8'
   ]
 
-  Dashboard [
-    label = 'Dashboard',
+  rawurl [
+    label = 'Raw URL',
+    fillcolor = '#FFF3CD'
+  ]
+
+  r [
+    label = 'R',
+    fillcolor = '#EAF2F8'
+  ]
+
+  dataset [
+    label = 'Dataset',
     fillcolor = '#FFF3CD',
     fontsize = 18
   ]
 
-  RCode -> RMarkdown
-  RMarkdown -> Flexdashboard
-  Flexdashboard -> Dashboard
+  github -> csv
+  csv -> rawfile
+  rawfile -> rawurl
+  rawurl -> r
+  r -> dataset
 }
 ")
+
 ```
 
-Flexdashboard juga menyediakan sistem layout berbasis `row` dan `column`, sehingga beberapa visualisasi dapat disusun dalam satu halaman.
+
+:::{.callout-note title="Keuntungannya"}
+File dataset tidak perlu dipindahkan manual ke setiap komputer. Selama URL masih bisa dibuka, R bisa mengambil datanya langsung.
+:::
 
 
-## Instalasi Flex Dashboard
 
-Sebelum membuat dashboard, package `flexdashboard` perlu di-install.
-Buka Console di RStudio, kemudian jalankan:
+---
 
 
-`install.packages("flexdashboard")`
+# URL Halaman GitHub vs URL Raw
+
+Ini hal yang paling penting: URL halaman GitHub dan URL raw itu berbeda
 
 
-atau kalian juga bisa install package dengan cara klik bagian Package → Install → cari package `flexdashboard`kemudian install.
 
-Setelah proses instalasi selesai, package dapat digunakan dalam project.
+:::{.callout-tip title="URL Halaman Github"}
 
-
-`library(flexdashboard)`
+Dipakai untuk melihat file lewat browser. Contoh:
 
 
-:::{.callout-warning title="Ingat"}
-Instalasi package cukup dilakukan satu kali pada komputer. Setelah ter-install, package dapat digunakan kembali pada project lainnya.
+> <a href="https://github.com/Muhammadrizkybagas/mlbb-dataset/blob/main/data/hero.csv">https://github.com/Muhammadrizkybagas/mlbb-dataset/blob/main/data/hero.csv</a>
+
+<img class="fotbar" src="img/not-raw.png">
+
+Halaman ini berisi tampilan website GitHub (menu, tombol, dll), bukan data mentah. Karena itu R
+tidak bisa membaca data dari URL ini.
+
 :::
 
 
 ---
 
 
-## Membuat Flex Dashboard
+:::{.callout-note title="URL Raw Github"}
 
-Cara termudah adalah menggunakan template yang sudah disediakan oleh RStudio.
+Hanya berisi isi file (data mentahnya saja). Inilah yang dibutuhkan R:
 
-1. Buka RStudio.
-2. Klik menu **File** > **New File** > **R Markdown**.
-3. Pada jendela yang muncul, pilih tab **From Template** di sebelah kiri.
-4. Pilih **Flex Dashboard** dari daftar, lalu klik **OK**,
+Formatnya:
+
+<a href="https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/data/hero.csv">https://github.com/Muhammadrizkybagas/mlbb-dataset/blob/main/data/hero.csv </a>
+
+<img class="fotbar" src="img/raw.png">
+
+:::
 
 
-## Pahami Struktur Dasar
+---
 
-RStudio akan membukakan file .Rmd dengan kerangka dasar. Bagian atas (YAML) akan terlihat seperti ini:
+
+:::{.callout-tip title="Tips"}
+cara cepat mengenali URL raw adalah dari alamatnya. Kalau diawali `github.com` berarti URL
+halaman biasa. Kalau diawali `raw.githubusercontent.com` berarti URL raw.
+:::
+
+
+---
+
+
+# Membaca Dataset
+
+
+Sekarang kita baca datanya di R. Tulis kode berikut di chunk R pada file .qmd kamu:
+
+```{r, message=FALSE, warning=FALSE}
+# baca dataset hero dari raw GitHub
+url_hero <-
+ "https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/data/hero.csv"
+data_hero <- read.csv(url_hero, stringsAsFactors = FALSE)
 
 ```
 
----
-title: "Dashboard Saya"
-output: 
-  flexdashboard::flex_dashboard:
-    orientation: columns
-    vertical_layout: fill
----
-      
+- `url_hero`: variabel untuk menyimpan alamat raw URL.
+- `read.csv()`: fungsi untuk membaca file CSV, bisa dari file lokal maupun dari URL.
+- `stringsAsFactors` = `FALSE`: supaya kolom teks tetap dibaca sebagai teks biasa.
+- `data_hero`: tempat hasil baca disimpan (berupa data frame).
+
+Setelah itu, cek isi datanya dulu sebelum dipakai:
+
+
+```{r, message=FALSE, warning=FALSE}
+head(data_hero) # lihat 6 baris pertama
+nrow(data_hero) # jumlah baris (hasilnya 133)
+names(data_hero) # nama kolom
 ```
 
-- Simpan file `.Rmd` tersebut.
-- Klik tombol **Knit** di bagian atas editor RStudio untuk melihat hasil pratinjau dashboard dalam bentuk halaman web HTML
+
+---
+
+
+# Menampilkan Gambar Hero
+
+Kolom `images.hero` baru berisi nama file gambar (misalnya `aamon.png`). Supaya tampil
+sebagai gambar, kita ubah nama file itu menjadi tag HTML `<img>` dengan `paste0()`.
+
+
+```{r, message=FALSE, warning=FALSE}
+# alamat folder gambar di GitHub (raw URL)
+image_base <-
+ "https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/img/images-hero/"
+
+# ubah nama file menjadi tag gambar
+data_hero$images.hero <- paste0(
+ '<img src="', image_base, data_hero$images.hero,
+ '" style="height:60px; width:auto; border-radius:50%;">'
+)
+```
 
 
 ---
 
 
-# Mengenal Dataset
+# Menampilkan Dataset
 
-Sampai tahap ini, kita sudah mengenal RStudio dan cara menggunakan `flexdashboard`.
-Sekarang kita mulai bekerja dengan dataset.
+Fungsi `datatable()` berasal dari package **DT**. Jika belum pernah dipasang, jalankan sekali di
+Console:
 
-**Dataset** → kumpulan data yang disusun dalam bentuk tertentu sehingga dapat digunakan untuk analisis.
+> `install.packages("DT")`
 
-Dalam analisis data, dataset biasanya terdiri dari:
+Lalu panggil library-nya dan tampilkan tabel:
 
-- `Rows` — observasi atau data
-- `Columns` — variabel atau atribut
+```{r, message=FALSE, warning=FALSE}
 
-Contoh:
+library(DT)
+datatable(
+ data_hero,
+ escape = FALSE, # agar tag <img> dibaca sebagai gambar
+ filter = "top", # kotak filter di atas tiap kolom
+ rownames = FALSE, # sembunyikan nomor baris bawaan
+ options = list(
+ pageLength = 5, # tampilkan 5 baris per halaman
+ scrollX = TRUE # tabel bisa digeser ke samping
+ )
+)
 
-| **Name**    | **Role**     |
-| ----------- | ------------ |
-| Miya        | Marksman     |
-| Balmond     | Fighter      |
-| Saber       | Assassin     |
-| Alice       | Mage         |
-| Tigreal     | Tank         |
 
-Dataset yang akan digunakan pada latihan ini adalah dataset ini berisi informasi mengenai hero dari game **Mobile Legends**.
+```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+Hasilnya adalah tabel interaktif: kamu bisa mencari data (search), memfilter per kolom,
+mengurutkan, dan berpindah halaman. Dataset hero ini terdiri dari 133 data, jadi akan muncul
+sekitar 27 halaman dengan 5 baris per halaman.
 
-# baca dataset
-data <- read.csv("data/hero.csv", stringsAsFactors = FALSE)
-image_folder <- "img/images-hero"
-image_files <- file.path(image_folder, data$images.hero)
 
-data$images.hero <- sapply(image_files, function(x) {
-  
-  if (file.exists(x)) {
-    paste0(
-      '<img src="',
-      knitr::image_uri(x),
-      '" style="height:80px; width:auto; object-fit:contain; border-radius:100%">'
-    )
-  } else {
-    "Gambar tidak ada"
-  }
-})
+---
 
-# tsmpilkan tabel
+
+# Kode Lengkap
+
+
+Salin URL dan data raw github dapat digunakan. Lihat kode di bawah ini.
+
+```{r, message=FALSE, warning=FALSE}
+
+data <- read.csv(
+  "https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/data/hero.csv"
+)
+
+# url gambar
+image_base <- "https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/img/images-hero/"
+
+# Ubah nama file menjadi gambar
+data$images.hero <- paste0(
+  '<img src="',
+  image_base,
+  data$images.hero,
+  '" style="height:80px; width:auto; border-radius:100%">'
+)
+
 datatable(
   data,
   escape = FALSE,
@@ -213,27 +294,26 @@ datatable(
     scrollX = TRUE
   )
 )
-
 ```
 
 
-# Membaca Data dari GitHub
+
+# Kesalahan Yang Sering Terjadi
 
 
-# Menggunakan Raw GitHub URL
+| Masalah | Kemungkinan Penyebab |
+|---|---|
+| Error saat read.csv() | Memakai URL GitHub, bukan URL raw. |
+| Error datatable | Belum menjalankan library(DT). |
 
 
-# Memeriksa Data
+# Ringkasan
 
-
-
-
-
-
-
-
-
-
+- Dataset bisa disimpan di GitHub dan dibaca langsung oleh R.
+- Gunakan raw URL (raw.githubusercontent.com), bukan URL halaman biasa.
+- Baca data dengan read.csv(url).
+- Tampilkan tabel interaktif dengan datatable() dari package DT.
+- Pakai escape = FALSE jika kolom berisi tag HTML seperti gambar
 
 
 
