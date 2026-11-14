@@ -1,0 +1,129 @@
+[
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Introduction to Data Visualization",
+    "section": "",
+    "text": "Pada bagian ini, kita akan mengenal dasar-dasar visualisasi data. Fokusnya bukan pada membuat grafik sebanyak mungkin, tetapi memahami mengapa, kapan, dan bagaimana sebuah grafik digunakan.\n\n1 Apa Itu Data Visualization\nData visualization adalah proses menyajikan data dalam bentuk visual agar informasi lebih mudah dipahami. Visualisasi dapat berupa grafik, diagram, peta, tabel, dashboard\nTujuan utamanya adalah membantu kita melihat informasi yang sulit ditemukan dari data mentah. Visualisasi dapat membantu menemukan:\n\nPola\nPerbedaan\nTren\nHubungan\nNilai yang tidak biasa\n\n\n\n\n\n\n\n\nNoteNote\n\n\n\nVisualisasi bukan sekadar membuat data terlihat menarik tapi dapat digunakan untuk membantu memahami data.\n\n\n\n\n\n2 Mengapa Data Perlu Divisualisasikan\nData dalam bentuk tabel dapat memberikan informasi yang lengkap. Namun, semakin banyak data yang tersedia, semakin sulit pola terlihat secara langsung.\n\nVisualisasi membantu menyederhanakan informasi tersebut.\n\nContohnya, data berikut dapat menunjukkan jumlah peserta berdasarkan kategori:\n\n\n\nKategori\nJumlah\n\n\n\n\nA\n80\n\n\nB\n60\n\n\nC\n40\n\n\nD\n25\n\n\n\nAngka tersebut dapat dibaca dari tabel. Namun, grafik membuat perbedaan antar kategori dapat dikenali dengan lebih cepat.\n\n\n\n\n\n\n\n\n\n\n\n\n3 Data, Informasi, dan Insight\nData, informasi, dan insight memiliki peran yang berbeda.\n\nData → merupakan nilai atau fakta yang dikumpulkan.\nInformasi → memberikan konteks terhadap data. &gt; Contoh: Kategori F memiliki jumlah paling tinggi.\nInsight → pemahaman yang diperoleh setelah data dianalisis. &gt; Kategori F memiliki jumlah angka yang jauh lebih tinggi dibandingkan kategori lainnya.\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipNote\n\n\n\nInsight membutuhkan interpretasi. Grafik yang bagus belum tentu menghasilkan insight yang bagus.\n\n\n\n\n\n4 Memilih Visualisasi yang Tepat\nTidak semua data cocok menggunakan grafik yang sama. Pemilihan visualisasi harus disesuaikan dengan pertanyaan yang ingin dijawab.\n\n\n\nTujuan\nVisualisasi\n\n\n\n\nMembandingkan kategori\nBar Chart\n\n\nMelihat perubahan\nLine Chart\n\n\nMelihat hubungan\nScatter Plot\n\n\nMelihat distribusi\nHistogram\n\n\nMelihat sebaran kelompok\nBoxplot\n\n\n\nContohnya:\n\n\n\n\n\n\nTipBar Chart\n\n\n\nKategori mana yang memiliki nilai paling tinggi?\n\n\n\n\n\n\n\n\nTipLine Chart\n\n\n\nBagaimana perubahan nilai dari waktu ke waktu?\n\n\n\n\n\n\n\n\nTipScatter Plot\n\n\n\nApakah dua variabel memiliki hubungan?\n\n\n\n\n\n\n\n\n\n\n\n5 Contoh Sederhana\nSekarang kita lihat contoh sederhana. Terdapat data jumlah peserta berdasarkan program studi.\n\n\n\nProgram Studi\nJumlah\n\n\n\n\nSains Data\n42\n\n\nInformatika\n35\n\n\nBisnis Digital\n28\n\n\nDesain Produk\n21\n\n\n\nPertanyaan yang ingin dijawab:\n\nProgram studi mana yang memiliki jumlah peserta paling banyak?\n\nKarena fokusnya adalah membandingkan beberapa kategori, Bar Chart dapat digunakan. Hasil visualisasinya akan memperlihatkan perbedaan jumlah dengan lebih jelas.\n\n\n\n\n\n\n\n\n\n\n\n\n6 Apa yang Akan Kita Kerjakan\nDalam kegiatan ini, prosesnya akan berjalan melalui beberapa tahap:\n\n\n\n\n\n\nKita akan menggunakan RStudio untuk menjalankan proses tersebut. Beberapa hal yang akan dipelajari:\n\nMengambil data\nMemahami struktur data\nMembuat visualisasi\nMemilih grafik yang sesuai\nMembaca pola\nMenemukan insight\nMenyajikan hasil analisis\n\nPada bagian berikutnya, kita akan mulai bekerja dengan RStudio dan Dashboard.\n\n\n\n\n\n\n\n\n\n\n\n\nNoteRemember\n\n\n\nStart with a question, not a chart.\nTentukan apa yang ingin diketahui terlebih dahulu. Setelah itu, pilih visualisasi yang paling sesuai.",
+    "crumbs": [
+      "**INTRODUCTION**"
+    ]
+  },
+  {
+    "objectID": "chapter4.html",
+    "href": "chapter4.html",
+    "title": "DATA EXPLORATION CHALLENGE",
+    "section": "",
+    "text": "1 Project Overview\n\n\n2 Pembagian Kelompok\n\n\n3 Dataset\n\n\n4 Project Mission\n\n\n5 Project Requirements\n\n\n6 Panduan Pengerjaan\n\n\n7 Visualisasi Minimum\n\n\n8 Insight dan Kesimpulan\n\n\n9 Publishing to RPubs\n\n\n10 Submission",
+    "crumbs": [
+      "**BAB**",
+      "4. Publish Bookdown ke Github"
+    ]
+  },
+  {
+    "objectID": "chapter2.html",
+    "href": "chapter2.html",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "",
+    "text": "Di bab ini kita tidak hanya belajar membuat grafik, tetapi belajar menjawab satu pertanyaan:\nSetelah bab ini, kamu bisa:",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#dataset-yang-digunakan",
+    "href": "chapter2.html#dataset-yang-digunakan",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "1.1 Dataset yang Digunakan",
+    "text": "1.1 Dataset yang Digunakan\n\n\n\n\n\n\n\nDataset\nContoh variabel\n\n\n\n\nmeta-draftpick-ml.csv\nlane, priority_tier, hero_name\n\n\nplayers.csv\nrole, country, winnings\n\n\nstat-player.csv\ncurrent_ability, market_value_usd, star_power\n\n\nbuild-item.csv\nbattle_spell, item_1–item_6, role\n\n\ntournament.csv\nname_turnament, prize_pool, location\n\n\n\nPanggil library dan baca semua dataset sekali di awal. Gunakan raw URL seperti di Chapter 1.\n\nlibrary(tidyverse) # berisi ggplot2, dplyr, tidyr, stringr\nlibrary(scales) # untuk format angka (comma)\n\nurl_data &lt;- \"https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/data/\"\nmeta &lt;- read.csv(paste0(url_data, \"meta-draftpick-ml.csv\"))\nbuild &lt;- read.csv(paste0(url_data, \"build-item.csv\"))\nplayers &lt;- read.csv(paste0(url_data, \"players.csv\"))\nstat &lt;- read.csv(paste0(url_data, \"stat-player.csv\"))\n\n\n# nama kolom di stat-player.csv\nstat &lt;- stat %&gt;%\n  rename(\n    role = player_info_role,\n    current_ability = hidden_and_non_technical_hidden_current_ability,\n    market_value_usd = hidden_and_non_technical_business_market_value_usd\n )\n\n\n\n\n\n\n\nWarningPerhatikan\n\n\n\nJika library(tidyverse) belum terpasang, jalankan sekali di Console: install.packages(\"tidyverse\"). Untuk scales sama: install.packages(\"scales\").",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#bar-chart",
+    "href": "chapter2.html#bar-chart",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "2.1 Bar Chart",
+    "text": "2.1 Bar Chart\n\n\n\n\n\n\nNoteBar Chart\n\n\n\nMembandingkan nilai antar kategori. Cocok untuk pertanyaan: mana yang paling banyak? mana yang paling sedikit? bagaimana perbedaan antar kategori?\n\n\n\n2.1.1 Hero S-Tier di Setiap Lane\n\n“Lane mana yang memiliki hero S-Tier paling banyak?”\n\n\n# filter hero S-Tier, lalu hitung jumlahnya per lane\nlane_s &lt;- meta %&gt;%\n  filter(priority_tier == \"S-Tier\") %&gt;%\n  count(lane)\n\nggplot(lane_s, aes(x = reorder(lane, -n), y = n)) +\n  geom_col(fill = \"#007AB8\") +\n  geom_text(aes(label = n), vjust = -0.3) +\n  labs(\n    title = \"Jumlah Hero S-Tier di Setiap Lane\",\n    x = \"Lane\",\n    y = \"Jumlah Hero\"\n )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHasil\n\n\n\nJungler dan Roamer punya hero S-Tier terbanyak (masing-masing 5), disusul gold lane (4), lalu exp lane dan mid lane (masing-masing 3). Dengan bar chart, perbandingan ini terbaca sekilas, tidak perlu membaca daftar hero satu per satu.\n\n\n\n\n\n2.1.2 Item yang Sering Dipakai\n\n“Item apa yang paling sering muncul di build hero?”\n\n\nitem_count &lt;- build %&gt;%\n  select(starts_with(\"item_\")) %&gt;%                          # ambil kolom item_1 - item_6\n  pivot_longer(cols = everything(),\n               names_to = \"slot\", values_to = \"item\") %&gt;%\n  filter(!is.na(item), item != \"\") %&gt;%                      # buang item kosong\n  count(item, sort = TRUE) %&gt;%                              # hitung tiap item\n  slice_head(n = 10)                                        # ambil 10 teratas\n\n\nggplot(item_count, aes(x = reorder(item, n), y = n)) +\n  geom_col(fill = \"#2E75B6\") +\n  geom_text(aes(label = n), hjust = -0.2) +\n  coord_flip() +                                            # jadikan batang horizontal\n  expand_limits(y = max(item_count$n) * 1.1) +              # beri ruang untuk label angka\n  labs(title = \"10 Item yang Paling Sering Muncul\",\n       x = \"Item\", y = \"Frekuensi\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHasil\n\n\n\nTough Boots paling sering muncul (89 kali), disusul Holy Crystal (77) dan Oracle (74).\n\n\n\n\n\n\n\n\nWarningPenting\n\n\n\nKalau nama kategori panjang (seperti nama item), gunakan bar chart horizontal dengan coord_flip() agar label tidak bertabrakan.",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#histogram",
+    "href": "chapter2.html#histogram",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "2.2 Histogram",
+    "text": "2.2 Histogram\n\n\n\n\n\n\nNoteHistogram\n\n\n\nMelihat sebaran data angka: di rentang mana data paling banyak, apakah simetris atau miring, dan apakah ada nilai yang menonjol.\n\n\n\n“Bagaimana sebaran current ability para pemain?”\n\n\nggplot(stat, aes(x = current_ability)) +\n  geom_histogram(binwidth = 5, boundary = 120,\n                 fill = \"#007AB8\", color = \"white\") +\n  \n labs(\n  title = \"Sebaran Current Ability Pemain\",\n  x = \"Current Ability\",\n  y = \"Jumlah Pemain\"\n )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHasil\n\n\n\nCurrent ability berkisar 120 sampai 192. Kebanyakan pemain ada di kisaran 140-165 dengan puncak sekitar nilai 150, lalu makin tinggi ability makin sedikit pemainnya. Ada lonjakan kecil di ujung kanan (sekitar 190-195).\n\n\n\n\n\n\n\n\nWarningCoba Sendiri\n\n\n\nUbah binwidth menjadi 2 dan 10. Bin terlalu kecil membuat grafik bergerigi, bin terlalu besar menyembunyikan bentuk sebaran. Pilih yang paling jelas menunjukkan pola.\n\n\n\n2.2.1 Histogram dan Barchart\nKeduanya sama-sama berbentuk batang, jadi sering tertukar. Bedanya ada pada data di sumbu x.\n\n\n\n\n\n\n\n\n\n\nBar chart\nHistogram\n\n\n\n\nData di sumbu x\nKategori (teks), misal negara atau role\nAngka yang dikelompokkan jadi rentang (bin)\n\n\nJarak antar batang\nAda jarak\nMenempel, tanpa jarak\n\n\nUrutan batang\nBoleh diurutkan bebas (misal dari terbesar)\nTetap mengikuti urutan angka\n\n\nTujuan\nMembandingkan kategori\nMelihat bentuk sebaran data\n\n\nFungsi ggplot2\ngeom_col() atau geom_bar()\ngeom_histogram()\n\n\nContoh\nJumlah pemain per negara\nSebaran current ability\n\n\n\n\n\n\n\n\n\nTipCara Cepat Membedakan\n\n\n\nTanya: sumbu x-nya kategori atau angka? Kategori = bar chart. Angka kontinu = histogram.",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#pie-chart-dan-donut-chart",
+    "href": "chapter2.html#pie-chart-dan-donut-chart",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "2.3 Pie Chart dan Donut Chart",
+    "text": "2.3 Pie Chart dan Donut Chart\n\n\n\n\n\n\nNotePie Chart dan Donut Chart\n\n\n\nmenunjukkan proporsi tiap bagian terhadap total (100%). Cocok kalau kategorinya sedikit, maksimal 5-6, dan kita hanya ingin melihat bagian mana yang dominan.\n\n\n\n“Bagaimana komposisi role hero dalam dataset build?”\n\n\n2.3.1 Pie Chart\nSatu build bisa punya dua role (contoh: Fighter, Assassin). Kita pisahkan dulu dengan separate_rows(), sehingga build itu dihitung di kedua role.\n\nrole_count &lt;- build %&gt;%\n  separate_rows(role, sep = \",\\\\s*\") %&gt;% # pisahkan role yang berisi dua nilai\n  count(role) %&gt;%\n  mutate(persen = n / sum(n) * 100)\n\n\n# Pie chart\nggplot(role_count, aes(x = \"\", y = n, fill = role)) +\n  geom_col(width = 1, color = \"white\") +\n  geom_text(aes(label = paste0(round(persen, 1), \"%\")),\n            position = position_stack(vjust = 0.5), color = \"white\") +\n  coord_polar(theta = \"y\") +\n  labs(title = \"Proporsi Role Hero dalam Dataset Build\", fill = \"Role\") +\n  theme_void()\n\n\n\n\n\n\n\n\n\n\n2.3.2 Donut Chart\nUbah x = \"\" menjadi x = 2, lalu tambahkan xlim(0.5, 2.5) di bawah coord_polar().\n\nggplot(role_count, aes(x = 2, y = n, fill = role)) +\n  geom_col(width = 1, color = \"white\") +\n  geom_text(aes(label = paste0(round(persen, 1), \"%\")),\n            position = position_stack(vjust = 0.5), color = \"white\") +\n  coord_polar(theta = \"y\") +\n  xlim(0.5, 2.5) +\n  labs(title = \"Proporsi Role Hero dalam Dataset Build\", fill = \"Role\") +\n  theme_void()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHasil\n\n\n\nFighter paling dominan (27,6%), diikuti Mage (18,1%) dan Assassin (17,9%). Support paling kecil (8,2%).\n\n\n\n\n\n\n\n\nWarningIngat\n\n\n\nKapan jangan pakai pie? Kalau kategori lebih dari 6, atau selisih antar bagian kecil dan perlu dibandingkan teliti.",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#line-chart",
+    "href": "chapter2.html#line-chart",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "2.4 Line Chart",
+    "text": "2.4 Line Chart\n\n\n\n\n\n\nNoteLine Chart\n\n\n\nMenunjukkan perubahan atau pola berdasarkan urutan yang bermakna, terutama waktu. Garis menghubungkan titik-titik yang berurutan.\n\n\n\n“Bagaimana jumlah pemain berubah dari tahun lahir ke tahun lahir?”\n\nKolom birthday berisi teks seperti October 13, 2005 (age 20). Kita ambil 4 angka tahunnya dengan str_extract().\n\nbirth &lt;- players %&gt;%\n  mutate(tahun_lahir = as.numeric(str_extract(birthday, \"\\\\d{4}\"))) %&gt;%\n  filter(!is.na(tahun_lahir), tahun_lahir &gt;= 1994) %&gt;% # sebelum 1994 datanya sangat sedikit\n  count(tahun_lahir)\n\n\nggplot(birth, aes(x = tahun_lahir, y = n)) +\n  geom_line(color = \"#2E75B6\", linewidth = 1.2) +\n  geom_point(color = \"#2E75B6\", size = 3) +\n  scale_x_continuous(breaks = seq(1994, 2010, by = 2)) +\n  labs(\n    title = \"Jumlah Pemain Berdasarkan Tahun Lahir\",\n    x = \"Tahun Lahir\",\n    y = \"Jumlah Pemain\"\n )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHasil\n\n\n\njumlah pemain naik dari kelahiran 1994 sampai puncaknya di 2004 (115 pemain), lalu turun. Data ini hanya mencakup pemain yang mencantumkan tanggal lahir (694 pemain).\n\n\n\n\n\n\n\n\nWarningSyarat Line Chart\n\n\n\nSumbu x harus berurutan (waktu atau angka). Jangan pakai untuk kategori yang tidak berurutan, misalnya jumlah hero per lane.",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#scatter-plot",
+    "href": "chapter2.html#scatter-plot",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "2.5 Scatter Plot",
+    "text": "2.5 Scatter Plot\n\n\n\n\n\n\nNoteLine Chart\n\n\n\nMelihat hubungan antara dua variabel angka. Setiap titik mewakili satu data (di sini, satu pemain).\n\n\n\n“Apakah pemain dengan kemampuan lebih tinggi memiliki market value yang lebih besar?”\n\n\nggplot(stat, aes(x = current_ability, y = market_value_usd)) +\n  geom_point(alpha = 0.4, color = \"#2E75B6\") +\n  geom_smooth(method = \"lm\", se = FALSE, color = \"#E4572E\") +   # garis tren\n  scale_y_log10(labels = comma) +                               # skala log di sumbu y\n  labs(\n    title = \"Current Ability vs Market Value\",\n    x = \"Current Ability\",\n    y = \"Market Value (USD, skala log)\"\n )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNoteHasil\n\n\n\nTitik-titik naik dari kiri bawah ke kanan atas. Artinya makin tinggi current ability, makin tinggi market value (hubungan positif yang kuat).\n\n\n\n\n\n\n\n\nWarningHati-hati\n\n\n\nHubungan antara dua angka belum tentu sebab-akibat. Scatter plot hanya menunjukkan bahwa keduanya bergerak bersama.",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#box-plot",
+    "href": "chapter2.html#box-plot",
+    "title": "Memilih Visualisasi Yang Tepat",
+    "section": "2.6 Box Plot",
+    "text": "2.6 Box Plot\n\n\n\n\n\n\nNoteBox Plot\n\n\n\nMelihat hubungan antara dua variabel angka. Setiap titik mewakili satu data (di sini, satu pemain).\n\n\n\n“Apakah current ability berbeda antar role pemain?”\n\n\nrole_utama &lt;- c(\"Roamer\", \"Mid Laner\", \"EXP Laner\", \"Gold Laner\", \"Jungler\")\n\n\nstat %&gt;%\n  filter(role %in% role_utama) %&gt;%\n  ggplot(aes(x = role, y = current_ability)) +\n  geom_boxplot(fill = \"#9CC3E6\") +\n  labs(\n    title = \"Current Ability Pemain per Role\",\n    x = \"Role\",\n    y = \"Current Ability\"\n )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTipCara Membaca Box Plot\n\n\n\n\nKotak = 50% data di tengah (dari kuartil 1 sampai kuartil 3).\nGaris tebal di dalam kotak = median (nilai tengah).\nGaris di atas dan bawah kotak = rentang data yang wajar.\nTitik terpisah = outlier, yaitu nilai yang jauh dari kebanyakan data.\n\n\n\n\n\n\n\n\n\nNoteHasil\n\n\n\nKelima role punya median yang hampir sama (sekitar 152-154). Jadi role pemain tidak membuat current ability berbeda jauh. Titik-titik di bagian atas adalah pemain dengan ability sangat tinggi.",
+    "crumbs": [
+      "**BAB**",
+      "2. Memilih Visualisai"
+    ]
+  },
+  {
+    "objectID": "chapter1.html",
+    "href": "chapter1.html",
+    "title": "MEMBACA DATASET DARI RAW GITHUB",
+    "section": "",
+    "text": "1 Apa Itu Dataset\nKumpulan data yang disusun dalam bentuk tabel, sehingga bisa dipakai untuk analisis. Sebuah dataset biasanya terdiri dari:\n\nBaris (rows): satu baris = satu observasi atau satu data.\nKolom (columns): satu kolom = satu variabel atau atribut\n\nContoh dataset kecil:\n\n\n\nName\nRole\n\n\n\n\nMiya\nMarksman\n\n\nBalmond\nFighter\n\n\nSaber\nAssassin\n\n\nAlice\nMage\n\n\nTigreal\nTank\n\n\n\nPada latihan ini kita memakai dataset hero Mobile Legends. Datasetnya berisi 133 hero dan disimpan di GitHub.\n\n\n\n2 Kenapa Dataset Disimpan di GitHub?\nDataset bisa disimpan di repository GitHub supaya bisa diakses lewat internet. Alurnya seperti ini:\n\n\n\n\n\n\n\n\n\n\n\n\nNoteKeuntungannya\n\n\n\nFile dataset tidak perlu dipindahkan manual ke setiap komputer. Selama URL masih bisa dibuka, R bisa mengambil datanya langsung.\n\n\n\n\n\n3 URL Halaman GitHub vs URL Raw\nIni hal yang paling penting: URL halaman GitHub dan URL raw itu berbeda\n\n\n\n\n\n\nTipURL Halaman Github\n\n\n\nDipakai untuk melihat file lewat browser. Contoh:\n\nhttps://github.com/Muhammadrizkybagas/mlbb-dataset/blob/main/data/hero.csv\n\n\nHalaman ini berisi tampilan website GitHub (menu, tombol, dll), bukan data mentah. Karena itu R tidak bisa membaca data dari URL ini.\n\n\n\n\n\n\n\n\n\nNoteURL Raw Github\n\n\n\nHanya berisi isi file (data mentahnya saja). Inilah yang dibutuhkan R:\nFormatnya:\nhttps://github.com/Muhammadrizkybagas/mlbb-dataset/blob/main/data/hero.csv \n\n\n\n\n\n\n\n\n\n\nTipTips\n\n\n\ncara cepat mengenali URL raw adalah dari alamatnya. Kalau diawali github.com berarti URL halaman biasa. Kalau diawali raw.githubusercontent.com berarti URL raw.\n\n\n\n\n\n4 Membaca Dataset\nSekarang kita baca datanya di R. Tulis kode berikut di chunk R pada file .qmd kamu:\n\n# baca dataset hero dari raw GitHub\nurl_hero &lt;-\n \"https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/data/hero.csv\"\ndata_hero &lt;- read.csv(url_hero, stringsAsFactors = FALSE)\n\n\nurl_hero: variabel untuk menyimpan alamat raw URL.\nread.csv(): fungsi untuk membaca file CSV, bisa dari file lokal maupun dari URL.\nstringsAsFactors = FALSE: supaya kolom teks tetap dibaca sebagai teks biasa.\ndata_hero: tempat hasil baca disimpan (berupa data frame).\n\nSetelah itu, cek isi datanya dulu sebelum dipakai:\n\nhead(data_hero) # lihat 6 baris pertama\n\n  id_hero name_hero images.hero                    role\n1       1     Aamon   aamon.png            ['assassin']\n2       2      Akai    akai.png                ['tank']\n3       3    Aldous  aldous.png             ['fighter']\n4       4     Alice   alice.png        ['tank', 'mage']\n5       5     Alpha   alpha.png             ['fighter']\n6       6   Alucard alucard.png ['fighter', 'assassin']\n\nnrow(data_hero) # jumlah baris (hasilnya 133)\n\n[1] 133\n\nnames(data_hero) # nama kolom\n\n[1] \"id_hero\"     \"name_hero\"   \"images.hero\" \"role\"       \n\n\n\n\n\n5 Menampilkan Gambar Hero\nKolom images.hero baru berisi nama file gambar (misalnya aamon.png). Supaya tampil sebagai gambar, kita ubah nama file itu menjadi tag HTML &lt;img&gt; dengan paste0().\n\n# alamat folder gambar di GitHub (raw URL)\nimage_base &lt;-\n \"https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/img/images-hero/\"\n\n# ubah nama file menjadi tag gambar\ndata_hero$images.hero &lt;- paste0(\n '&lt;img src=\"', image_base, data_hero$images.hero,\n '\" style=\"height:60px; width:auto; border-radius:50%;\"&gt;'\n)\n\n\n\n\n6 Menampilkan Dataset\nFungsi datatable() berasal dari package DT. Jika belum pernah dipasang, jalankan sekali di Console:\n\ninstall.packages(\"DT\")\n\nLalu panggil library-nya dan tampilkan tabel:\n\nlibrary(DT)\ndatatable(\n data_hero,\n escape = FALSE, # agar tag &lt;img&gt; dibaca sebagai gambar\n filter = \"top\", # kotak filter di atas tiap kolom\n rownames = FALSE, # sembunyikan nomor baris bawaan\n options = list(\n pageLength = 5, # tampilkan 5 baris per halaman\n scrollX = TRUE # tabel bisa digeser ke samping\n )\n)\n\n\n\n\n\nHasilnya adalah tabel interaktif: kamu bisa mencari data (search), memfilter per kolom, mengurutkan, dan berpindah halaman. Dataset hero ini terdiri dari 133 data, jadi akan muncul sekitar 27 halaman dengan 5 baris per halaman.\n\n\n\n7 Kode Lengkap\nSalin URL dan data raw github dapat digunakan. Lihat kode di bawah ini.\n\ndata &lt;- read.csv(\n  \"https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/data/hero.csv\"\n)\n\n# url gambar\nimage_base &lt;- \"https://raw.githubusercontent.com/Muhammadrizkybagas/mlbb-dataset/refs/heads/main/img/images-hero/\"\n\n# Ubah nama file menjadi gambar\ndata$images.hero &lt;- paste0(\n  '&lt;img src=\"',\n  image_base,\n  data$images.hero,\n  '\" style=\"height:80px; width:auto; border-radius:100%\"&gt;'\n)\n\ndatatable(\n  data,\n  escape = FALSE,\n  filter = \"top\",\n  rownames = FALSE,\n  options = list(\n    pageLength = 5,\n    scrollX = TRUE\n  )\n)\n\n\n\n\n\n\n\n8 Kesalahan Yang Sering Terjadi\n\n\n\nMasalah\nKemungkinan Penyebab\n\n\n\n\nError saat read.csv()\nMemakai URL GitHub, bukan URL raw.\n\n\nError datatable\nBelum menjalankan library(DT).\n\n\n\n\n\n9 Ringkasan\n\nDataset bisa disimpan di GitHub dan dibaca langsung oleh R.\nGunakan raw URL (raw.githubusercontent.com), bukan URL halaman biasa.\nBaca data dengan read.csv(url).\nTampilkan tabel interaktif dengan datatable() dari package DT.\nPakai escape = FALSE jika kolom berisi tag HTML seperti gambar",
+    "crumbs": [
+      "**BAB**",
+      "1. Baca Raw Github"
+    ]
+  },
+  {
+    "objectID": "chapter5.html",
+    "href": "chapter5.html",
+    "title": "UNDERSTANDING DATA VISUALIZATION",
+    "section": "",
+    "text": "1 Apa yang Ingin Kita Ketahui?\n\n\n2 Bar Chart\n\n\n3 Line Chart\n\n\n4 Scatter Plot\n\n\n5 Histogram\n\n\n6 Boxplot\n\n\n7 Memilih Grafik yang Tepat\n\n\n8 Kesalahan dalam Visualisasi\n\n\n9 Bad Visualization Challenge"
+  }
+]
